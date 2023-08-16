@@ -129,6 +129,66 @@
 .feature-card:hover {
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
+  outline: 2px solid white;
+  cursor: cell;
+}
+
+.navbrutalbutton {
+  font-variant: small-caps;
+  transition: all 0.3s ease;
+  padding: 1em 2em;
+  background: linear-gradient(
+    157.81deg,
+    #b541d3 -43.27%,
+    #9d6ba9 -21.27%,
+    #b541d3 12.19%,
+    #ae5bc3 29.82%,
+    #c536e9 51.94%,
+    #b541d3 90.29%
+  );
+
+  font-size: 1em;
+  font-weight: 900;
+  border: 2px solid white;
+  border-radius: 0.1em;
+  box-shadow: 0.25em 0.25em black;
+  cursor: cell;
+  color: white;
+  &:hover {
+    transform: translate(-0.1em, -0.1em);
+    box-shadow: 0.35em 0.35em;
+    background: linear-gradient(
+      157.81deg,
+      #fc9b53 -43.27%,
+      #fd6852 -21.24%,
+      #f85155 12.19%,
+      #ca3f65 29.82%,
+      #a13474 51.94%,
+      #54248f 90.29%
+    );
+    color: black;
+    padding: 1em 2.25em;
+    border: 2px solid black;
+  }
+
+  &:active {
+    background-color: #00040f;
+    color: black;
+    transform: translate(0.15em, 0.15em);
+    box-shadow: 0.25em 0.25em;
+  }
+  &.alt {
+    background-color: $border-color;
+    box-shadow: none;
+    &:hover {
+      box-shadow: 0.35em 0.35em;
+      background-color: #00040f;
+    }
+    &:active {
+      color: #00040f;
+      box-shadow: none;
+    }
+  }
 }
 
 .feedback-container .feedback-card:last-child {
@@ -167,7 +227,7 @@
   border: 2px solid $border-color;
   border-radius: 0.1em;
   box-shadow: 0.25em 0.25em $border-color;
-  cursor: pointer;
+  cursor: cell;
   color: white;
   &:hover {
     transform: translate(-0.1em, -0.1em);
@@ -206,6 +266,7 @@
 }
 
 .brutalbutton {
+  font-variant: small-caps;
   transition: all 0.3s ease;
   padding: 1em 2em;
   background: linear-gradient(
@@ -219,30 +280,31 @@
   );
   font-size: 1em;
   font-weight: 900;
-  border: 2px solid $border-color;
+  border: 2px solid white;
   border-radius: 0.1em;
-  box-shadow: 0.25em 0.25em $border-color;
-  cursor: pointer;
+  box-shadow: 0.25em 0.25em black;
+  cursor: cell;
   color: white;
   &:hover {
     transform: translate(-0.1em, -0.1em);
     box-shadow: 0.35em 0.35em;
     background: linear-gradient(
       157.81deg,
-      #ffc69a -43.27%,
-      #faa496 -21.24%,
-      #ff8d8f 12.19%,
-      #cd6782 29.82%,
-      #a45583 51.94%,
-      #6d4d94 90.29%
+      #b541d3 -43.27%,
+      #9d6ba9 -21.27%,
+      #b541d3 12.19%,
+      #ae5bc3 29.82%,
+      #c536e9 51.94%,
+      #b541d3 90.29%
     );
-    color: $border-color;
+    color: black;
     padding: 1em 2.25em;
+    border: 2px solid black;
   }
 
   &:active {
     background-color: #00040f;
-    color: white;
+    color: black;
     transform: translate(0.15em, 0.15em);
     box-shadow: 0.25em 0.25em;
   }
@@ -260,16 +322,26 @@
   }
 }
 
-.navaltbrutalbutton {
+.navbrutalbutton {
+  font-variant: small-caps;
   transition: all 0.3s ease;
   padding: 1em 2em;
-  background: $primary;
+  background: linear-gradient(
+    157.81deg,
+    #b541d3 -43.27%,
+    #9d6ba9 -21.27%,
+    #b541d3 12.19%,
+    #ae5bc3 29.82%,
+    #c536e9 51.94%,
+    #b541d3 90.29%
+  );
+
   font-size: 1em;
   font-weight: 900;
-  border: 2px solid $border-color;
+  border: 2px solid white;
   border-radius: 0.1em;
-  box-shadow: 0.25em 0.25em $border-color;
-  cursor: pointer;
+  box-shadow: 0.25em 0.25em black;
+  cursor: cell;
   color: white;
   &:hover {
     transform: translate(-0.1em, -0.1em);
@@ -283,13 +355,14 @@
       #a13474 51.94%,
       #54248f 90.29%
     );
-    color: $border-color;
+    color: black;
     padding: 1em 2.25em;
+    border: 2px solid black;
   }
 
   &:active {
     background-color: #00040f;
-    color: white;
+    color: black;
     transform: translate(0.15em, 0.15em);
     box-shadow: 0.25em 0.25em;
   }

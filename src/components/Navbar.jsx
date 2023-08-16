@@ -22,18 +22,18 @@ const Navbar = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
-        className="navbrutalbutton"
+        className="navbrutalbutton font-arcade"
       >
         BUY $ABC
       </a>
-      <a
+      {/* <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://t.me/AlphaBotCalls"
         className="navaltbrutalbutton"
       >
         JOIN
-      </a>
+      </a> */}
 
       {/* <div className="sm:hidden flex flex-1 justify-end items-center">
         <img

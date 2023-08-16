@@ -14,8 +14,8 @@ const Hero = () => {
         <div className="-mt-5 flex flex-row items-center  p-[6px] px-4 bg-discount-gradient rounded-[5px] mb-2">
           <img src={discount} alt="discount" className="w-[32px] h-[32px]" />
           <p className={`${styles.paragraph} text-sm ml-2`}>
-            <span className="text-white">Get</span> 2000 $ABC{" "}
-            <span className="text-white">For Alpha</span> Hub
+            <span className="text-white">2000</span> $ABC{" "}
+            <span className="text-white">= Alpha</span> Hub
           </p>
         </div>
 

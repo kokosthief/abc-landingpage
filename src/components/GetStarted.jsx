@@ -9,14 +9,14 @@ const GetStarted = () => (
     className=""
   >
     <div
-      className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-orange-gradient p-[2px] cursor-pointer`}
+      className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full  bg-orange-gradient p-[2px] cursor-cell`}
     >
       <div
-        className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}
+        className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] hover:bg-black-gradient rounded-full`}
       >
         <div className={`${styles.flexStart} flex-row`}>
-          <p className="font-notosans font-bold text-[20px] leading-[23.4px]">
-            <span className="text-gradient">Call w/</span>
+          <p className="font-notosans font-bold text-[20px] leading-[28.4px]">
+            <span className="text-gradient ">Call w/</span>
           </p>
           <img
             src={arrowUp}
@@ -25,8 +25,8 @@ const GetStarted = () => (
           />
         </div>
 
-        <p className="font-notosans font-bold text-[20px] leading-[23.4px]">
-          <span className="text-gradient">ABC Bot</span>
+        <p className="font-notosans font-bold text-[20px] leading-[28.4px]">
+          <span className="text-gradient ">ABC Bot</span>
         </p>
       </div>
     </div>

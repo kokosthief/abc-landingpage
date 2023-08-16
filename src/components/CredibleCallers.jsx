@@ -18,7 +18,8 @@ const CredibleCallers = () => (
 
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        Empowering Legitimate <br className="sm:block hidden" /> Crypto Callers
+        Empowering <a class="underline decoration-[#B369DB]">Legitimate</a>{" "}
+        <br className="sm:block hidden" /> Crypto Callers
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         Bringing credibility to crypto callers with proven track record of

@@ -33,8 +33,9 @@ const Vision = () => (
         <a class="underline decoration-[#B369DB]">for good</a>.
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5 mb-7`}>
-        Organic adoption of ABC Bot across crypto gamifies the culture of making
-        calls whilst bringing credibilty and accountability for teh culture.
+        Organic adoption of the ABC Bot across crypto gamifies the culture of
+        making calls whilst bringing credibilty and accountability for teh
+        culture.
       </p>
 
       <Button styles={`mt-10`} />

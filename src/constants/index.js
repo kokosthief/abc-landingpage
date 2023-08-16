@@ -31,21 +31,21 @@ export const features = [
     icon: star,
     title: "Transparency and Trust:",
     content:
-      "The ABC Bot promotes transparent engagement across crypto fostering trust among users by making calls more accountable.",
+      "The ABC Bot promotes transparent engagement across crypto fostering trust among users by making callers more accountable.",
   },
   {
     id: "feature-2",
     icon: shield,
     title: "Elevating Real Crypto Chads",
     content:
-      "Our vision authenticates voices in the crypto community, highlighting legitimate insights and expertise and even rewards them for it.",
+      "Our vision authenticates voices in the crypto community, highlighting legitimate insights and expertise and rewarding top performers.",
   },
   {
     id: "feature-3",
     icon: send,
     title: "Cultivating an Alpha Hub",
     content:
-      "Organic growth by gamifying informed calls means ABC Trending and ABC Hub becomes a hub for trending alpha insights.",
+      "Organic growth through gamified calling establishes ABC Trending and the ABC Hub as the gold standard for alpha insights.",
   },
 ];
 

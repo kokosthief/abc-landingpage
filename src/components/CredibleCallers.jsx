@@ -22,7 +22,7 @@ const CredibleCallers = () => (
         <br className="sm:block hidden" /> Crypto Callers
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Bringing credibility to crypto callers with proven track record of
+        Bringing credibility to crypto callers with a proven track record of
         success. Hold 2000 $ABC and start trading with them.
       </p>
       {/* 

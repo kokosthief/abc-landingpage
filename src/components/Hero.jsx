@@ -33,8 +33,9 @@ const Hero = () => {
         </h1>
 
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Engage communities with ABC Bot and make credible 10-100x calls
-          together whilst bringing accountability.
+          Building a gamified ecosystem for callers, establishing the KYC (know
+          your CALLER) standard, and promoting merit-based exposure, all powered
+          by our proprietary call-tracking technology
         </p>
       </div>
 

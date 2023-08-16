@@ -1,5 +1,5 @@
 import styles from "../style";
-import { discount, robot } from "../assets";
+import { discount, abccolorlogo } from "../assets";
 import GetStarted from "./GetStarted";
 
 const Hero = () => {
@@ -42,12 +42,12 @@ const Hero = () => {
       <div
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
-        {/* <img
-          src={robot}
+        <img
+          src={abccolorlogo}
           alt="CredibleCallers"
           className="w-[100%] h-[100%] relative z-[5]"
-        /> */}
-        <a
+        />
+        {/* <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://t.me/AlphaBotCalls"
@@ -58,7 +58,7 @@ const Hero = () => {
             alt="ABC Color Logo"
             className="w-[100%] h-[100%] relative z-[5]"
           />
-        </a>
+        </a> */}
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
         <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />

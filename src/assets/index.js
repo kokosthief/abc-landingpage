@@ -6,7 +6,7 @@ import maestro from "./maestro.png";
 import uniswap from "./uniswap.png";
 import logo from "./logo.png";
 import quotes from "./quotes.svg";
-import robot from "./robot.png";
+import abccolorlogo from "./abclogo.png";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
 import star from "./Star.svg";
@@ -30,7 +30,7 @@ export {
   uniswap,
   logo,
   quotes,
-  robot,
+  abccolorlogo,
   send,
   shield,
   star,

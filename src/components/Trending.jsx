@@ -1,4 +1,4 @@
-import { card } from "../assets";
+import { trending } from "../assets";
 import styles, { layout } from "../style";
 import Button from "./Button";
 
@@ -17,9 +17,13 @@ const Trending = () => (
       <Button className="mt-6" />
     </div>
 
-    {/* <div className={layout.sectionImg}>
-      <img src={card} alt="Credible Callers" className="w-[100%] h-[100%]" />
-    </div> */}
+    <div className={layout.sectionImg}>
+      <img
+        src={trending}
+        alt="Trending tokens from and accountable and credible callers"
+        className="w-[100%] h-[100%]"
+      />
+    </div>
   </section>
 );
 

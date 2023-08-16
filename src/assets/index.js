@@ -1,7 +1,7 @@
 import dexscreener from "./dexscreener.png";
 import userstats from "./userstats.png";
 import dextools from "./dextools.png";
-import card from "./card.png";
+import trending from "./trending.png";
 import maestro from "./maestro.png";
 import uniswap from "./uniswap.png";
 import logo from "./logo.png";
@@ -25,7 +25,7 @@ export {
   dexscreener,
   userstats,
   dextools,
-  card,
+  trending,
   maestro,
   uniswap,
   logo,

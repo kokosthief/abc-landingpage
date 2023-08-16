@@ -4,7 +4,7 @@ import dextools from "./dextools.png";
 import card from "./card.png";
 import maestro from "./maestro.png";
 import uniswap from "./uniswap.png";
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
 import send from "./Send.svg";

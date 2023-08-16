@@ -9,8 +9,14 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex py-2 justify-between items-center navbar">
-      <img src={logo} alt="AlphaBotCalls" className="w-[100px] h-[100px]" />
-
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://t.me/AlphaBotCalls"
+        className=""
+      >
+        <img src={logo} alt="AlphaBotCalls" className="w-[100px] h-[100px]" />
+      </a>
       <ul className="list-none sm:flex hidden justify-end items-center flex-1"></ul>
       <a
         target="_blank"

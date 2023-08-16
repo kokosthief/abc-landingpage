@@ -46,12 +46,18 @@ const Hero = () => {
           alt="CredibleCallers"
           className="w-[100%] h-[100%] relative z-[5]"
         /> */}
-        <img
-          src="../src/assets/abclogo.png"
-          alt="abc logo"
-          className="w-[100%] h-[100%] relative z-[5]"
-        />
-
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://t.me/AlphaBotCalls"
+          className=""
+        >
+          <img
+            src="../src/assets/abclogo.png"
+            alt="abc logo"
+            className="w-[100%] h-[100%] relative z-[5]"
+          />
+        </a>
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
         <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />

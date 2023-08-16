@@ -8,11 +8,13 @@ import Stats from "./Stats";
 import Footer from "./Footer";
 import Leaderboards from "./Leaderboards";
 import Hero from "./Hero";
+import Team from "./Team";
 
 export {
   Navbar,
   CredibleCallers,
   Trending,
+  Team,
   Vision,
   Integrations,
   CTA,

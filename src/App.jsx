@@ -3,6 +3,7 @@ import {
   CredibleCallers,
   Vision,
   Trending,
+  Team,
   Integrations,
   CTA,
   Footer,
@@ -32,7 +33,8 @@ const App = () => (
         <Vision />
         <CredibleCallers />
         <Trending />
-        <Leaderboards />
+        {/* <Leaderboards /> */}
+        {/* <Team /> */}
         <Integrations />
         <CTA />
         <Footer />

@@ -4,14 +4,11 @@ import GetStarted from "./GetStarted";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY}`}
-    >
+    <section id="home" className={`flex md:flex-row flex-col mb-16`}>
       <div
-        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
+        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 `}
       >
-        <div className="-mt-5 flex flex-row items-center  p-[6px] px-4 bg-discount-gradient rounded-[5px] mb-2">
+        <div className="flex flex-row items-center  p-[6px] px-4 bg-discount-gradient rounded-[5px] mb-5">
           <img src={discount} alt="discount" className="w-[32px] h-[32px]" />
           <p className={`${styles.paragraph} text-sm ml-2`}>
             <span className="text-white">2000</span> $ABC{" "}
@@ -23,25 +20,23 @@ const Hero = () => {
           <h1 className="	 flex-1 font-arcade font-semibold ss:text-[72px] text-[42px] text-white ss:leading-[100.8px] leading-[75px]">
             Gamifying <br className="sm:block hidden" />{" "}
           </h1>
-          <div className="ss:flex hidden md:mr-2 ml-10">
+          {/* <div className="ss:flex hidden md:mr-2 ml-10">
             <GetStarted />
-          </div>
+          </div> */}
         </div>
 
         <h1 className="font-arcade font-semibold ss:text-[68px] text-[38px] text-white ss:leading-[100.8px] leading-[75px] w-full flex items-center">
           <span className="text-gradient mr-6">100x </span> Calls
         </h1>
 
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        <p className={`${styles.paragraph} max-w-[470px] mt-4 `}>
           Building a gamified ecosystem for callers, establishing the KYC (know
           your CALLER) standard, and promoting merit-based exposure, all powered
           by our proprietary call-tracking technology
         </p>
       </div>
 
-      <div
-        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
-      >
+      <div className={`flex-1 flex ${styles.flexCenter} md:my-0  relative`}>
         <img
           src={abccolorlogo}
           alt="CredibleCallers"

@@ -20,8 +20,16 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 import telegram from "./telegram.svg";
 import medium from "./medium.svg";
+import mrser from "./team-mrser.jpeg";
+import zhaabbah from "./team-zhaabbah.jpeg";
+import zen from "./team-zen.jpeg";
+import kokos from "./team-kokos.png";
 
 export {
+  mrser,
+  zhaabbah,
+  zen,
+  kokos,
   dexscreener,
   userstats,
   dextools,

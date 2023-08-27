@@ -21,15 +21,16 @@ const Navbar = () => {
           className="w-[100px] h-[100px] p-2"
         />
       </a>
+      <h1 className="font-arcade text-white">ALPHA BOT CALLS</h1>
       <ul className="list-none sm:flex hidden justify-end items-center flex-1"></ul>
-      <a
+      {/* <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
-        className="navbrutalbutton font-arcade"
+        className="navbrutalbutton font-arcade invisible md:visible"
       >
         BUY $ABC
-      </a>
+      </a> */}
       {/* <a
         target="_blank"
         rel="noopener noreferrer"

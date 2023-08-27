@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Leaderboards from "./Leaderboards";
 import Hero from "./Hero";
 import Team from "./Team";
+import Tokenomics from "./Tokenomics";
 
 export {
   Navbar,
@@ -21,5 +22,6 @@ export {
   Stats,
   Footer,
   Leaderboards,
+  Tokenomics,
   Hero,
 };

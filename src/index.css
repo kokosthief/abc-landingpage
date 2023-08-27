@@ -14,12 +14,22 @@
 }
 
 :root {
+  --pink-gradient: linear-gradient(
+    157.81deg,
+    #fc9b53 -43.27%,
+    #fd6852 -21.24%,
+    #f85155 12.19%,
+    #ca3f65 29.82%,
+    #a13474 51.94%,
+    #54248f 90.29%
+  );
   --black-gradient: linear-gradient(
     144.39deg,
     #ffffff -278.56%,
     #6d6d6d -78.47%,
     #11101d 91.61%
   );
+
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
 
@@ -216,6 +226,17 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+.buybutton {
+  transition: all 0.3s ease;
+  padding: 1em 2em;
+  background: white;
+  font-size: 1em;
+  font-weight: 900;
+  box-shadow: 0.25em 0.25em black;
+  cursor: cell;
+  color: white;
 }
 
 .navbrutalbutton {

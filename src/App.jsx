@@ -3,6 +3,7 @@ import {
   CredibleCallers,
   Vision,
   Trending,
+  Features,
   Team,
   Integrations,
   CTA,
@@ -16,7 +17,7 @@ import {
 
 const App = () => (
   <div className="w-full overflow-hidden">
-    <div className="bg-orange-gradient">
+    <div className="bg-hero1-gradient ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
@@ -28,19 +29,24 @@ const App = () => (
           <Hero />
         </div>
       </div>
+      {/* <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Stats />
+        </div>
+      </div> */}
     </div>
 
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        <Stats />
-        <Vision />
-        <CredibleCallers />
-        <Trending />
-        <Leaderboards />
+        {/* <Features /> */}
+        {/* <Vision /> */}
+        {/* <CredibleCallers /> */}
+        {/* <Trending /> */}
+        {/* <Leaderboards /> */}
         {/* <Team /> */}
-        <Integrations />
+        {/* <Integrations /> */}
         {/* <Tokenomics /> */}
-        <CTA />
+        {/* <CTA /> */}
         <Footer />
       </div>
     </div>

@@ -10,6 +10,7 @@ import Leaderboards from "./Leaderboards";
 import Hero from "./Hero";
 import Team from "./Team";
 import Tokenomics from "./Tokenomics";
+import Features from "./Features";
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   Leaderboards,
   Tokenomics,
   Hero,
+  Features,
 };

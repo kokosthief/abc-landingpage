@@ -1,6 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./src/**/*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
+  plugins: [require("tw-elements/dist/plugin.cjs")],
+  darkMode: "class",
+};
+module.exports = {
+  content: [
     "./index.html",
     "./src/**/*.{js,jsx}",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
@@ -18,6 +26,7 @@ module.exports = {
       },
       fontFamily: {
         arcade: ["Arcade", "sans-serif"],
+        league: ["League Spartan", "sans-serif"],
         spacegrotesk: ["Space Grotesk", "sans-serif"],
         notosans: ["Noto Sans", "sans-serif"],
       },
@@ -31,5 +40,5 @@ module.exports = {
       xl: "1700px",
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("tw-elements/dist/plugin.cjs")],
 };

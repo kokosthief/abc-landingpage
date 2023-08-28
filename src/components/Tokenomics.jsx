@@ -1,4 +1,5 @@
-import { Card } from "flowbite-react";
+import { Chart, initTE } from "tw-elements";
+initTE({ Chart });
 
 const Tokenomics = () => (
   <div class="pb-16">
@@ -14,153 +15,15 @@ const Tokenomics = () => (
         </h1>
       </div>
     </div>
-    <Card>
-      <div className="mb-4 flex items-center justify-between">
-        <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
-          Latest Customers
-        </h5>
-        <a
-          className="text-sm font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-          href="#"
-        >
-          <p>View all</p>
-        </a>
-      </div>
-      <div className="flow-root">
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          <li className="py-3 sm:py-4">
-            <div className="flex items-center space-x-4">
-              <div className="shrink-0">
-                <No
-                  Display
-                  Name
-                  alt="Neil image"
-                  className="rounded-full"
-                  height="32"
-                  src="/images/people/profile-picture-1.jpg"
-                  width="32"
-                />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
-                  Neil Sims
-                </p>
-                <p className="truncate text-sm text-gray-500 dark:text-gray-400">
-                  email@windster.com
-                </p>
-              </div>
-              <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $320
-              </div>
-            </div>
-          </li>
-          <li className="py-3 sm:py-4">
-            <div className="flex items-center space-x-4">
-              <div className="shrink-0">
-                <No
-                  Display
-                  Name
-                  alt="Bonnie image"
-                  className="rounded-full"
-                  height="32"
-                  src="/images/people/profile-picture-3.jpg"
-                  width="32"
-                />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
-                  Bonnie Green
-                </p>
-                <p className="truncate text-sm text-gray-500 dark:text-gray-400">
-                  email@windster.com
-                </p>
-              </div>
-              <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $3467
-              </div>
-            </div>
-          </li>
-          <li className="py-3 sm:py-4">
-            <div className="flex items-center space-x-4">
-              <div className="shrink-0">
-                <No
-                  Display
-                  Name
-                  alt="Michael image"
-                  className="rounded-full"
-                  height="32"
-                  src="/images/people/profile-picture-2.jpg"
-                  width="32"
-                />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
-                  Michael Gough
-                </p>
-                <p className="truncate text-sm text-gray-500 dark:text-gray-400">
-                  email@windster.com
-                </p>
-              </div>
-              <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $67
-              </div>
-            </div>
-          </li>
-          <li className="py-3 sm:py-4">
-            <div className="flex items-center space-x-4">
-              <div className="shrink-0">
-                <No
-                  Display
-                  Name
-                  alt="Lana image"
-                  className="rounded-full"
-                  height="32"
-                  src="/images/people/profile-picture-4.jpg"
-                  width="32"
-                />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
-                  Lana Byrd
-                </p>
-                <p className="truncate text-sm text-gray-500 dark:text-gray-400">
-                  email@windster.com
-                </p>
-              </div>
-              <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $367
-              </div>
-            </div>
-          </li>
-          <li className="pb-0 pt-3 sm:pt-4">
-            <div className="flex items-center space-x-4">
-              <div className="shrink-0">
-                <No
-                  Display
-                  Name
-                  alt="Thomas image"
-                  className="rounded-full"
-                  height="32"
-                  src="/images/people/profile-picture-5.jpg"
-                  width="32"
-                />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
-                  Thomes Lean
-                </p>
-                <p className="truncate text-sm text-gray-500 dark:text-gray-400">
-                  email@windster.com
-                </p>
-              </div>
-              <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $2367
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </Card>
+    <div class="mx-auto w-3/5 overflow-hidden">
+      <canvas
+        data-te-chart="doughnut"
+        data-te-dataset-label="Traffic"
+        data-te-labels="['Monday', 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' , 'Saturday' , 'Sunday ']"
+        data-te-dataset-data="[2112, 2343, 2545, 3423, 2365, 1985, 987]"
+        data-te-dataset-background-color="['rgba(63, 81, 181, 0.5)', 'rgba(77, 182, 172, 0.5)', 'rgba(66, 133, 244, 0.5)', 'rgba(156, 39, 176, 0.5)', 'rgba(233, 30, 99, 0.5)', 'rgba(66, 73, 244, 0.4)', 'rgba(66, 133, 244, 0.2)']"
+      ></canvas>
+    </div>
   </div>
 );
 

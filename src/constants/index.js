@@ -14,17 +14,6 @@ import {
   star,
 } from "../assets";
 
-export const navLinks = [
-  {
-    id: "buy",
-    title: "Buy $ABC",
-  },
-  {
-    id: "join-telegram",
-    title: "Join Telegram",
-  },
-];
-
 export const features = [
   {
     id: "feature-1",
@@ -79,18 +68,23 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "Unique Callers",
+    title: "unique callers",
     value: "538",
   },
   {
     id: "stats-2",
-    title: "# of Communities",
+    title: "# of communities",
     value: "30+",
   },
   {
     id: "stats-3",
-    title: "Total Calls",
+    title: "total calls",
     value: "1819",
+  },
+  {
+    id: "stats-4",
+    title: "100x calls",
+    value: "42",
   },
 ];
 

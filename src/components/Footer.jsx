@@ -4,15 +4,19 @@ import { footerLinks, socialMedia } from "../constants";
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
-    <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
-      <div className="flex-[1] flex flex-col justify-start mr-10">
+    <div
+      className={`${styles.flexStart} md:flex-row flex-col text-center mb-8 w-full`}
+    >
+      <div className="flex-[1] flex flex-col ">
         <img
           src={logo}
           alt="AlphaBotCalls"
-          className="w-[266px] h-[72.14px] object-contain"
+          className="w-[106px] h-auto self-center md:self-start"
         />
-        <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
-          We are AlphaBotCalls, the first Know Your Caller (KYC) protocol.
+        <p
+          className={`${styles.paragraph} mt-4 max-w-[312px] self-center md:self-start md:text-left`}
+        >
+          the 1st gamified caller ecosystem
         </p>
       </div>
 
@@ -44,13 +48,13 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] -mb-10 border-t-[#3F3E45]">
+    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] -mb-5 border-t-[#3F3E45]">
       <p className="font-notosans font-normal text-center text-[16px] leading-[25px] text-white">
         Copyright Ⓒ 2023 AlphaBotCalls. All Rights Reserved.
       </p>
 
       {/* Social links*/}
-      <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
+      <ul className="flex my-4 md:order-1 md:ml-4 md:mb-0">
         <li>
           <a
             target="_blank"
@@ -121,6 +125,27 @@ const Footer = () => (
               xmlns="http://www.w3.org/2000/svg"
             >
               <path d="M4.37162 7.26396C4.39646 7.01656 4.30284 6.77204 4.11951 6.60553L2.2521 4.33862V4H8.05042L12.5322 13.9048L16.4725 4H22V4.33862L20.4034 5.88125C20.2657 5.98698 20.1974 6.16075 20.226 6.33275V17.6673C20.1974 17.8392 20.2657 18.013 20.4034 18.1188L21.9627 19.6614V20H14.1195V19.6614L15.7348 18.0811C15.8936 17.9212 15.8936 17.8742 15.8936 17.6296V8.46796L11.4024 19.9624H10.7955L5.56676 8.46796V16.1717C5.52316 16.4955 5.62991 16.8216 5.85621 17.0559L7.95705 19.6238V19.9624H2V19.6238L4.10084 17.0559C4.32549 16.8212 4.42601 16.493 4.37162 16.1717V7.26396Z" />
+            </svg>
+          </a>
+        </li>
+        <li className="pl-4">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/@AlphaBotCalls"
+            className="flex justify-center items-center text-gray-600 hover:text-gray-900 hover:bg-white-100 bg-white dark:bg-[#13171d] dark:text-[#fffefe] dark:hover:text-orange dark:bg- rounded-full shadow transition duration-150 ease-in-out"
+            aria-label="Youtube"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-8 h-8 fill-current"
+              viewBox="-55.20005 -41.33325 355.0671 240.9995"
+            >
+              <path d="M229.763 25.817c-2.699-10.162-10.65-18.165-20.747-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.554 7.652 7.602 15.655 4.904 25.817 0 44.237 0 82.667 0 82.667s0 38.43 4.904 56.85c2.698 10.162 10.65 18.164 20.747 20.881 18.3 4.935 91.682 4.935 91.682 4.935s73.383 0 91.683-4.935c10.097-2.717 18.048-10.72 20.747-20.88 4.904-18.422 4.904-56.851 4.904-56.851s0-38.43-4.904-56.85" />
+              <path
+                d="M93.333 117.558l61.334-34.89-61.334-34.893z"
+                fill="#242424"
+              />
             </svg>
           </a>
         </li>

@@ -15,6 +15,10 @@ import close from "./close.svg";
 import arrowUp from "./arrow-up.svg";
 import discount from "./Discount.svg";
 import twitter from "./twitter.svg";
+import twittercircle from "./twittercircle.svg";
+import discordcircle from "./discordcircle.svg";
+import telegramcircle from "./telegramcircle.svg";
+import mediumcircle from "./mediumcircle.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
@@ -50,6 +54,10 @@ export {
   telegram,
   medium,
   twitter,
+  twittercircle,
+  discordcircle,
+  telegramcircle,
+  mediumcircle,
   people01,
   people02,
   people03,

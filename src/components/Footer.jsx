@@ -4,29 +4,19 @@ import { footerLinks, socialMedia } from "../constants";
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
-    <div
-      className={`${styles.flexStart} md:flex-row flex-col text-center mb-8 w-full`}
-    >
-      <div className="flex-[1] flex flex-col ">
+    <div className={`${styles.flexStart} md:flex-row flex-col  mb-8 w-full`}>
+      <div className="flex basis-3/12 flex-col mx-auto ">
         <img
           src={logo}
           alt="AlphaBotCalls"
           className="w-[106px] h-auto self-center md:self-start"
         />
-        <p
-          className={`${styles.paragraph} mt-4 max-w-[312px] self-center md:self-start md:text-left`}
-        >
-          the 1st gamified caller ecosystem
-        </p>
       </div>
 
-      <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
+      <div className="w-full flex flex-wrap md:flex-row justify-around gap-4 text-center md:mt-0 mt-10 md:text-left">
         {footerLinks.map((footerlink) => (
-          <div
-            key={footerlink.title}
-            className={`flex flex-col ss:my-0 my-4 min-w-[150px]`}
-          >
-            <h4 className="font-spacegrotesk font-bold text-[19px] leading-[27px] text-white">
+          <div key={footerlink.title} className={`flex flex-col ss:my-0 my-4`}>
+            <h4 className="font-league font-bold text-[22px] leading-[27px] text-white">
               {footerlink.title}
             </h4>
             <ul className="list-none mt-4">

@@ -6,7 +6,6 @@ import {
   BellIcon,
   ChevronDownIcon,
   CursorArrowRaysIcon,
-  PlayCircleIcon,
   ChartBarSquareIcon,
   UserGroupIcon,
 } from "@heroicons/react/20/solid";
@@ -15,7 +14,7 @@ const solutions = [
   {
     name: "ABC Trending",
     description: "List of top tokens called in the last 24 hours.",
-    href: "#",
+    href: "https://telegram.me/ABCTrending",
     icon: ChartBarSquareIcon,
   },
   {
@@ -27,17 +26,21 @@ const solutions = [
   {
     name: "ABC Alpha Hub",
     description: "Hold $2000 $ALPHA to gain access",
-    href: "#",
+    href: "https://telegram.me/alphaBotCalls",
     icon: UserGroupIcon,
   },
 ];
 const callsToAction = [
+  // {
+  //   name: "Watch demo",
+  //   href: "https://www.youtube.com/watch?v=c92a4rjc4rI",
+  //   icon: PlayCircleIcon,
+  // },
   {
-    name: "Watch demo",
-    href: "https://www.youtube.com/watch?v=c92a4rjc4rI",
-    icon: PlayCircleIcon,
+    name: "Make your first call",
+    href: "https://telegram.me/ABCAlphaBot",
+    icon: CursorArrowRaysIcon,
   },
-  { name: "Make your first call", href: "#", icon: CursorArrowRaysIcon },
 ];
 
 export default function Navbar() {
@@ -86,6 +89,8 @@ export default function Navbar() {
                     </div>
                     <div>
                       <a
+                        target="_blank"
+                        rel="noopener noreferrer"
                         href={item.href}
                         className="font-semibold text-gray-900"
                       >
@@ -97,9 +102,11 @@ export default function Navbar() {
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+              <div className="grid grid-cols-1 divide-x divide-gray-900/5 bg-gray-50">
                 {callsToAction.map((item) => (
                   <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     key={item.name}
                     href={item.href}
                     className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100"

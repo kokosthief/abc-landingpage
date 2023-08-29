@@ -1,20 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,js}",
-    "./node_modules/tw-elements/dist/js/**/*.js",
-  ],
-  plugins: [require("tw-elements/dist/plugin.cjs")],
-  darkMode: "class",
-};
-module.exports = {
-  content: [
     "./index.html",
     "./src/**/*.{js,jsx}",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   mode: "jit",
   theme: {
+    safelist: [
+      "animate-[tada]",
+      "animate-[fade-in_1s_ease-in-out]",
+      "animate-[slide-right_1s_ease-in-out]",
+    ],
     extend: {
       colors: {
         primary: "#232323",

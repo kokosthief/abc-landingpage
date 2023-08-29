@@ -9,7 +9,6 @@ import {
   CTA,
   Footer,
   Navbar,
-  Stats,
   Leaderboards,
   Tokenomics,
   Hero,

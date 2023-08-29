@@ -73,7 +73,7 @@ export const stats = [
   },
   {
     id: "stats-2",
-    title: "# of communities",
+    title: "communities",
     value: "30+",
   },
   {

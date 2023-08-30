@@ -1,10 +1,16 @@
+import React from "react";
+import { hero3 } from "../assets";
 import { lightning } from "../assets";
+
 const Hero3 = () => {
+  const sectionStyle = {
+    backgroundImage: `url(${hero3})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+
   return (
-    <section
-      id="hero2"
-      className="bg-[url('../../src/assets/hero3.jpeg')] bg-[24%]  md:bg-center 	bg-cover "
-    >
+    <section id="hero3" className="relative h-screen" style={sectionStyle}>
       <div className=" h-screen relative">
         <div
           className="absolute -bottom-12 text-center underline 	md:decoration-transparent	 decoration-sky-500 decoration-8 underline-offset-8

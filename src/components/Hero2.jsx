@@ -1,12 +1,18 @@
+import React from "react";
+import { herorobot } from "../assets";
+
 const Hero2 = () => {
+  const sectionStyle = {
+    backgroundImage: `url(${herorobot})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+
   return (
-    <section
-      id="hero2"
-      className="bg-[url('../../src/assets/hero-robot.png')] bg-center 	bg-cover "
-    >
-      <div className=" h-screen ">
-        <h1 class="pt-4 px-2 text-center md:text-left md:relative md:top-32 md:left-48 font-league font-bold text-6xl md:text-8xl xl:text-7xl text-white  tracking-normal mb-12">
-          a <span class="text-black ">new frontier</span>
+    <section id="hero2" className="relative h-screen" style={sectionStyle}>
+      <div className="absolute top-32 left-48 md:top-32 md:left-48">
+        <h1 className="pt-4 px-2 text-center md:text-left font-league font-bold text-6xl md:text-8xl xl:text-7xl text-white tracking-normal mb-12">
+          a <span className="text-black">new frontier</span>
           <br />
           for crypto
         </h1>

@@ -3,7 +3,7 @@ import styles from "../style";
 
 const Integrations = () => (
   <section className={`${styles.flexCenter} my-4  `}>
-    <div className={`${styles.flexCenter} hidden sm:flex flex-wrap w-full`}>
+    <div className={`${styles.flexCenter} hidden sm:flex flex-wrap w-full `}>
       {integrations.map((integration) => (
         <div
           key={integration.id}

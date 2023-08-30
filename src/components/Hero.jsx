@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section id="home" className={``}>
       <div>
-        <section class="mb-40">
+        <section class="mb-20">
           <div class=" text-gray-800 text-center lg:text-left">
             <div class="container mx-auto xl:px-32">
               <div class="flex flex-col md:flex-row items-center py-2 md:py-24">

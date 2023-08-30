@@ -30,8 +30,14 @@ import zen from "./team-zen.jpeg";
 import kokos from "./team-kokos.png";
 import subscriptions from "./logo_abcsubscriptionsbot.jpeg";
 import herorobot from "./hero-robot.png";
+import roadmaprobot from "./roadmap1.png";
+import hero3 from "./hero3.jpeg";
+import lightning from "./lightning.svg";
 
 export {
+  lightning,
+  hero3,
+  roadmaprobot,
   mrser,
   zhaabbah,
   zen,

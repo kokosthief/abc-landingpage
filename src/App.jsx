@@ -13,7 +13,10 @@ import {
   Tokenomics,
   Hero,
   Hero2,
+  Hero3,
   AlphaHub,
+  HowToUse,
+  Roadmap,
 } from "./components";
 
 const App = () => (
@@ -38,6 +41,27 @@ const App = () => (
         </div>
       </div>
     </div>
+    <div className=" ">
+      <div className={` ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Hero3 />
+        </div>
+      </div>
+    </div>
+    <div className="bg-hero2-gradient ">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <HowToUse />
+        </div>
+      </div>
+    </div>
+    <div className="bg-hero2-gradient ">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Roadmap />
+        </div>
+      </div>
+    </div>
     <div className="bg-hero2-gradient ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
@@ -45,7 +69,6 @@ const App = () => (
         </div>
       </div>
     </div>
-
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         {/* <Features />
@@ -53,10 +76,11 @@ const App = () => (
         <CredibleCallers />
         <Trending />
         <Leaderboards />
-        <Team />
+        <Team /> */}
+        {/* <Tokenomics /> */}
         <Integrations />
-        <Tokenomics />
-        <CTA /> */}
+
+        {/* <CTA /> */}
         <Footer />
       </div>
     </div>

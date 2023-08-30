@@ -12,6 +12,8 @@ import {
   Leaderboards,
   Tokenomics,
   Hero,
+  Hero2,
+  AlphaHub,
 } from "./components";
 
 const App = () => (
@@ -28,24 +30,33 @@ const App = () => (
           <Hero />
         </div>
       </div>
-      {/* <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+    </div>
+    <div className=" ">
+      <div className={` ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Stats />
+          <Hero2 />
         </div>
-      </div> */}
+      </div>
+    </div>
+    <div className="bg-hero2-gradient ">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <AlphaHub />
+        </div>
+      </div>
     </div>
 
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        {/* <Features /> */}
-        {/* <Vision /> */}
-        {/* <CredibleCallers /> */}
-        {/* <Trending /> */}
-        {/* <Leaderboards /> */}
-        {/* <Team /> */}
-        {/* <Integrations /> */}
-        {/* <Tokenomics /> */}
-        {/* <CTA /> */}
+        {/* <Features />
+        <Vision />
+        <CredibleCallers />
+        <Trending />
+        <Leaderboards />
+        <Team />
+        <Integrations />
+        <Tokenomics />
+        <CTA /> */}
         <Footer />
       </div>
     </div>

@@ -21,11 +21,11 @@ const Leaderboards = () => (
       </div>
     </div>
 
-    {/* <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
+    <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
       {feedback.map((card) => (
         <TopCallers key={card.id} {...card} />
       ))}
-    </div> */}
+    </div>
   </section>
 );
 

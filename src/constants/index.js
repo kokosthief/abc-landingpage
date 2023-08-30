@@ -100,22 +100,26 @@ export const footerLinks = [
         name: "ABC Trending",
         link: "https://telegram.me/ABCTrending",
       },
+      {
+        name: "ABC Subscriptions",
+        link: "https://telegram.me/ABCSubscriptionsBot",
+      },
     ],
   },
   {
     title: "Community",
     links: [
       {
-        name: "Telegram",
-        link: "https://t.me/AlphaBotCalls",
+        name: "Blog",
+        link: "https://medium.com/@alphabotcalls",
       },
       {
         name: "Twitter",
         link: "",
       },
       {
-        name: "Blog",
-        link: "https://medium.com/@alphabotcalls",
+        name: "Telegram",
+        link: "https://t.me/AlphaBotCalls",
       },
     ],
   },
@@ -123,12 +127,12 @@ export const footerLinks = [
     title: "AlphaBotCalls",
     links: [
       {
-        name: "Etherscan",
-        link: "https://etherscan.io/token/0xD4d4B7b55B30fB096C30ad202e746d010B47dc30",
-      },
-      {
         name: "Support",
         link: "https://telegram.me/MisterS3R",
+      },
+      {
+        name: "Etherscan",
+        link: "https://etherscan.io/token/0xD4d4B7b55B30fB096C30ad202e746d010B47dc30",
       },
       {
         name: "Become a Partner",

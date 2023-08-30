@@ -64,6 +64,18 @@
     #c943e6 90.29%
   );
 }
+
+.bg-hero2-gradient {
+  background: linear-gradient(
+    90deg,
+    #034aad -43.27%,
+    #4253bb -21.24%,
+    #6359c5 12.19%,
+    #8f61d2 29.82%,
+    #a866da 51.94%,
+    #c86be4 90.29%
+  );
+}
 .bg-orange-gradient {
   background: linear-gradient(
     157.81deg,

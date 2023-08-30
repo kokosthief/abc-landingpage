@@ -29,6 +29,7 @@ import zhaabbah from "./team-zhaabbah.jpeg";
 import zen from "./team-zen.jpeg";
 import kokos from "./team-kokos.png";
 import subscriptions from "./logo_abcsubscriptionsbot.jpeg";
+import herorobot from "./hero-robot.png";
 
 export {
   mrser,
@@ -62,4 +63,5 @@ export {
   people02,
   people03,
   subscriptions,
+  herorobot,
 };

@@ -6,7 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 export default function Roadmap() {
   return (
-    <div className="h-screen mx-auto">
+    <div className="h-auto mx-auto">
       <div className="mx-auto max-w-2xl sm:text-center">
         <h2 className="font-league font-bold text-6xl md:text-6xl xl:text-6xl text-white  tracking-normal mb-6">
           roadmap
@@ -28,15 +28,15 @@ export default function Roadmap() {
               "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
           }}
           date="2023 - August"
-          dateClassName="sm:text-white text-black   "
+          dateClassName="lg:text-white text-black font-arcade  uppercase    "
           iconStyle={{ background: "#fed5c0", color: "#fff" }}
           textClassName="text-black text-lg font-semibold "
           //   icon={roadmaprobot}
         >
-          <h3 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-tight text-black vertical-timeline-element-title">
+          <h3 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-normal text-black vertical-timeline-element-title">
             launch and
           </h3>
-          <h4 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-tight text-black vertical-timeline-element-subtitle">
+          <h4 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-normal text-black vertical-timeline-element-subtitle">
             adoption 🔤
           </h4>
           <ul className="list-disc list-inside	">
@@ -58,15 +58,15 @@ export default function Roadmap() {
               "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
           }}
           date="2023 - July"
-          dateClassName="text-white text-lg"
+          dateClassName="lg:text-white text-black font-arcade  uppercase   "
           iconStyle={{ background: "#fec0ca", color: "#fec0ca" }}
           textClassName="text-black text-lg font-semibold "
           //   icon={roadmaprobot}
         >
-          <h3 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-tight text-black vertical-timeline-element-title">
+          <h3 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-normal text-black vertical-timeline-element-title">
             Updates and
           </h3>
-          <h4 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-tight text-black vertical-timeline-element-subtitle">
+          <h4 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-normal text-black vertical-timeline-element-subtitle">
             Community Building 🔤
           </h4>
           <ul className="list-disc list-inside	">
@@ -89,15 +89,15 @@ export default function Roadmap() {
               "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
           }}
           date="2023 - August"
-          dateClassName="text-white text-lg"
+          dateClassName="lg:text-white text-black font-arcade  uppercase   "
           iconStyle={{ background: "#fec0e9", color: "#fff" }}
           textClassName="text-black text-lg font-semibold "
           //   icon={roadmaprobot}
         >
-          <h3 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-tight text-black vertical-timeline-element-title">
+          <h3 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-normal text-black vertical-timeline-element-title">
             Monetize and
           </h3>
-          <h4 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-tight text-black vertical-timeline-element-subtitle">
+          <h4 className="md:text-4xl xl:text-7xl font-league text-2xl sm:text-2xl font-bold tracking-normal text-black vertical-timeline-element-subtitle">
             Give Back to Holders 🔤
           </h4>
           <ul className="list-disc list-inside	">

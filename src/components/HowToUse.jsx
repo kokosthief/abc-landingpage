@@ -3,7 +3,7 @@ import React from "react";
 const HowToUse = () => {
   return (
     <section id="howtouse" className="h-max">
-      <div className=" my-24 mx-auto md:px-6">
+      <div className="pt-24 sm:pt-56 sm:pb-8 mx-auto ">
         <section className=" bg-white mb-32  rounded-3xl">
           <div className="px-6 py-12 text-center md:px-12 lg:text-left">
             <div className="container mx-auto">

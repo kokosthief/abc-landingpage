@@ -59,7 +59,7 @@ export default function Navbar() {
         />
       </a>
       <Popover className="">
-        <Popover.Button className="hidden xs:inline-flex items-center gap-x-1 text-sm xs:text-md sm:text-lg md:text-xl font-bold font-arcade text-white leading-6 ">
+        <Popover.Button className="hidden  xs:inline-flex items-center gap-x-1 text-sm xs:text-md sm:text-lg md:text-xl font-bold font-arcade text-white leading-6 focus:ring-0 ">
           <h1>ALPHA BOT CALLS</h1>
           <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
         </Popover.Button>
@@ -74,7 +74,7 @@ export default function Navbar() {
           leaveTo="opacity-0 translate-y-1"
         >
           <Popover.Panel className="absolute left-1/2 md:left-1/3 lg:left-1/4 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
-            <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+            <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ">
               <div className="p-4">
                 {solutions.map((item) => (
                   <div

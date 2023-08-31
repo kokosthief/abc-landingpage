@@ -21,7 +21,6 @@ import {
 const App = () => (
   <div className="w-full overflow-hidden">
     <Hero />
-
     <div className=" ">
       <div className={` ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
@@ -46,18 +45,32 @@ const App = () => (
     <div className="bg-hero2-gradient ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Roadmap />
+          <AlphaHub />
         </div>
       </div>
     </div>
     <div className="bg-hero2-gradient ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <AlphaHub />
+          <Roadmap />
         </div>
       </div>
     </div>
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+    <div className="bg-hero2-gradient ">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>{/* <Integrations /> */}</div>
+      </div>
+    </div>
+    <div className="bg-hero-gradient ">
+      <div className={`${styles.paddingX} ${styles.flexCenter}  `}>
+        <div className={`${styles.boxWidth}`}>
+          <Tokenomics />
+        </div>
+      </div>
+    </div>
+    <div
+      className={`bg-gradient-to-r from-gray-700 via-gray-900 to-black ${styles.paddingX} ${styles.flexCenter}`}
+    >
       <div className={`${styles.boxWidth}`}>
         {/* <Features />
         <Vision />
@@ -65,8 +78,6 @@ const App = () => (
         <Trending />
         <Leaderboards />
         <Team /> */}
-        {/* <Tokenomics /> */}
-        <Integrations />
 
         {/* <CTA /> */}
         <Footer />

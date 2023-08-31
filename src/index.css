@@ -76,6 +76,13 @@
     #c86be4 90.29%
   );
 }
+.bg-hero-gradient {
+  background: linear-gradient(
+    rgb(17, 24, 39),
+    rgb(88, 28, 135),
+    rgb(124, 58, 237)
+  );
+}
 .bg-orange-gradient {
   background: linear-gradient(
     157.81deg,

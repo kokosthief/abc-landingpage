@@ -6,11 +6,14 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 export default function Roadmap() {
   return (
-    <div className="h-auto mx-auto">
+    <div className="h-auto sm:mx-auto -mt-20 mb-32 -mx-2">
       <div className="mx-auto max-w-2xl sm:text-center">
-        <h2 className="font-league font-bold text-6xl md:text-6xl xl:text-6xl text-white  tracking-normal mb-6">
-          roadmap
-        </h2>
+        <h1 className=" font-league font-bold text-white pt-16 text-6xl xs:mt-16 sm:text-8xl  md:text-8xl xl:text-9xl  ">
+          <span className="text-[white] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            roadmap
+          </span>
+        </h1>
+
         <p className="font-spacegrotesk my-6 text-xl sm:text-2xl leading-8 text-white">
           we've come a long way already and continue to build
         </p>

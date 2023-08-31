@@ -1,9 +1,9 @@
 import React from "react";
-import { herorobot } from "../assets";
+import { hero1 } from "../assets";
 
 const Hero2 = () => {
   const sectionStyle = {
-    backgroundImage: `url(${herorobot})`,
+    backgroundImage: `url(${hero1})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   };

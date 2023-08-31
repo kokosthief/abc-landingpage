@@ -14,12 +14,12 @@ const HowToUse = () => {
                     <br />
                     <span className=" text-pink-400">in your community</span>
                   </h1>
-                  <p className="font-spacegrotesk font-bold  text-xl  text-black">
+                  <p className="font-spacegrotesk font-bold text-md sm:text-xl  text-black">
                     <ol className="list-inside list-decimal leading-10">
                       <li>
                         add{" "}
                         <a
-                          className="text-pink-400"
+                          className="text-pink-400 shadow hover:text-2xl"
                           target="_blank"
                           rel="noopener noreferrer"
                           href="https://t.me/ABCAlphaBot?startgroup=true"
@@ -28,9 +28,40 @@ const HowToUse = () => {
                         </a>{" "}
                         to group{" "}
                       </li>
-                      <li>make calls using /call command</li>
-                      <li>track previous calls with /checkcalls command</li>
-                      <li>engage your community</li>
+                      <li>
+                        <a
+                          className="text-pink-400 shadow hover:text-2xl"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
+                        >
+                          /call
+                        </a>{" "}
+                        - make your next 100x call
+                      </li>
+
+                      <li>
+                        <a
+                          className="text-pink-400 shadow hover:text-2xl"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
+                        >
+                          /checkcalls
+                        </a>{" "}
+                        - return a list of current active calls
+                      </li>
+                      <li>
+                        <a
+                          className="text-pink-400 shadow hover:text-2xl"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
+                        >
+                          /stats
+                        </a>{" "}
+                        - check your stats and ranking
+                      </li>
                     </ol>
                   </p>
                 </div>

@@ -17,19 +17,19 @@ export default function Roadmap() {
       </div>
       <VerticalTimeline>
         <VerticalTimelineElement
-          className="mb-12 vertical-timeline-element--work md:pr-0 pr-[40px]  "
+          className="mb-12 vertical-timeline-element--work "
           contentArrowStyle={{
-            borderRight: "7px solid  pink  ",
+            borderRight: "7px solid  #fed5c0  ",
           }}
           contentStyle={{
-            background: "pink",
+            background: "#fed5c0",
             borderRadius: "25px",
             boxShadow:
               "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
           }}
           date="2023 - August"
-          dateClassName="text-white text-lg"
-          iconStyle={{ background: "pink", color: "#fff" }}
+          dateClassName="sm:text-white text-black   "
+          iconStyle={{ background: "#fed5c0", color: "#fff" }}
           textClassName="text-black text-lg font-semibold "
           //   icon={roadmaprobot}
         >
@@ -47,19 +47,19 @@ export default function Roadmap() {
           </ul>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          className="mb-12 vertical-timeline-element--work md:pr-0 pr-[40px]  "
+          className="mb-12 vertical-timeline-element--work   "
           contentArrowStyle={{
-            borderRight: "7px solid  pink  ",
+            borderRight: "7px solid  #fec0ca  ",
           }}
           contentStyle={{
-            background: "pink",
+            background: "#fec0ca",
             borderRadius: "25px",
             boxShadow:
               "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
           }}
           date="2023 - July"
           dateClassName="text-white text-lg"
-          iconStyle={{ background: "pink", color: "#fff" }}
+          iconStyle={{ background: "#fec0ca", color: "#fec0ca" }}
           textClassName="text-black text-lg font-semibold "
           //   icon={roadmaprobot}
         >
@@ -78,19 +78,19 @@ export default function Roadmap() {
           </ul>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          className="mb-12 vertical-timeline-element--work md:pr-0 pr-[40px]  "
+          className="mb-12 vertical-timeline-element--work   "
           contentArrowStyle={{
-            borderRight: "7px solid  pink  ",
+            borderRight: "7px solid  #fec0e9  ",
           }}
           contentStyle={{
-            background: "pink",
+            background: "#fec0e9",
             borderRadius: "25px",
             boxShadow:
               "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
           }}
           date="2023 - August"
           dateClassName="text-white text-lg"
-          iconStyle={{ background: "pink", color: "#fff" }}
+          iconStyle={{ background: "#fec0e9", color: "#fff" }}
           textClassName="text-black text-lg font-semibold "
           //   icon={roadmaprobot}
         >

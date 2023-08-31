@@ -19,11 +19,11 @@ const Stats = () => (
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h4 className="font-league font-semibold text-4xl sm:text-6xl md:text-6xl leading-[43.16px] text-white">
+          <h4 className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-league font-semibold text-6xl sm:text-6xl md:text-6xl leading-[43.16px] text-white">
             {stat.value}
           </h4>
         </motion.div>
-        <p className="font-league font-bold text-3xl sm:text-5xl md:text-4xl leading-[31.58px] text-black ml-3 sm:ml-4 md:ml-3">
+        <p className="font-league font-bold text-4xl sm:text-5xl md:text-4xl leading-[31.58px] text-black ml-3 sm:ml-4 md:ml-3">
           {stat.title}
         </p>
       </div>

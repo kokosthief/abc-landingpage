@@ -6,18 +6,20 @@ import {
   discordcircle,
   mediumcircle,
 } from "../assets";
+import Navbar from "./Navbar";
 import Stats from "./Stats";
 
 const Hero = () => {
   return (
-    <section id="home" className={``}>
+    <section id="home" className={`h-screen`}>
       <div>
         <section class="mb-20">
-          <div class=" text-gray-800 text-center lg:text-left">
+          <Navbar />
+          <div class=" text-gray-800 text-center md:text-left">
             <div class="container mx-auto xl:px-32">
               <div class="flex flex-col md:flex-row items-center py-2 md:py-24">
                 <div class="mt-6 lg:mt-0 basis-7/12 ">
-                  <h1 class="  font-league font-bold text-6xl md:text-8xl xl:text-7xl text-white   tracking-normal mb-12">
+                  <h1 class="font-league font-bold text-4xl xs:text-5xl sm:text-6xl md:text-8xl xl:text-7xl text-white   tracking-normal mb-12">
                     the 1st gamified <br />
                     <span class="text-black ">caller ecosystem</span>
                   </h1>
@@ -60,6 +62,7 @@ const Hero = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://twitter.com/alphabotcalls"
+                        className="hidden xs:flex "
                       >
                         <img
                           src={twittercircle}
@@ -82,7 +85,7 @@ const Hero = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://discord.gg/CQ6txJa8RA"
-                        className="hidden md:flex "
+                        className="hidden xs:flex "
                       >
                         <img
                           src={discordcircle}
@@ -94,7 +97,7 @@ const Hero = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://medium.com/@alphabotcalls"
-                        className="hidden md:flex "
+                        className="hidden sm:flex "
                       >
                         <img
                           src={mediumcircle}

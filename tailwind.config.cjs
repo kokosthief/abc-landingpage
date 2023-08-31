@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,jsx}",
-    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx,js,cjs,mjs,ts}",
   ],
   mode: "jit",
   theme: {

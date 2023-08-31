@@ -32,11 +32,13 @@ import subscriptions from "./logo_abcsubscriptionsbot.jpeg";
 import herorobot from "./hero-robot.png";
 import roadmaprobot from "./roadmap1.png";
 import hero3 from "./hero3.jpeg";
+import hero4 from "./hero4.svg";
 import lightning from "./lightning.svg";
 
 export {
   lightning,
   hero3,
+  hero4,
   roadmaprobot,
   mrser,
   zhaabbah,

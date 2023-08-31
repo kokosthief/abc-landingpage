@@ -8,7 +8,6 @@ import {
   Integrations,
   CTA,
   Footer,
-  Navbar,
   Leaderboards,
   Tokenomics,
   Hero,
@@ -22,12 +21,6 @@ import {
 const App = () => (
   <div className="w-full overflow-hidden">
     <div className="bg-hero1-gradient ">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
-        </div>
-      </div>
-
       <div className={` ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Hero />

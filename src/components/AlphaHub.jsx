@@ -53,8 +53,8 @@ export default function AlphaHub() {
               ))}
             </ul>
           </div>
-          <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-            <div className="rounded-2xl bg-hero1-gradient opacity-76 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+          <div className="-mt-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0  self-center">
+            <div className="rounded-2xl outline outline-4 outline-white bg-hero1-gradient opacity-76 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
               <div className="mx-auto max-w-xs px-8">
                 <p className="font-arcade text-base font-semibold text-white">
                   Start Your Alpha Journey

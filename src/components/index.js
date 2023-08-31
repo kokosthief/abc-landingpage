@@ -10,6 +10,7 @@ import Leaderboards from "./Leaderboards";
 import Hero from "./Hero";
 import Hero2 from "./Hero2";
 import Hero3 from "./Hero3";
+// import Hero4 from "./Hero4";
 import Team from "./Team";
 import Tokenomics from "./Tokenomics";
 import Features from "./Features";
@@ -34,6 +35,7 @@ export {
   Hero,
   Hero2,
   Hero3,
+  // Hero4,
   Features,
   AlphaHub,
 };

@@ -1,17 +1,17 @@
 import React from "react";
-import { herorobot } from "../assets";
+import { hero4 } from "../assets";
 
 const Hero2 = () => {
   const sectionStyle = {
-    backgroundImage: `url(${herorobot})`,
+    backgroundImage: `url(${hero4})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
 
   return (
     <section id="hero2" className="relative h-screen" style={sectionStyle}>
-      <div className="flex font-league font-bold text-white tracking-normal mb-12 ">
-        <h1 className="w-max mx-auto pt-16 text-center text-6xl xs:mt-16 sm:text-8xl  md:ml-20 lg:ml-24  md:text-left md:text-8xl xl:text-9xl  ">
+      <div className="absolute top-32 left-48 md:top-32 md:left-48">
+        <h1 className="pt-4 px-2 text-center md:text-left font-league font-bold text-6xl md:text-8xl xl:text-7xl text-white tracking-normal mb-12">
           a <span className="text-black">new frontier</span>
           <br />
           for crypto

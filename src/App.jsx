@@ -20,13 +20,8 @@ import {
 
 const App = () => (
   <div className="w-full overflow-hidden">
-    <div className="bg-hero1-gradient ">
-      <div className={` ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Hero />
-        </div>
-      </div>
-    </div>
+    <Hero />
+
     <div className=" ">
       <div className={` ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>

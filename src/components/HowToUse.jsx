@@ -14,9 +14,20 @@ const HowToUse = () => {
                     <br />
                     <span className=" text-pink-400">in your community</span>
                   </h1>
-                  <p className="font-spacegrotesk mt-6 text-xl leading-7 text-black">
-                    <ol className="list-inside	list-decimal		">
-                      <li>add bot to group</li>
+                  <p className="font-spacegrotesk font-bold  text-xl  text-black">
+                    <ol className="list-inside list-decimal leading-10">
+                      <li>
+                        add{" "}
+                        <a
+                          className="text-pink-400"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://t.me/ABCAlphaBot?startgroup=true"
+                        >
+                          @ABCAlphaBot
+                        </a>{" "}
+                        to group{" "}
+                      </li>
                       <li>make calls using /call command</li>
                       <li>track previous calls with /checkcalls command</li>
                       <li>engage your community</li>

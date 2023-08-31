@@ -29,7 +29,7 @@ import zhaabbah from "./team-zhaabbah.jpeg";
 import zen from "./team-zen.jpeg";
 import kokos from "./team-kokos.png";
 import subscriptions from "./logo_abcsubscriptionsbot.jpeg";
-import herorobot from "./hero1.png";
+import hero1 from "./hero1.png";
 import roadmaprobot from "./roadmap1.png";
 import hero3 from "./hero3.jpeg";
 import hero4 from "./hero4.svg";
@@ -71,5 +71,5 @@ export {
   people02,
   people03,
   subscriptions,
-  herorobot,
+  hero1,
 };

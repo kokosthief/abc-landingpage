@@ -23,7 +23,7 @@ const Stats = () => (
             {stat.value}
           </h4>
         </motion.div>
-        <p className="font-league font-bold text-2xl xs:text-3xl ss:text-3xl sm:text-3xl lg:text-4xl leading-[31.58px] text-black ml-3 sm:ml-4 md:ml-3">
+        <p className="font-league font-bold text-2xl xs:text-3xl ss:text-3xl sm:text-3xl lg:text-4xl leading-[31.58px] text-[#0a0a0a] ml-3 sm:ml-4 md:ml-3">
           {stat.title}
         </p>
       </div>

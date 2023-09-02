@@ -1,6 +1,5 @@
 import styles from "../style";
 import {
-  abccolorlogo,
   abcbricklogo,
   twittercircle,
   telegramcircle,
@@ -17,12 +16,12 @@ const Hero = () => {
       className={`-mb-10 pb-10  h-full sm:h-fit md:h-screen lg:h-full sm:pb-16 bg-[linear-gradient(to_bottom,_#FD7553,_#D84261)]`}
     >
       <Navbar />
-      <div class="container mx-auto -mt-7 sm:mt-0 sm:py-14 md:py-16 lg:py-20 xl:py-24">
-        <div class="flex flex-col-reverse	 sm:flex-row items-center justify-around ">
-          <div class="mt-6 lg:mt-0 ss:text-left  ">
-            <h1 class="whitespace-nowrap overflow-hidden font-league font-bold  text-4xl ss:text-5xl sm:text-6xl md:text-7xl text-white tracking-normal mb-12">
-              the 1st gamified <br />
-              <span class="text-black ">caller ecosystem</span>
+      <div class="container mx-auto -mt-7 sm:mt-0 sm:py-10 md:py-16 lg:py-20 xl:py-24 ">
+        <div class="flex flex-col-reverse	 sm:flex-row items-center justify-around sm:justify-between ">
+          <div class="mt-6 lg:mt-0 text-center ss:text-left ">
+            <h1 class="whitespace-nowrap overflow-hidden font-league font-bold text-4xl ss:text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-normal mb-12">
+              Gamifying Calls. <br />
+              <span class="text-[#0a0a0a] ">Finding Alpha.</span>
             </h1>
             <div className="flex flex-row gap-2 justify-center sm:justify-start ">
               <div className="flex">
@@ -39,7 +38,7 @@ const Hero = () => {
                     href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
                     class="relative self-center bg-white inline-block  px-8 py-4 mr-4 font-extrabold text-xl rounded-full"
                   >
-                    <span class="relative w-full text-center text-black ">
+                    <span class="relative w-full text-center text-[#0a0a0a] ">
                       Buy $ABC
                     </span>
                   </a>
@@ -69,7 +68,7 @@ const Hero = () => {
                   <img
                     src={telegramcircle}
                     alt="CredibleCallers"
-                    className="w-[60px] h-auto rounded-full hidden xs:flex"
+                    className="w-[60px] h-auto rounded-full hidden xs:flex "
                   />
                 </a>
                 <a
@@ -112,7 +111,7 @@ const Hero = () => {
             </div>
           </div>
           {/* abc logo */}
-          <div className="flex sm:ml-8 md:ml-0 mt-6 sm:my-auto  ">
+          <div className="flex sm:ml-8 md:ml-0 mt-6 sm:my-auto">
             <img
               src={abcbricklogo}
               alt="CredibleCallers"

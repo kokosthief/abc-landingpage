@@ -9,20 +9,22 @@ const includedFeatures = [
 
 export default function AlphaHub() {
   return (
-    <div className="-mt-20 pb-24 sm:pb-44 mx-auto max-w-8xl  lg:px-8">
-      <div className="mx-auto text-center">
-        <h1 className=" font-league font-bold text-white pt-16 text-6xl xs:mt-16 sm:text-8xl  md:text-8xl xl:text-9xl  ">
-          <span className="text-[white] ">alpha hub</span>
+    <div className="sm:pt-24 sm:pb-20 mx-auto max-w-8xl  lg:px-8 ">
+      <div className="mx-auto text-center overflow-clip">
+        <h1 className=" font-league font-bold pt-16 text-6xl  text-center  xs:text-5xl ss:text-6xl sm:text-6xl md:text-7xl lg:text--8xl xl:text-9xl text-white tracking-normal   ">
+          <span className="text-[white] ">Holder Benefits</span>
         </h1>
         <p className="font-spacegrotesk mt-6 text-xl sm:text-2xl leading-8 text-white">
-          access exclusive benefits by holding 2000 $ABC and play<br></br> an
-          important role in the gamification of making calls.
+          ABC is committed to maximizing token holder value through the creation
+          of premium, <br></br>
+          holder-exclusive features and access to our comprehensive revenue
+          sharing model.
         </p>
       </div>
       <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
         <div className="p-8 sm:p-10 lg:flex-auto">
           <h3 className="font-league text-4xl sm:text-5xl font-bold tracking-tight text-white">
-            exclusive ABC alpha hub features
+            ABC Alpha Hub
           </h3>
           <p className="font-spacegrotesk mt-6 text-xl leading-7 text-white">
             elevate your crypto journey being part of the ABC Alpha Hub and
@@ -63,12 +65,12 @@ export default function AlphaHub() {
                   2000
                 </span>
                 <span className="font-arcade text-sm font-semibold leading-6 tracking-wide text-white">
-                  $ALPHA
+                  $ABC
                 </span>
               </p>
               {/* <a
                   href="#"
-                  className="bg-white px-8 py-4 mr-4 font-extrabold text-xl rounded-full font-spacegrotesk mt-10 block w-full text-center   text-black shadow-sm"
+                  className="bg-white px-8 py-4 mr-4 font-extrabold text-xl rounded-full font-spacegrotesk mt-10 block w-full text-center   text-[#0a0a0a] shadow-sm"
                 >
                   GET ACCESS
                 </a> */}

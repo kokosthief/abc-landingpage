@@ -9,13 +9,26 @@ const Hero2 = () => {
   };
 
   return (
-    <section id="hero2" className=" h-screen    " style={sectionStyle}>
-      <div className="flex mx-auto mb-12 xl:max-w-screen-xl">
-        <h1 className="px-1 w-full pt-16  text-white tracking-normal font-league font-bold text-center text-6xl xs:mt-16 sm:text-8xl  md:ml-20 lg:ml-24  md:text-left md:text-8xl xl:text-9xl  ">
-          a <span className="text-black">new frontier</span>
-          <br />
-          for crypto
-        </h1>
+    <section id="hero2" className="  h-screen    " style={sectionStyle}>
+      <div className="flex flex-col mx-auto overflow-clip xl:max-w-screen-xl justify-around sm:justify-center sm:gap-8 h-full px-5 sm:px-20 md:px-28 lg:px-40">
+        <div className=" ">
+          <h1 className="font-league font-bold text-center md:text-left text-4xl xs:text-5xl ss:text-6xl sm:text-6xl md:text-7xl lg:text--8xl xl:text-9xl text-white tracking-normal   ">
+            Creating <br />
+            <span className="text-[#0a0a0a]">an Ecosystem </span>
+            <br />
+            of Gem-Finders
+          </h1>
+        </div>
+        <div className="  md:place-self-end">
+          <p className="my-4 bg-white rounded-3xl px-5 py-5 mx-auto md:mx-0 font-spacegrotesk font-bold text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl md:text-2xl xl:text-3xl max-w-md">
+            ABC tracks data and the performance of callers across all socials.
+            <br></br>
+          </p>
+          <p className="bg-white rounded-3xl px-5 py-5 mx-auto md:mx-0 font-spacegrotesk font-bold text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl md:text-2xl xl:text-3xl max-w-md">
+            Whether you're a seasoned gem-finder or just starting, ABC empowers
+            you to build a following and earn rewards for successful calls.
+          </p>
+        </div>
       </div>
     </section>
   );

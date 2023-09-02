@@ -1,14 +1,6 @@
 import styles from "./style";
 import {
-  CredibleCallers,
-  Vision,
-  Trending,
-  Features,
-  Team,
-  Integrations,
-  CTA,
   Footer,
-  Leaderboards,
   Tokenomics,
   Hero,
   Hero2,
@@ -16,25 +8,27 @@ import {
   AlphaHub,
   HowToUse,
   Roadmap,
+  Pricing,
 } from "./components";
 
 const App = () => (
   <div className="w-full overflow-hidden">
     <Hero />
-    <Hero2 />
     <Hero3 />
+    <Hero2 />
 
     <div className="bg-hero2-gradient ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <HowToUse />
+          <AlphaHub />
+          {/* <Pricing /> */}
         </div>
       </div>
     </div>
     <div className="bg-hero2-gradient ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <AlphaHub />
+          <HowToUse />
         </div>
       </div>
     </div>
@@ -59,14 +53,6 @@ const App = () => (
     </div>
     <div className={`bg-[#0a0a0a] ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        {/* <Features />
-        <Vision />
-        <CredibleCallers />
-        <Trending />
-        <Leaderboards />
-        <Team /> */}
-
-        {/* <CTA /> */}
         <Footer />
       </div>
     </div>

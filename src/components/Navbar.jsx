@@ -25,7 +25,7 @@ const solutions = [
   },
   {
     name: "ABC Alpha Hub",
-    description: "Hold $2000 $ALPHA to gain access",
+    description: "Hold $2000 $ABC to gain access",
     href: "https://telegram.me/alphaBotCalls",
     icon: UserGroupIcon,
   },
@@ -58,7 +58,7 @@ export default function Navbar() {
           className="relative w-[100px] h-[auto] p-2"
         />
       </a>
-      <h1 className="hidden  xs:inline-flex text-sm xs:text-md sm:text-lg md:text-xl  font-arcade text-white">
+      <h1 className="  xs:inline-flex text-sm xs:text-md sm:text-lg md:text-xl  font-arcade text-white">
         ALPHA BOT CALLS
       </h1>
 

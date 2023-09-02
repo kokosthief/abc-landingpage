@@ -10,31 +10,33 @@ const Hero3 = () => {
   };
 
   return (
-    <section id="hero3" className="h-screen" style={sectionStyle}>
-      <div className="flex flex-col xl:max-w-screen-xl h-screen justify-around sm:justify-center sm:justify-items-end">
-        <h1 className="w-fit mx-auto sm:mx-5 font-league font-bold text-center sm:text-left text-white text-6xl xs:mt-16 sm:text-8xl md:text-8xl xl:text-9xl">
-          <span className="text-[white]">gamifying </span>
-          <br />
-          <span className="">crypto</span>
-          <span className="text-black"> calling</span>
-        </h1>
-        <div className="flex flex-col-reverse sm:flex-row bg-white rounded-3xl mx-5 sm:px-5 sm:py-4 max-w-sm sm:max-w-3xl">
+    <section id="hero3" className=" h-screen    " style={sectionStyle}>
+      <div className="flex flex-col mx-auto overflow-clip xl:max-w-screen-xl justify-around sm:justify-center sm:gap-8 h-full px-5 sm:px-20 md:mr-20 lg:mr-40">
+        <div className=" md:place-self-end  sm:mr-7">
+          <h1 className="font-league font-bold text-center md:text-left text-4xl xs:text-5xl ss:text-6xl sm:text-6xl md:text-7xl lg:text--8xl xl:text-9xl text-white tracking-normal   ">
+            <span className="text-[white]">Gamifying </span>
+            <br />
+            <span className="">Crypto</span>
+            <span className="text-[#0a0a0a]"> Calling</span>
+          </h1>
+        </div>
+        <div className="gap-10 md:place-self-end flex flex-col-reverse md:flex-row ">
           <img
             src={lightning}
             alt="Lightning Strike"
-            className="w-[70px] md:w-[100px] mx-auto flex"
+            className="w-[70px] md:w-[100px] mx-auto flex "
           />
-          <div className="px-4 py-2 flex flex-col font-spacegrotesk font-bold text-black text-center text-1xl sm:text-2xl md:text-2xl xl:text-3xl">
-            <p className="">
-              a <span className="font-bold">fun and free </span>bot for
-              communities, whilst bringing transparency to callers.
+          <div className=" bg-white rounded-3xl px-5 py-5 mx-auto ">
+            <p className="font-spacegrotesk font-bold text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl md:text-2xl xl:text-3xl max-w-md">
+              AlphaBot is a{" "}
+              <span className="font-bold">fun, free and useful </span>utility
+              that tracks calls and brings transparency and competition to the
+              space.
             </p>
-            <p className="mt-4">
-              Anyone can use the bot to{" "}
-              <span className="font-bold">
-                track their calls, receive a ranking, and build their reputation{" "}
-              </span>{" "}
-              as an alpha hunter.
+            <p className="font-spacegrotesk font-bold text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl md:text-2xl xl:text-3xl max-w-md">
+              Anyone can use the bot to track their own calls,{" "}
+              <span className="font-bold">receive a score and ranking, </span>{" "}
+              and try to make it on the ABC Leaderboards.
             </p>
           </div>
         </div>

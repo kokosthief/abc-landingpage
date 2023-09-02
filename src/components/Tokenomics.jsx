@@ -9,8 +9,8 @@ const bullishPoints = [
 
 const Tokenomics = () => (
   <section class="">
-    <div class="container flex flex-wrap  py-40 mx-auto items-center">
-      <div class=" border-4 border-white px-6 shadow-2xl py-5 rounded-3xl md:w-1/2 md:pr-12 md:py-8 mb-10 md:mb-0 pb-10  ">
+    <div class="container flex flex-wrap  py-40 mx-auto">
+      <div class=" border-4 border-white px-6 shadow-2xl py-5 rounded-3xl sm:w-1/2 sm:pr-12 sm:py-8 mb-10 sm:mb-0 pb-10  ">
         <h3 className="font-league text-4xl sm:text-5xl font-bold tracking-tight text-[#E900CE]">
           tokenomics
         </h3>
@@ -32,8 +32,8 @@ const Tokenomics = () => (
           ))}
         </ul>
         <p className="font-spacegrotesk mt-6 text-xl leading-7 text-white">
-          initial liquidity is locked for 1 year and tax-added liquidity is
-          periodically burned (0.5% so far)
+          Liquidity is locked for 1 year and tax-added liquidity is periodically
+          burned.
         </p>
         <div
           className="md:hidden flex-shrink-0 pt-6            "
@@ -48,7 +48,7 @@ const Tokenomics = () => (
             href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
             class="relative self-center bg-white inline-block  px-8 py-4 mr-4 font-extrabold text-xl rounded-full"
           >
-            <span class="relative w-full text-center text-black ">
+            <span class="relative w-full text-center text-[#0a0a0a] ">
               Buy $ABC
             </span>
           </a>

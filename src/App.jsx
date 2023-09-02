@@ -14,15 +14,14 @@ import {
 const App = () => (
   <div className="w-full overflow-hidden">
     <Hero />
-    <Hero3 />
     <Hero2 />
+    <Hero3 />
+    <AlphaHub />
+    <Pricing />
 
     <div className="bg-hero2-gradient ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <AlphaHub />
-          {/* <Pricing /> */}
-        </div>
+        <div className={`${styles.boxWidth}`}></div>
       </div>
     </div>
     <div className="bg-hero2-gradient ">

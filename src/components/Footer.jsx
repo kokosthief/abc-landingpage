@@ -3,8 +3,12 @@ import { logo } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
 
 const Footer = () => (
-  <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
-    <div className={`${styles.flexStart} md:flex-row flex-col  mb-8 w-full`}>
+  <section
+    className={`${styles.flexCenter} ${styles.paddingY} flex-col bg-[#0a0a0a]`}
+  >
+    <div
+      className={`${styles.flexStart} md:flex-row flex-col  mb-8 w-full bg-[#0a0a0a]`}
+    >
       <div className="flex basis-3/12 flex-col mx-auto ">
         <img
           src={logo}
@@ -50,7 +54,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://twitter.com/alphabotcalls"
-            className="flex justify-center items-center text-gray-600 hover:text-gray-900 hover:bg-white-100 bg-white dark:bg-[#13171d] dark:text-[#fffefe] dark:hover:text-orange dark:bg- rounded-full shadow transition duration-150 ease-in-out"
+            className="flex justify-center items-center bg-white text-[#0a0a0a] rounded-full hover:text-orange shadow transition duration-200 ease-in-out"
             aria-label="Twitter"
           >
             <svg
@@ -67,7 +71,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://t.me/AlphaBotCalls"
-            className="flex justify-center items-center text-gray-600 hover:text-gray-900 hover:bg-white-100 bg-white dark:bg-[#13171d] dark:text-[#fffefe] dark:hover:text-orange dark:bg- rounded-full shadow transition duration-150 ease-in-out"
+            className="flex justify-center items-center bg-white text-[#0a0a0a] rounded-full hover:text-orange shadow transition duration-200 ease-in-out"
             aria-label="Telegram"
           >
             <svg
@@ -84,7 +88,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://dexscreener.com/ethereum/0xD4d4B7b55B30fB096C30ad202e746d010B47dc30"
-            className="flex justify-center items-center text-gray-600 hover:text-gray-900 hover:bg-white-100 bg-white dark:bg-[#13171d] dark:text-[#fffefe] dark:hover:text-orange dark:bg- rounded-full shadow transition duration-150 ease-in-out"
+            className="flex justify-center items-center bg-white text-[#0a0a0a] rounded-full hover:text-orange shadow transition duration-200 ease-in-out"
             aria-label="DexScreener"
           >
             <svg
@@ -106,7 +110,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://medium.com/@alphabotcalls"
-            className="flex justify-center items-center text-gray-600 hover:text-gray-900 hover:bg-white-100 bg-white dark:bg-[#13171d] dark:text-[#fffefe] dark:hover:text-orange dark:bg- rounded-full shadow transition duration-150 ease-in-out"
+            className="flex justify-center items-center bg-white text-[#0a0a0a] rounded-full hover:text-orange shadow transition duration-200 ease-in-out"
             aria-label="Medium"
           >
             <svg
@@ -123,18 +127,18 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.youtube.com/@AlphaBotCalls"
-            className="flex justify-center items-center text-gray-600 hover:text-gray-900 hover:bg-white-100 bg-white dark:bg-[#13171d] dark:text-[#fffefe] dark:hover:text-orange dark:bg- rounded-full shadow transition duration-150 ease-in-out"
+            className="flex justify-center items-center bg-white text-[#0a0a0a] rounded-full hover:text-orange shadow transition duration-200 ease-in-out"
             aria-label="Youtube"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-8 h-8 fill-current"
-              viewBox="-55.20005 -41.33325 355.0671 240.9995"
+              viewBox="-64 -31.5 360 215"
             >
               <path d="M229.763 25.817c-2.699-10.162-10.65-18.165-20.747-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.554 7.652 7.602 15.655 4.904 25.817 0 44.237 0 82.667 0 82.667s0 38.43 4.904 56.85c2.698 10.162 10.65 18.164 20.747 20.881 18.3 4.935 91.682 4.935 91.682 4.935s73.383 0 91.683-4.935c10.097-2.717 18.048-10.72 20.747-20.88 4.904-18.422 4.904-56.851 4.904-56.851s0-38.43-4.904-56.85" />
               <path
                 d="M93.333 117.558l61.334-34.89-61.334-34.893z"
-                fill="#242424"
+                fill="#ffffff"
               />
             </svg>
           </a>

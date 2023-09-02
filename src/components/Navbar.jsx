@@ -45,7 +45,7 @@ const callsToAction = [
 
 export default function Navbar() {
   return (
-    <nav className=" mx-auto flex flex-row grow w-full py-3 justify-center md:justify-start items-center navbar">
+    <nav className="xl:max-w-screen-xl md:px-14  mx-auto flex flex-row  py-3 justify-center md:justify-start items-center ">
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -58,7 +58,11 @@ export default function Navbar() {
           className="relative w-[100px] h-[auto] p-2"
         />
       </a>
-      <Popover className="">
+      <h1 className="hidden  xs:inline-flex text-sm xs:text-md sm:text-lg md:text-xl  font-arcade text-white">
+        ALPHA BOT CALLS
+      </h1>
+
+      {/* <Popover className="">
         <Popover.Button className="hidden  xs:inline-flex items-center gap-x-1 text-sm xs:text-md sm:text-lg md:text-xl font-bold font-arcade text-white leading-6 focus:ring-0 ">
           <h1>ALPHA BOT CALLS</h1>
           <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
@@ -122,7 +126,7 @@ export default function Navbar() {
             </div>
           </Popover.Panel>
         </Transition>
-      </Popover>
+      </Popover> */}
     </nav>
   );
 }

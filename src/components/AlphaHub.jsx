@@ -12,9 +12,7 @@ export default function AlphaHub() {
     <div className="-mt-20 pb-24 sm:pb-44 mx-auto max-w-8xl  lg:px-8">
       <div className="mx-auto text-center">
         <h1 className=" font-league font-bold text-white pt-16 text-6xl xs:mt-16 sm:text-8xl  md:text-8xl xl:text-9xl  ">
-          <span className="text-[white] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            alpha hub
-          </span>
+          <span className="text-[white] ">alpha hub</span>
         </h1>
         <p className="font-spacegrotesk mt-6 text-xl sm:text-2xl leading-8 text-white">
           access exclusive benefits by holding 2000 $ABC and play<br></br> an

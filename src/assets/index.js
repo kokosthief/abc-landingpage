@@ -7,6 +7,7 @@ import uniswap from "./uniswap.png";
 import logo from "./logo.png";
 import quotes from "./quotes.svg";
 import abccolorlogo from "./abclogo.png";
+import abcbricklogo from "./abclogo-brick.png";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
 import star from "./Star.svg";
@@ -53,6 +54,7 @@ export {
   logo,
   quotes,
   abccolorlogo,
+  abcbricklogo,
   send,
   shield,
   star,

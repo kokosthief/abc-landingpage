@@ -10,41 +10,32 @@ const Hero3 = () => {
   };
 
   return (
-    <section id="hero3" className="h-screen w-screen" style={sectionStyle}>
-      <div className="flex flex-col items-end  self-start sm:pr-10 pt-8">
-        <h1 className=" font-league font-bold text-white  w-fit  mx-auto sm:mx-0 pt-16 text-center text-6xl xs:mt-16 sm:text-8xl md:pr-20  md:text-left md:text-8xl xl:text-9xl  ">
-          <span className="text-[white] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            gamifying{" "}
-          </span>
+    <section id="hero3" className="h-screen" style={sectionStyle}>
+      <div className="flex flex-col xl:max-w-screen-xl h-screen justify-around sm:justify-center sm:justify-items-end">
+        <h1 className="w-fit mx-auto sm:mx-5 font-league font-bold text-center sm:text-left text-white text-6xl xs:mt-16 sm:text-8xl md:text-8xl xl:text-9xl">
+          <span className="text-[white]">gamifying </span>
           <br />
-          <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            crypto
-          </span>
+          <span className="">crypto</span>
           <span className="text-black"> calling</span>
         </h1>
-        <div className="px-10 sm:px-20 flex flex-col-reverse mx-auto sm:mx-0 gap-10 sm:flex-row pt-36 xs:pt-44 sm:pt-20 md:pt-28">
+        <div className="flex flex-col-reverse sm:flex-row bg-white rounded-3xl mx-5 sm:px-5 sm:py-4 max-w-sm sm:max-w-3xl">
           <img
             src={lightning}
             alt="Lightning Strike"
-            className=" w-[70px] md:w-[100px] mx-auto"
+            className="w-[70px] md:w-[100px] mx-auto flex"
           />
-          <div className="bg-white md:bg-transparent px-4 py-2 rounded-xl font-spacegrotesk text-black text-center sm:text-left  sm:max-w-md md:max-w-lg text-1xl sm:text-2xl md:text-2xl xl:text-3xl">
-            <div className="">
-              <p className="">
-                a <span className="font-bold">fun and free </span>bot for
-                communities, whilst bringing transparency to callers.
-              </p>
-            </div>
-            <div className="mt-4">
-              <p className="">
-                Anyone can use the bot to{" "}
-                <span className="font-bold">
-                  track their calls, receive a ranking, and build their
-                  reputation{" "}
-                </span>{" "}
-                as an alpha hunter.
-              </p>
-            </div>
+          <div className="px-4 py-2 flex flex-col font-spacegrotesk font-bold text-black text-center text-1xl sm:text-2xl md:text-2xl xl:text-3xl">
+            <p className="">
+              a <span className="font-bold">fun and free </span>bot for
+              communities, whilst bringing transparency to callers.
+            </p>
+            <p className="mt-4">
+              Anyone can use the bot to{" "}
+              <span className="font-bold">
+                track their calls, receive a ranking, and build their reputation{" "}
+              </span>{" "}
+              as an alpha hunter.
+            </p>
           </div>
         </div>
       </div>

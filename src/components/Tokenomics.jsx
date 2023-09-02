@@ -11,7 +11,7 @@ const Tokenomics = () => (
   <section class="">
     <div class="container flex flex-wrap  py-40 mx-auto items-center">
       <div class=" border-4 border-white px-6 shadow-2xl py-5 rounded-3xl md:w-1/2 md:pr-12 md:py-8 mb-10 md:mb-0 pb-10  ">
-        <h3 className="font-league text-4xl sm:text-5xl font-bold tracking-tight text-pink-400">
+        <h3 className="font-league text-4xl sm:text-5xl font-bold tracking-tight text-[#E900CE]">
           tokenomics
         </h3>
         <ul
@@ -60,8 +60,8 @@ const Tokenomics = () => (
             href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
             class="relative self-center overflow-hidden inline-block px-8 py-4 mr-4 font-extrabold text-xl rounded-full group focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] shadow-lg"
           >
-            <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-            <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+            <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-[white] opacity-[3%]"></span>
+            <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-[#E900CE] opacity-100 group-hover:-translate-x-8"></span>
             <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
               Buy $ABC
             </span>
@@ -70,19 +70,19 @@ const Tokenomics = () => (
         </div>
       </div>
       <div class="flex flex-col text-center sm:text-right grow justify-between gap-4">
-        <h3 className="font-league text-9xl tracking-widest -mr-4 text-gradient-to-r from-rose-700 to-pink-600 mt-1 bg-gradient-to-r  bg-clip-text font-extrabold uppercase  text-transparent ">
+        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text font-extrabold uppercase  text-transparent ">
           1M
         </h3>
         <h4 className="font-league flex-none text-3xl -mt-7 mb-3 font-semibold leading-6 text-white">
           total supply
         </h4>
-        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-gradient-to-r from-teal-200 to-lime-200 mt-1  bg-clip-text font-extrabold uppercase  text-transparent ">
+        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-[linear-gradient(to_bottom,_#FF7892,_#FF8661)] mt-1  bg-clip-text font-extrabold uppercase  text-transparent ">
           .5%
         </h3>
         <h4 className="font-league flex-none text-3xl -mt-7 mb-3 font-semibold leading-6 text-white">
           supply burned
         </h4>{" "}
-        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-gradient-to-r from-gray-100 to-gray-300  bg-clip-text font-extrabold uppercase  text-transparent ">
+        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-[#FFB762] bg-clip-text font-extrabold uppercase  text-transparent ">
           4%
         </h3>
         <h4 className="font-league flex-none text-3xl -mt-7 mb-3 font-semibold leading-6 text-white">

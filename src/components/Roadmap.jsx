@@ -9,9 +9,7 @@ export default function Roadmap() {
     <div className="h-auto sm:mx-auto -mt-20 mb-32 -mx-2">
       <div className="mx-auto max-w-2xl sm:text-center">
         <h1 className=" font-league font-bold text-white pt-16 text-6xl xs:mt-16 sm:text-8xl  md:text-8xl xl:text-9xl  ">
-          <span className="text-[white] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            roadmap
-          </span>
+          <span className="text-[white] ">roadmap</span>
         </h1>
 
         <p className="font-spacegrotesk my-6 text-xl sm:text-2xl leading-8 text-white">

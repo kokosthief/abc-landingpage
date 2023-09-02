@@ -21,20 +21,9 @@ import {
 const App = () => (
   <div className="w-full overflow-hidden">
     <Hero />
-    <div className=" ">
-      <div className={` ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Hero2 />
-        </div>
-      </div>
-    </div>
-    <div className=" ">
-      <div className={` ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Hero3 />
-        </div>
-      </div>
-    </div>
+    <Hero2 />
+    <Hero3 />
+
     <div className="bg-hero2-gradient ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
@@ -68,9 +57,7 @@ const App = () => (
         </div>
       </div>
     </div>
-    <div
-      className={`bg-gradient-to-r from-gray-700 via-gray-900 to-black ${styles.paddingX} ${styles.flexCenter}`}
-    >
+    <div className={`bg-[#0a0a0a] ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         {/* <Features />
         <Vision />

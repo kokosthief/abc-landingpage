@@ -5,11 +5,11 @@ const HowToUse = () => {
     <section id="howtouse" className="h-max">
       <div className="pt-24 sm:pt-56 sm:pb-8 mx-auto ">
         <section className=" bg-white mb-32  rounded-3xl">
-          <div className="px-6 py-12 text-center md:px-12 lg:text-left">
+          <div className="px-6 py-12 text-left md:px-12">
             <div className="container mx-auto">
               <div className="grid items-center gap-12 lg:grid-cols-2">
                 <div className="mt-12 lg:mt-0">
-                  <h1 className="font-league text-4xl sm:text-5xl font-bold tracking-tight text-[#0a0a0a] mb-12 md:text-6xl xl:text-7xl">
+                  <h1 className="font-league text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#0a0a0a] mb-12 md:text-6xl xl:text-7xl">
                     How to Use AlphaBot Bot
                     <br />
                     <span className=" text-pink-400">in Your Community</span>

@@ -18,15 +18,15 @@ const HowToUse = () => {
                   <p className="font-spacegrotesk font-bold text-md sm:text-xl  text-[#0a0a0a]">
                     <ol className="list-inside list-decimal ">
                       <a
-                        className="text-pink-400"
+                        className=""
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://t.me/ABCAlphaBot?startgroup=true"
                       >
-                        <li className="block w-full cursor-pointer rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-300 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
+                        <li className="block w-full cursor-pointer rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
                           1. Install AlphaBot in{" "}
                           <a
-                            className="text-pink-400"
+                            className="text-pink-400 hover:text-white"
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://t.me/ABCAlphaBot?startgroup=true"
@@ -35,7 +35,7 @@ const HowToUse = () => {
                           </a>{" "}
                           or{" "}
                           <a
-                            className="text-pink-400  "
+                            className="text-pink-400  hover:text-white  "
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://discord.com/api/oauth2/authorize?client_id=1141380686188662884&permissions=534723951680&scope=bot"
@@ -58,7 +58,7 @@ const HowToUse = () => {
                         rel="noopener noreferrer"
                         href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
                       >
-                        <li className="ml-5 block w-full cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-300 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
+                        <li className=" block w-full cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
                           <a
                             className="text-pink-400 "
                             target="_blank"
@@ -75,7 +75,7 @@ const HowToUse = () => {
                         rel="noopener noreferrer"
                         href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
                       >
-                        <li className="ml-5 block w-full cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-300 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
+                        <li className=" block w-full cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
                           <a
                             className="text-pink-400  "
                             target="_blank"
@@ -93,7 +93,7 @@ const HowToUse = () => {
                         rel="noopener noreferrer"
                         href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
                       >
-                        <li className="ml-5 block w-full cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-300 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
+                        <li className=" block w-full cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
                           <a
                             className="text-pink-400  "
                             target="_blank"

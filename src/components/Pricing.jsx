@@ -5,6 +5,8 @@ import {
   ShieldCheckIcon,
 } from "@heroicons/react/20/solid";
 
+import { tierdiamond, tiergold } from "../assets";
+
 const bullishPoints = [
   "total token supply: 1,000,000",
   "100% of supply added",
@@ -12,213 +14,263 @@ const bullishPoints = [
   "max wallet: 2%",
 ];
 
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Button,
+  Tooltip,
+  IconButton,
+} from "@material-tailwind/react";
+
 const Pricing = () => (
   <section class="bg-hero2-gradient">
     <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
-        <div class="rounded-2xl border-4 bg-gradient-to-b from-sky-400 to-sky-200 border-white p-6 shadow-sm ring-1 ring-indigo-600 sm:order-last sm:px-8 lg:p-12">
-          <div class="text-center">
-            <h2 class="font-league text-4xl sm:text-5xl font-bold tracking-tight text-[#0a0a0a] md:text-6xl xl:text-7xl">
-              Diamond
-              <span class="sr-only">Plan</span>
-            </h2>
-
-            <p class="mt-2 sm:mt-4">
-              <strong class=" text-3xl font-bold text-gray-900 sm:text-4xl">
-                2000
-              </strong>
-
-              <span class="font-arcade  text-xl font-medium text-gray-900">
-                $ABC
-              </span>
-            </p>
-          </div>
-
-          <ul class="mt-6 space-y-2">
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-10 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                All future and existing premium features{" "}
-              </span>
-            </li>
-
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-10 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                Calls From Top Callers Forwarded{" "}
-              </span>
-            </li>
-
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-10 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                Unlimited Free Caller Subscriptions{" "}
-              </span>
-            </li>
-
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-10 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                Diamond Alpha Chat Access{" "}
-              </span>
-            </li>
-
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-10 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                Custom Filtered Call Forwarding*{" "}
-              </span>
-            </li>
-
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-10 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                Security Filtered Calls*{" "}
-              </span>
-            </li>
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-10 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                RevShare*{" "}
-              </span>
-            </li>
-          </ul>
-
-          <div class="text-center">
+        <Card className="w-full max-w-[26rem] shadow-lg">
+          <CardHeader floated={false} color="blue-gray">
+            <img src={tiergold} alt="ui/ux review check" />
+            <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+          </CardHeader>
+          <CardBody>
+            <div className="mb-3 flex items-center justify-between">
+              <Typography
+                variant="h5"
+                color="blue-gray"
+                className="font-league text-4xl font-semibold"
+              >
+                Diamond Members
+              </Typography>
+            </div>
+            <Typography color="gray">
+              <ul className="list-disc list-inside ml-2  gap-x-2 text-xl  font-spacegrotesk font-bold">
+                <li class="">2 Free Caller Subscriptions*</li>
+                <li class="">Earn ETH When Gaining Paid Subscribers*</li>
+                <li class="">Gold Alpha Chat Access*</li>
+                <li class="">Alpha Signals From Our Database*</li>
+              </ul>
+            </Typography>
+            <Typography
+              color="blue-gray"
+              className="flex items-center pt-4 gap-1.5 text-4xl font-bold"
+            >
+              200 <span className="font-arcade text-lg">$ABC</span>
+            </Typography>
+            {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+              <Tooltip content="Free wifi">
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M1.371 8.143c5.858-5.857 15.356-5.857 21.213 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.06 0c-4.98-4.979-13.053-4.979-18.032 0a.75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182c4.1-4.1 10.749-4.1 14.85 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.062 0 8.25 8.25 0 00-11.667 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.204 3.182a6 6 0 018.486 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0 3.75 3.75 0 00-5.304 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182a1.5 1.5 0 012.122 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0l-.53-.53a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </Tooltip>
+              <Tooltip content="2 bedrooms">
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                    <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                  </svg>
+                </span>
+              </Tooltip>
+              <Tooltip content={`65" HDTV`}>
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path d="M19.5 6h-15v9h15V6z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v11.25C1.5 17.16 2.34 18 3.375 18H9.75v1.5H6A.75.75 0 006 21h12a.75.75 0 000-1.5h-3.75V18h6.375c1.035 0 1.875-.84 1.875-1.875V4.875C22.5 3.839 21.66 3 20.625 3H3.375zm0 13.5h17.25a.375.375 0 00.375-.375V4.875a.375.375 0 00-.375-.375H3.375A.375.375 0 003 4.875v11.25c0 .207.168.375.375.375z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </Tooltip>
+              <Tooltip content="Fire alert">
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </Tooltip>
+              <Tooltip content="And +20 more">
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  +20
+                </span>
+              </Tooltip>
+            </div> */}
+          </CardBody>
+          <CardFooter className="pt-3">
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
-              class="relative self-center overflow-hidden inline-block px-8 py-4 mt-5 font-extrabold text-xl rounded-full group focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] shadow-lg"
+              href="https://t.me/AlphaBotCalls"
             >
-              <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-              <span class="absolute top-0 left-0 w-48 h-48 -mt-1  transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-[#b9f2ff] opacity-100 group-hover:-translate-x-8"></span>
-              <span class="relative w-full text-left  text-black transition-colors duration-200 ease-in-out group-hover:text-white">
-                Buy $ABC
-              </span>
-              <span class="absolute inset-0 border-2 hover:border-[#b9f2ff]  rounded-full"></span>
+              <Button size="lg" fullWidth={true}>
+                Get Access
+              </Button>
             </a>
-          </div>
-        </div>
-
-        <div class="rounded-2xl border-4 border-white bg-gradient-to-r from-orange to-rose-300  p-6 shadow-sm sm:px-8 lg:p-12">
-          <div class="text-center">
-            <h2 class="font-league text-3xl sm:text-4xl font-semibold tracking-tight text-[#0a0a0a] md:text-5xl xl:text-6xl">
-              Gold
-              <span class="sr-only">Plan</span>
-            </h2>
-
-            <p class="mt-2 sm:mt-4">
-              <strong class="text-3xl font-bold text-gray-900 sm:text-4xl">
-                200
-              </strong>
-
-              <span class="font-arcade  text-xl font-medium text-gray-900">
-                $ABC
-              </span>
-            </p>
-          </div>
-
-          <ul class="mt-6 space-y-2">
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-8 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                2 Free Caller Subscriptions*{" "}
-              </span>
-            </li>
-
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-8 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                Earn ETH When Gaining Paid Subscribers*{" "}
-              </span>
-            </li>
-
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-8 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                Gold Alpha Chat Access*{" "}
-              </span>
-            </li>
-
-            <li class="flex items-center gap-1">
-              <CheckCircleIcon
-                className="h-8 w-auto flex-none text-white "
-                aria-hidden="true"
-              />
-
-              <span className="flex gap-x-3 text-xl text-white font-spacegrotesk font-bold lowercase">
-                {" "}
-                Alpha Signals From Our Database*{" "}
-              </span>
-            </li>
-          </ul>
-          <div class="text-center">
+          </CardFooter>
+        </Card>
+        <Card className="w-full max-w-[26rem] shadow-lg">
+          <CardHeader floated={false} color="blue-gray">
+            <img src={tierdiamond} alt="ui/ux review check" />
+            <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+          </CardHeader>
+          <CardBody>
+            <div className="mb-3 flex items-center justify-between">
+              <Typography
+                variant="h5"
+                color="blue-gray"
+                className="font-league text-4xl font-semibold"
+              >
+                Diamond Members
+              </Typography>
+            </div>
+            <Typography color="gray">
+              <ul className="list-disc list-inside ml-2  gap-x-2 text-xl  font-spacegrotesk font-bold">
+                <li>Calls From Top Callers Forwarded</li>
+                <li>Unlimited Free Caller Subscriptions</li>
+                <li>Diamond Alpha Chat Access</li>
+                <li>Custom Filtered Call Forwarding*</li>
+                <li>Security Filtered Calls*</li>
+                <li>RevShare*</li>
+              </ul>
+            </Typography>
+            <Typography
+              color="blue-gray"
+              className="flex items-center pt-4 gap-1.5 text-4xl font-bold"
+            >
+              2000 <span className="font-arcade text-lg">$ABC</span>
+            </Typography>
+            {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+              <Tooltip content="Revenue Share">
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path d="M12 7.5a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M1.5 4.875C1.5 3.839 2.34 3 3.375 3h17.25c1.035 0 1.875.84 1.875 1.875v9.75c0 1.036-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 011.5 14.625v-9.75zM8.25 9.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM18.75 9a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V9.75a.75.75 0 00-.75-.75h-.008zM4.5 9.75A.75.75 0 015.25 9h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H5.25a.75.75 0 01-.75-.75V9.75z"
+                      clipRule="evenodd"
+                    />
+                    <path d="M2.25 18a.75.75 0 000 1.5c5.4 0 10.63.722 15.6 2.075 1.19.324 2.4-.558 2.4-1.82V18.75a.75.75 0 00-.75-.75H2.25z" />
+                  </svg>
+                </span>
+              </Tooltip>
+              <Tooltip content="Free wifi">
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M1.371 8.143c5.858-5.857 15.356-5.857 21.213 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.06 0c-4.98-4.979-13.053-4.979-18.032 0a.75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182c4.1-4.1 10.749-4.1 14.85 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.062 0 8.25 8.25 0 00-11.667 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.204 3.182a6 6 0 018.486 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0 3.75 3.75 0 00-5.304 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182a1.5 1.5 0 012.122 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0l-.53-.53a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </Tooltip>
+              <Tooltip content="2 bedrooms">
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                    <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                  </svg>
+                </span>
+              </Tooltip>
+              <Tooltip content={`65" HDTV`}>
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path d="M19.5 6h-15v9h15V6z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v11.25C1.5 17.16 2.34 18 3.375 18H9.75v1.5H6A.75.75 0 006 21h12a.75.75 0 000-1.5h-3.75V18h6.375c1.035 0 1.875-.84 1.875-1.875V4.875C22.5 3.839 21.66 3 20.625 3H3.375zm0 13.5h17.25a.375.375 0 00.375-.375V4.875a.375.375 0 00-.375-.375H3.375A.375.375 0 003 4.875v11.25c0 .207.168.375.375.375z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </Tooltip>
+              <Tooltip content="Fire alert">
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </Tooltip>
+              <Tooltip content="And +20 more">
+                <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+                  +20
+                </span>
+              </Tooltip>
+            </div> */}
+          </CardBody>
+          <CardFooter className="pt-3">
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
-              class="relative self-center overflow-hidden inline-block px-8 py-4 mt-5 font-extrabold text-xl rounded-full group focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] shadow-lg"
+              href="https://t.me/AlphaBotCalls"
             >
-              <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-              <span class="absolute top-0 left-0 w-48 h-48 -mt-1  transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-[#d4af37] opacity-100 group-hover:-translate-x-8"></span>
-              <span class="relative w-full text-left  text-black transition-colors duration-200 ease-in-out group-hover:text-white">
-                Buy $ABC
-              </span>
-              <span class="absolute inset-0 border-2 hover:border-white  rounded-full"></span>
+              <Button size="lg" fullWidth={true}>
+                Get Access
+              </Button>
             </a>
-          </div>
-        </div>
+          </CardFooter>
+        </Card>
       </div>
     </div>
   </section>

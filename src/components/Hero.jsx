@@ -9,14 +9,20 @@ import {
 import Navbar from "./Navbar";
 import Stats from "./Stats";
 
+import React from "react";
+
+import { stats } from "../constants";
+
+import { motion } from "framer-motion";
+
 const Hero = () => {
   return (
     <section
       id="home"
-      className={`-mb-10 pb-10  h-full sm:h-fit md:h-screen lg:h-full sm:pb-16 bg-[linear-gradient(to_bottom,_#FD7553,_#D84261)]`}
+      className={` pb-10 sm:px-20  h-fit sm:h-fit md:h-screen lg:h-screen xl:h-screen  bg-[linear-gradient(to_bottom,_#FD7553,_#D84261)] mx-auto `}
     >
       <Navbar />
-      <div class="container mx-auto -mt-7 sm:mt-0 sm:py-10 md:py-16 lg:py-20 xl:py-24 ">
+      <div class="container mx-auto lg:px-20 -mt-7 sm:mt-0 sm:py-10 md:py-16 lg:py-20 xl:py-24  xl:max-w-screen-xl ">
         <div class="flex flex-col-reverse	 sm:flex-row items-center justify-around sm:justify-between ">
           <div class="mt-6 lg:mt-0 text-center ss:text-left ">
             <h1 class="whitespace-nowrap overflow-hidden font-league font-bold text-4xl ss:text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-normal mb-12">
@@ -120,7 +126,29 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <Stats />
+      <div
+        className={`${styles.flexCenter} grid ss:grid-cols-2 md:grid-cols-4 m-4 sm:mb-20 mb-6 md:px-4 lg:px-10  `}
+      >
+        {stats.map((stat) => (
+          <div
+            key={stat.id}
+            className={`flex-1 flex items-center md:justify-center md:px-2 lg:px-4 xl:px-5 flex-row my-4 mx-auto transition duration-300 ease-in-out hover:scale-110`}
+          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="font-league font-semibold text-4xl xs:text-5xl ss:text-5xl sm:text-6xl lg:text-7xl leading-[43.16px] text-white">
+                {stat.value}
+              </h4>
+            </motion.div>
+            <p className="font-league font-bold text-2xl xs:text-3xl ss:text-3xl sm:text-3xl lg:text-4xl leading-[31.58px] text-[#0a0a0a] ml-3 sm:ml-4 md:ml-3">
+              {stat.title}
+            </p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

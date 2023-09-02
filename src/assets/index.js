@@ -19,8 +19,12 @@ import hero1 from "./hero1.png";
 import hero3 from "./hero3.jpeg";
 import hero4 from "./hero4.svg";
 import lightning from "./lightning.svg";
+import tierdiamond from "./tier-diamond.jpeg";
+import tiergold from "./tier-gold.jpeg";
 
 export {
+  tierdiamond,
+  tiergold,
   lightning,
   hero3,
   hero4,

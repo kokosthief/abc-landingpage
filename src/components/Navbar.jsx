@@ -45,7 +45,7 @@ const callsToAction = [
 
 export default function Navbar() {
   return (
-    <nav className="xl:max-w-screen-xl md:px-14  mx-auto flex flex-row  py-3 justify-center md:justify-start items-center ">
+    <nav className="xl:max-w-screen-xl md:px-14  mx-auto md:mx-0 flex flex-row  py-3 justify-center md:justify-start items-center ">
       <a
         target="_blank"
         rel="noopener noreferrer"

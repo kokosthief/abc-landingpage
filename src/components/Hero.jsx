@@ -19,13 +19,13 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className={` pb-10 sm:px-20  h-fit sm:h-fit md:h-screen lg:h-screen xl:h-screen  bg-[linear-gradient(to_bottom,_#FD7553,_#D84261)] mx-auto `}
+      className={`flex flex-col pb-10 sm:px-20  h-fit sm:h-fit md:h-screen lg:h-screen xl:h-screen  justify-between bg-[linear-gradient(to_bottom,_#FD7553,_#D84261)] mx-auto `}
     >
       <Navbar />
       <div class="container mx-auto lg:px-20 -mt-7 sm:mt-0 sm:py-10 md:py-16 lg:py-20 xl:py-24  xl:max-w-screen-xl ">
         <div class="flex flex-col-reverse	 sm:flex-row items-center justify-around sm:justify-between ">
-          <div class="mt-6 lg:mt-0 text-center ss:text-left ">
-            <h1 class="whitespace-nowrap overflow-hidden font-league font-bold text-4xl ss:text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-normal mb-12">
+          <div class="mt-6 lg:mt-0 text-center sm:text-left ">
+            <h1 class="whitespace-nowrap overflow-hidden font-league font-bold text-4xl  sm:text-5xl  md:text-7xl lg:text-7xl text-white tracking-normal mb-12">
               Gamifying Calls. <br />
               <span class="text-[#0a0a0a] ">Finding Alpha.</span>
             </h1>
@@ -117,22 +117,22 @@ const Hero = () => {
             </div>
           </div>
           {/* abc logo */}
-          <div className="flex sm:ml-8 md:ml-0 mt-6 sm:my-auto">
+          <div className="flex mt-6 sm:my-auto justify-end">
             <img
               src={abcbricklogo}
               alt="CredibleCallers"
-              className="w-[200px] xs:w-[240px] ss:w-[280px] sm:w-[340px] md:w-[400px] lg:w-[450px] xl:w-[550px] "
+              className="w-[200px] sm:w-[300px] md:w-[400px]"
             />
           </div>
         </div>
       </div>
       <div
-        className={`${styles.flexCenter} grid ss:grid-cols-2 md:grid-cols-4 m-4 sm:mb-20 mb-6 md:px-4 lg:px-10  `}
+        className={`${styles.flexCenter} grid sm:grid-cols-2 lg:grid-cols-4 m-4 md:px-4 lg:px-10`}
       >
         {stats.map((stat) => (
           <div
             key={stat.id}
-            className={`flex-1 flex items-center md:justify-center md:px-2 lg:px-4 xl:px-5 flex-row my-4 mx-auto transition duration-300 ease-in-out hover:scale-110`}
+            className={`flex-1 flex items-center  md:px-2 lg:px-4 xl:px-5 flex-row my-4 mx-auto transition duration-300 ease-in-out hover:scale-110`}
           >
             <motion.div
               initial={{ opacity: 0 }}

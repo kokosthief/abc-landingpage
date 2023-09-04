@@ -70,7 +70,7 @@ const Tokenomics = () => (
         </div>
       </div>
       <div class="flex flex-col text-center sm:text-right grow justify-between gap-4">
-        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text font-extrabold uppercase  text-transparent ">
+        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-gradient-to-r from-[#E900CE] to-pink-600 bg-clip-text font-extrabold uppercase  text-transparent ">
           1M
         </h3>
         <h4 className="font-league flex-none text-3xl -mt-7 mb-3 font-semibold leading-6 text-white">

@@ -29,10 +29,14 @@ const Pricing = () => (
   <section class="bg-hero2-gradient">
     <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
-        <Card className="w-full max-w-[26rem] shadow-lg">
-          <CardHeader floated={false} color="blue-gray">
+        <Card className="w-full max-w-[26rem] h-full justify-center shadow-lg">
+          <CardHeader
+            className="w-9/12 mx-auto shadow-none"
+            floated={false}
+            // color="blue-gray"
+          >
             <img src={tiergold} alt="ui/ux review check" />
-            <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+            {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
           </CardHeader>
           <CardBody>
             <div className="mb-3 flex items-center justify-between">
@@ -41,11 +45,11 @@ const Pricing = () => (
                 color="blue-gray"
                 className="font-league text-4xl font-semibold"
               >
-                Diamond Members
+                Gold Tier
               </Typography>
             </div>
-            <Typography color="gray">
-              <ul className="list-disc list-inside ml-2  gap-x-2 text-xl  font-spacegrotesk font-bold">
+            <Typography color="blue-gray">
+              <ul className="list-disc list-inside ml-2  gap-x-2  mt-6leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                 <li class="">2 Free Caller Subscriptions*</li>
                 <li class="">Earn ETH When Gaining Paid Subscribers*</li>
                 <li class="">Gold Alpha Chat Access*</li>
@@ -54,9 +58,9 @@ const Pricing = () => (
             </Typography>
             <Typography
               color="blue-gray"
-              className="flex items-center pt-4 gap-1.5 text-4xl font-bold"
+              className="flex font-arcade pt-6 gap-1.5 text-3xl mx-auto font-bold"
             >
-              200 <span className="font-arcade text-lg">$ABC</span>
+              200 $ABC
             </Typography>
             {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
               <Tooltip content="Free wifi">
@@ -141,9 +145,13 @@ const Pricing = () => (
           </CardFooter>
         </Card>
         <Card className="w-full max-w-[26rem] shadow-lg">
-          <CardHeader floated={false} color="blue-gray">
+          <CardHeader
+            className="w-9/12 mx-auto shadow-none"
+            floated={false}
+            // color="blue-gray"
+          >
             <img src={tierdiamond} alt="ui/ux review check" />
-            <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+            {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
           </CardHeader>
           <CardBody>
             <div className="mb-3 flex items-center justify-between">
@@ -152,11 +160,11 @@ const Pricing = () => (
                 color="blue-gray"
                 className="font-league text-4xl font-semibold"
               >
-                Diamond Members
+                Diamond Tier
               </Typography>
             </div>
-            <Typography color="gray">
-              <ul className="list-disc list-inside ml-2  gap-x-2 text-xl  font-spacegrotesk font-bold">
+            <Typography color="blue-gray">
+              <ul className="list-disc list-inside ml-2  gap-x-2  mt-6leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                 <li>Calls From Top Callers Forwarded</li>
                 <li>Unlimited Free Caller Subscriptions</li>
                 <li>Diamond Alpha Chat Access</li>
@@ -167,9 +175,9 @@ const Pricing = () => (
             </Typography>
             <Typography
               color="blue-gray"
-              className="flex items-center pt-4 gap-1.5 text-4xl font-bold"
+              className="flex font-arcade pt-6 gap-1.5 text-3xl mx-auto font-bold"
             >
-              2000 <span className="font-arcade text-lg">$ABC</span>
+              2000 $ABC
             </Typography>
             {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
               <Tooltip content="Revenue Share">

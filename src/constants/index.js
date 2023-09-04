@@ -9,7 +9,7 @@ export const stats = [
   {
     id: "stats-2",
     title: "communities",
-    value: "30+",
+    value: "50+",
   },
   {
     id: "stats-3",
@@ -28,7 +28,7 @@ export const footerLinks = [
     title: "Utilities",
     links: [
       {
-        name: "ABC Bot",
+        name: "ABC AlphaBot",
         link: "https://telegram.me/ABCAlphaBot",
       },
       {

@@ -1,4 +1,4 @@
-import { KeyIcon } from "@heroicons/react/20/solid";
+import { KeyIcon, QuestionMarkCircleIcon } from "@heroicons/react/20/solid";
 
 import { tierdiamond, tiergold } from "../assets";
 
@@ -52,13 +52,16 @@ const Pricing = () => (
                       Gold Tier
                     </Typography>
                   </div>
-                  <Typography color="blue-gray">
+                  <Typography className="relative" color="blue-gray ">
                     <ul className="list-disc list-inside ml-2  gap-x-2  leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
-                      <li class="">2 Free Caller Subscriptions*</li>
-                      <li class="">Earn ETH When Gaining Paid Subscribers*</li>
-                      <li class="">Gold Alpha Chat Access*</li>
-                      <li class="">Alpha Signals From Our Database*</li>
+                      <li className="blur">2 Free Caller Subscriptions*</li>
+                      <li className="blur">
+                        Earn ETH When Gaining Paid Subscribers*
+                      </li>
+                      <li className="blur">Gold Alpha Chat Access*</li>
+                      <li className="blur">Alpha Signals From Our Database*</li>
                     </ul>
+                    <QuestionMarkCircleIcon className="absolute top-0 w-40 left-20 opacity-40   text-[#e6b284]" />
                   </Typography>
                   <Typography
                     color="blue-gray"

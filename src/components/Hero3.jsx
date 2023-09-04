@@ -6,7 +6,7 @@ const Hero3 = () => {
   const sectionStyle = {
     backgroundImage: `url(${hero3})`,
     backgroundSize: "cover",
-    backgroundPosition: "left",
+    backgroundPosition: "43%",
   };
 
   return (
@@ -14,10 +14,10 @@ const Hero3 = () => {
       <div className="flex flex-col mx-auto overflow-clip xl:max-w-screen-xl justify-around sm:justify-center sm:gap-8 h-full px-5 sm:px-20 md:mr-20 lg:mr-40">
         <div className=" md:place-self-end  sm:mr-[100px]">
           <h1 className="font-league font-bold text-center md:text-left text-4xl xs:text-5xl ss:text-6xl sm:text-6xl md:text-7xl lg:text--8xl xl:text-9xl text-white tracking-normal   ">
-            <span className="text-[white]">Gamifying </span>
+            <span className="text-[#0a0a0a] sm:text-[white]">Gamifying </span>
             <br />
             <span className="">Crypto</span>
-            <span className="text-[#0a0a0a]"> Calling</span>
+            <span className="text-white sm:text-[#0a0a0a]"> Calling</span>
           </h1>
         </div>
         <div className="gap-10 md:place-self-end flex flex-col-reverse md:flex-row ">

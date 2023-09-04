@@ -57,12 +57,12 @@ const HowToUse = () => {
                         <a
                           href="https://t.me/ABCAlphaBot?startgroup=true"
                           target="_blank"
-                          className="telegramim_button telegramim_shadow "
+                          className="telegramim_button -ml-2"
                           style={{
                             fontSize: "16px",
                             width: "116px",
                             background: "#27A5E7",
-                            boxShadow: "1px 1px 2px #27A5E7",
+                            boxShadow: "1px 1px 3px #27A5E7",
                             color: "#FFFFFF",
                             borderRadius: "46px",
                           }}

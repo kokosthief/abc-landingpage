@@ -221,6 +221,11 @@
   }
 }
 
+.textshadow .blurry-text {
+  text-shadow: 0 0 32px white;
+  color: transparent;
+}
+
 .feedback-container .feedback-card:last-child {
   margin-right: 0px;
 }

@@ -5,10 +5,10 @@ import {
   Hero,
   Hero2,
   Hero3,
-  AlphaHub,
+  CTA,
   HowToUse,
   Roadmap,
-  Pricing,
+  Tiers,
 } from "./components";
 
 const App = () => (
@@ -16,43 +16,17 @@ const App = () => (
     <Hero />
     <Hero2 />
     <Hero3 />
-    <AlphaHub />
-    <Pricing />
+    <CTA />
+    <Tiers />
+    <HowToUse />
+    <Roadmap />
+    <Tokenomics />
 
-    <div className="bg-hero2-gradient ">
+    <div className="bg-[#0a0a0a]  ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}></div>
-      </div>
-    </div>
-    <div className="bg-hero2-gradient ">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <HowToUse />
+        <div className={`${styles.boxWidth} `}>
+          <Footer />
         </div>
-      </div>
-    </div>
-    <div className="bg-hero2-gradient ">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Roadmap />
-        </div>
-      </div>
-    </div>
-    <div className="bg-hero2-gradient ">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>{/* <Integrations /> */}</div>
-      </div>
-    </div>
-    <div className="bg-hero-gradient ">
-      <div className={`${styles.paddingX} ${styles.flexCenter}  `}>
-        <div className={`${styles.boxWidth}`}>
-          <Tokenomics />
-        </div>
-      </div>
-    </div>
-    <div className={`bg-[#0a0a0a] ${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Footer />
       </div>
     </div>
   </div>

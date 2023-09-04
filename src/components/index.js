@@ -6,9 +6,9 @@ import Hero from "./Hero";
 import Hero2 from "./Hero2";
 import Hero3 from "./Hero3";
 import Team from "./Team";
-import Pricing from "./Pricing";
+import Tiers from "./Tiers";
 import Tokenomics from "./Tokenomics";
-import AlphaHub from "./AlphaHub";
+import CTA from "./CTA";
 import HowToUse from "./HowToUse";
 import Roadmap from "./Roadmap";
 
@@ -20,10 +20,10 @@ export {
   Integrations,
   Stats,
   Footer,
-  Pricing,
+  Tiers,
   Tokenomics,
   Hero,
   Hero2,
   Hero3,
-  AlphaHub,
+  CTA,
 };

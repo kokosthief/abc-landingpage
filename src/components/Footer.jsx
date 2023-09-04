@@ -4,7 +4,7 @@ import { footerLinks } from "../constants";
 
 const Footer = () => (
   <section
-    className={`${styles.flexCenter} ${styles.paddingY} flex-col bg-[#0a0a0a]`}
+    className={`${styles.flexCenter} ${styles.paddingY} flex-col bg-[#0a0a0a] `}
   >
     <div
       className={`${styles.flexStart} md:flex-row flex-col  mb-8 w-full bg-[#0a0a0a]`}

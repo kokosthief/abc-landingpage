@@ -4,7 +4,7 @@ export const stats = [
   {
     id: "stats-1",
     title: "unique callers",
-    value: "538",
+    value: "3000+",
   },
   {
     id: "stats-2",
@@ -14,12 +14,12 @@ export const stats = [
   {
     id: "stats-3",
     title: "total calls",
-    value: "1819",
+    value: "3500+",
   },
   {
     id: "stats-4",
     title: "100x calls",
-    value: "42",
+    value: "10",
   },
 ];
 

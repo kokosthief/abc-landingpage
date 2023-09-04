@@ -8,7 +8,7 @@ const bullishPoints = [
 ];
 
 const Tokenomics = () => (
-  <section class="">
+  <section class="bg-hero-gradient">
     <div class="container flex flex-wrap  py-40 mx-auto">
       <div class=" border-4 border-white px-6 shadow-2xl py-5 rounded-3xl sm:w-1/2 sm:pr-12 sm:py-8 mb-10 sm:mb-0 pb-10  ">
         <h3 className=" font-league text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#ff75ef] mb-12 md:text-6xl xl:text-7xl">

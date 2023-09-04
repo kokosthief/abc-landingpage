@@ -1,18 +1,6 @@
-import {
-  CheckBadgeIcon,
-  CheckCircleIcon,
-  CheckIcon,
-  ShieldCheckIcon,
-} from "@heroicons/react/20/solid";
+import { KeyIcon } from "@heroicons/react/20/solid";
 
 import { tierdiamond, tiergold } from "../assets";
-
-const bullishPoints = [
-  "total token supply: 1,000,000",
-  "100% of supply added",
-  "no team tokens",
-  "max wallet: 2%",
-];
 
 import {
   Card,
@@ -27,42 +15,60 @@ import {
 
 const Pricing = () => (
   <section class="bg-hero2-gradient">
-    <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
-        <Card className="w-full max-w-[26rem] h-full justify-center shadow-lg">
-          <CardHeader
-            className="w-9/12 mx-auto shadow-none"
-            floated={false}
-            // color="blue-gray"
-          >
-            <img src={tiergold} alt="ui/ux review check" />
-            {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
-          </CardHeader>
-          <CardBody>
-            <div className="mb-3 flex items-center justify-between">
-              <Typography
-                variant="h5"
-                color="blue-gray"
-                className="font-league text-4xl font-semibold"
-              >
-                Gold Tier
-              </Typography>
-            </div>
-            <Typography color="blue-gray">
-              <ul className="list-disc list-inside ml-2  gap-x-2  mt-6leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
-                <li class="">2 Free Caller Subscriptions*</li>
-                <li class="">Earn ETH When Gaining Paid Subscribers*</li>
-                <li class="">Gold Alpha Chat Access*</li>
-                <li class="">Alpha Signals From Our Database*</li>
-              </ul>
-            </Typography>
-            <Typography
-              color="blue-gray"
-              className="flex font-arcade pt-6 gap-1.5 text-3xl mx-auto font-bold"
-            >
-              200 $ABC
-            </Typography>
-            {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+    <div class="container mx-auto md:px-6 pt-14">
+      <div class="flex flex-wrap items-center">
+        <div class="mb-6 w-full shrink-0 grow-0 basis-auto px-3 lg:w-4/12 text-center ">
+          <h2 className="font-league font-bold pt-16 text-5xl    lg:text-left  xs:text-5xl text-white tracking-normal   ">
+            Holder Benefits: <br />
+            <u class="text-white dark:text-primary-400 text-6xl">Alpha Hub</u>
+          </h2>
+
+          <p class="font-spacegrotesk mt-6 text-xl leading-7 lg:text-left  text-white mb-12  dark:text-neutral-300">
+            ABC is committed to maximizing token holder value through the
+            creation of premium, holder-exclusive features and access to our
+            comprehensive revenue sharing model.
+          </p>
+        </div>
+
+        <div class="mb-md-0 mb-6 w-full shrink-0 grow-0 basis-auto px-3 lg:w-8/12">
+          <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
+              <Card className="w-full max-w-[26rem] h-full justify-center shadow-lg mx-auto">
+                <CardHeader
+                  className="w-9/12 mx-auto shadow-none"
+                  floated={false}
+                  // color="blue-gray"
+                >
+                  <img src={tiergold} alt="ui/ux review check" />
+                  {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
+                </CardHeader>
+                <CardBody>
+                  <div className="mb-3 flex  justify-between ">
+                    <Typography
+                      variant="h5"
+                      color="blue-gray"
+                      className="font-league text-4xl font-semibold text-center mx-auto"
+                    >
+                      Gold Tier
+                    </Typography>
+                  </div>
+                  <Typography color="blue-gray">
+                    <ul className="list-disc list-inside ml-2  gap-x-2  leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
+                      <li class="">2 Free Caller Subscriptions*</li>
+                      <li class="">Earn ETH When Gaining Paid Subscribers*</li>
+                      <li class="">Gold Alpha Chat Access*</li>
+                      <li class="">Alpha Signals From Our Database*</li>
+                    </ul>
+                  </Typography>
+                  <Typography
+                    color="blue-gray"
+                    className="flex font-arcade pt-6 gap-1.5 text-2xl font-bold mx-auto "
+                  >
+                    <p className="mx-auto">
+                      <span className=" text-pink-400">200</span> $ABC
+                    </p>
+                  </Typography>
+                  {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
               <Tooltip content="Free wifi">
                 <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                   <svg
@@ -131,9 +137,28 @@ const Pricing = () => (
                 </span>
               </Tooltip>
             </div> */}
-          </CardBody>
-          <CardFooter className="pt-3">
-            <a
+                </CardBody>
+                <CardFooter className="-mt-6">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://t.me/AlphaBotCalls"
+                    class=" w-full box-border relative z-30 my-3 inline-flex items-center justify-center px-6  overflow-hidden font-bold text-white transition-all duration-300 bg-[#EC407A] rounded-md cursor-pointer group ring-offset-2 ring-1 ring-[#e65787] ring-offset-[#ffa8c5] hover:ring-offset-[#ba3e68] ease focus:outline-none"
+                  >
+                    <span class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                    <span class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                    <span class="relative z-20 flex items-center text-sm -my-[5px]">
+                      <KeyIcon
+                        className="mb-4 mt-4 h-6 w-auto text-white "
+                        fill="white"
+                      />
+                      <span class=" font-spacegrotesk px-6  font-extrabold text-lg  ">
+                        GET ACCESS
+                      </span>
+                    </span>
+                  </a>
+
+                  {/* <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://t.me/AlphaBotCalls"
@@ -141,45 +166,47 @@ const Pricing = () => (
               <Button size="lg" fullWidth={true}>
                 Get Access
               </Button>
-            </a>
-          </CardFooter>
-        </Card>
-        <Card className="w-full max-w-[26rem] shadow-lg">
-          <CardHeader
-            className="w-9/12 mx-auto shadow-none"
-            floated={false}
-            // color="blue-gray"
-          >
-            <img src={tierdiamond} alt="ui/ux review check" />
-            {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
-          </CardHeader>
-          <CardBody>
-            <div className="mb-3 flex items-center justify-between">
-              <Typography
-                variant="h5"
-                color="blue-gray"
-                className="font-league text-4xl font-semibold"
-              >
-                Diamond Tier
-              </Typography>
-            </div>
-            <Typography color="blue-gray">
-              <ul className="list-disc list-inside ml-2  gap-x-2  mt-6leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
-                <li>Calls From Top Callers Forwarded</li>
-                <li>Unlimited Free Caller Subscriptions</li>
-                <li>Diamond Alpha Chat Access</li>
-                <li>Custom Filtered Call Forwarding*</li>
-                <li>Security Filtered Calls*</li>
-                <li>RevShare*</li>
-              </ul>
-            </Typography>
-            <Typography
-              color="blue-gray"
-              className="flex font-arcade pt-6 gap-1.5 text-3xl mx-auto font-bold"
-            >
-              2000 $ABC
-            </Typography>
-            {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+            </a> */}
+                </CardFooter>
+              </Card>
+              <Card className="w-full max-w-[26rem] shadow-lg  mx-auto">
+                <CardHeader
+                  className="w-9/12 mx-auto shadow-none"
+                  floated={false}
+                  // color="blue-gray"
+                >
+                  <img src={tierdiamond} alt="ui/ux review check" />
+                  {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
+                </CardHeader>
+                <CardBody>
+                  <div className="mb-3 flex items-center justify-between">
+                    <Typography
+                      variant="h5"
+                      color="blue-gray"
+                      className="font-league text-4xl font-semibold mx-auto"
+                    >
+                      Diamond Tier
+                    </Typography>
+                  </div>
+                  <Typography color="blue-gray">
+                    <ul className="list-disc list-inside ml-2  gap-x-2  mt-6leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
+                      <li>Calls From Top Callers Forwarded</li>
+                      <li>Unlimited Free Caller Subscriptions</li>
+                      <li>Diamond Alpha Chat Access</li>
+                      <li>Custom Filtered Call Forwarding*</li>
+                      <li>Security Filtered Calls*</li>
+                      <li>RevShare*</li>
+                    </ul>
+                  </Typography>
+                  <Typography
+                    color="blue-gray"
+                    className="flex font-arcade pt-6  gap-1.5 text-2xl font-bold mx-auto "
+                  >
+                    <p className="mx-auto">
+                      <span className=" text-pink-400">2000</span> $ABC
+                    </p>{" "}
+                  </Typography>
+                  {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
               <Tooltip content="Revenue Share">
                 <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                   <svg
@@ -266,9 +293,28 @@ const Pricing = () => (
                 </span>
               </Tooltip>
             </div> */}
-          </CardBody>
-          <CardFooter className="pt-3">
-            <a
+                </CardBody>
+                <CardFooter className="-mt-6">
+                  <a
+                    href="https://t.me/AlphaBotCalls"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class=" w-full box-border relative z-30 my-3 inline-flex items-center justify-center px-6  overflow-hidden font-bold text-white transition-all duration-300 bg-[#EC407A] rounded-md cursor-pointer group ring-offset-2 ring-1 ring-[#e65787] ring-offset-[#ffa8c5] hover:ring-offset-[#ba3e68] ease focus:outline-none"
+                  >
+                    <span class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                    <span class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                    <span class="relative z-20 flex items-center text-sm -my-[5px]">
+                      <KeyIcon
+                        className="mb-4 mt-4 h-6 w-auto text-white "
+                        fill="white"
+                      />
+                      <span class=" font-spacegrotesk px-6  font-extrabold text-lg  ">
+                        GET ACCESS
+                      </span>
+                    </span>
+                  </a>
+
+                  {/* <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://t.me/AlphaBotCalls"
@@ -276,9 +322,12 @@ const Pricing = () => (
               <Button size="lg" fullWidth={true}>
                 Get Access
               </Button>
-            </a>
-          </CardFooter>
-        </Card>
+            </a> */}
+                </CardFooter>
+              </Card>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

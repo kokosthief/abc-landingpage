@@ -4,10 +4,10 @@ import { footerLinks } from "../constants";
 
 const Footer = () => (
   <section
-    className={`${styles.flexCenter} ${styles.paddingY} flex-col bg-[#0a0a0a] `}
+    className={`${styles.flexCenter} ${styles.paddingY} flex-col bg-[#0a0a0a]`}
   >
     <div
-      className={`${styles.flexStart} md:flex-row flex-col  mb-8 w-full bg-[#0a0a0a]`}
+      className={`${styles.flexStart} md:flex-row flex-col  mb-4 w-full bg-[#0a0a0a]`}
     >
       <div className="flex basis-3/12 flex-col mx-auto ">
         <img
@@ -42,7 +42,7 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] -mb-5 border-t-[#3F3E45]">
+    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] -mb-5 sm:-mb-9 border-t-[#3F3E45]">
       <p className="font-notosans font-normal text-center text-[16px] leading-[25px] text-white">
         Copyright Ⓒ 2023 AlphaBotCalls. All Rights Reserved.
       </p>

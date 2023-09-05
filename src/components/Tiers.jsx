@@ -42,6 +42,7 @@ const Pricing = () => (
                   <img src={tiergold} alt="ui/ux review check" />
                   {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
                 </CardHeader>
+
                 <CardBody>
                   <div className="mb-3 flex  justify-between ">
                     <Typography
@@ -53,15 +54,19 @@ const Pricing = () => (
                     </Typography>
                   </div>
                   <Typography className="relative" color="blue-gray ">
-                    <ul className="list-disc list-inside ml-2  gap-x-2  leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
-                      <li className="blur">2 Free Caller Subscriptions*</li>
-                      <li className="blur">
-                        Earn ETH When Gaining Paid Subscribers*
-                      </li>
-                      <li className="blur">Gold Alpha Chat Access*</li>
-                      <li className="blur">Alpha Signals From Our Database*</li>
-                    </ul>
-                    <QuestionMarkCircleIcon className="absolute top-0 w-40 left-20 opacity-40   text-[#e6b284]" />
+                    <div className="flex items-center relative">
+                      <ul className="list-disc list-inside ml-2 gap-x-2 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg text-[#0a0a0a]">
+                        <li className="blur">2 eerF relalC snoiSbcstup *</li>
+                        <li className="blur">
+                          nraE HTE nehw gnnaiG diaP serrsubipS *
+                        </li>
+                        <li className="blur">dloG ahplA tahC ssseccA *</li>
+                        <li className="blur">
+                          ahplA sgnilaS morF ruo esabataD *
+                        </li>
+                      </ul>
+                      <QuestionMarkCircleIcon className="  flex z-4 opacity-30 text-[#e6b284] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-40 w-40" />
+                    </div>
                   </Typography>
                   <Typography
                     color="blue-gray"

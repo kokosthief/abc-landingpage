@@ -1,7 +1,22 @@
 import React, { useEffect } from "react";
-import { telegramcircle } from "../assets";
+
+import {
+  Popover,
+  PopoverHandler,
+  PopoverContent,
+  Button,
+  Chip,
+  Typography,
+} from "@material-tailwind/react";
 
 const HowToUse = () => {
+  const [openPopover, setOpenPopover] = React.useState(false);
+
+  const triggers = {
+    onMouseEnter: () => setOpenPopover(true),
+    onMouseLeave: () => setOpenPopover(false),
+  };
+
   useEffect(() => {
     const script = document.createElement("script");
     script.type = "text/javascript";
@@ -28,9 +43,10 @@ const HowToUse = () => {
 
                   <p className="font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                     <ol className="list-inside list-decimal ">
-                      <li class="block w-full cursor-default px-4 my-1 pb-1  font-semibold focus:outline-none focus:ring-0">
+                      <li class="block w-full cursor-default px-4 my-1 pb-2 font-semibold focus:outline-none focus:ring-0">
                         1. Install AlphaBot in Telegram or Discord
                       </li>
+
                       <div className="flex flex-col xs:flex-row gap-2 sm:gap-4 sm:pl-5 ">
                         <div className="flex mx-auto sm:mx-0">
                           <a
@@ -115,67 +131,122 @@ const HowToUse = () => {
                               className="w-[25px] h-auto inline-block mr-1"
                             /> */}
                       </div>
-                      <li class="block w-full cursor-default px-4 py-2 my-1  font-semibold focus:outline-none focus:ring-0">
-                        2. Ensure AlphaBot is assigned proper permissions in{" "}
-                        <br />
-                        Telegram (admin) & Discord (roles)
+                      <li class="block w-full cursor-default px-4 pt-5 my-1  font-semibold focus:outline-none focus:ring-0">
+                        2. Ensure AlphaBot is assigned the proper permissions in{" "}
+                        <br />{" "}
+                        <Popover open={openPopover} handler={setOpenPopover}>
+                          <PopoverHandler {...triggers}>
+                            <span className="text-pink-400  font-semibold cursor-help">
+                              Telegram (admin){" "}
+                            </span>
+                          </PopoverHandler>
+                          <PopoverContent
+                            {...triggers}
+                            className="z-50 max-w-[26rem]"
+                          >
+                            <div className="mb-2 flex items-center gap-3">
+                              <Typography
+                                as="a"
+                                href="#"
+                                variant="h6"
+                                color="blue-gray"
+                                className=" transition-colorsfont-spacegrotesk font-bold text-sm sm:text-md  text-[#0a0a0a]"
+                              >
+                                How to make ABC AlphaBot have full admin rights
+                                in a Telegram group:
+                              </Typography>
+                              <Chip
+                                value="Easy as ABC"
+                                className="rounded-full py-1 px-2 font-medium capitalize tracking-wide"
+                              />
+                            </div>
+                            <Typography
+                              variant="small"
+                              color="gray"
+                              className="font-normal"
+                            >
+                              <ul className="list-disc list-inside ml-2  gap-x-2   leading-7  font-spacegrotesk font-normal text-sm sm:text-md  text-[#0a0a0a]">
+                                <li>Open your Telegram group</li>
+                                <li>Tap on the group name</li>
+                                <li>Select "Administrators"</li>
+                                <li>Tap on "Add Administrator"</li>
+                                <li>Search for and select AlphaBot</li>
+                                <li>Assign full admin privileges"</li>
+                              </ul>
+                            </Typography>
+                          </PopoverContent>
+                        </Popover>
+                        or{" "}
+                        <span className="text-pink-400  font-semibold cursor-help">
+                          Discord (roles)
+                        </span>
                       </li>
 
-                      <li class="block w-full cursor-default px-4 py-2 my-1  font-semibold focus:outline-none focus:ring-0">
+                      <li class="block w-full cursor-default px-4 pt-5 my-1  font-semibold focus:outline-none focus:ring-0">
                         3. Perform basic functions: <br />
                       </li>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
-                      >
-                        <li className=" block w-full cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
-                          <a
-                            className="text-pink-400 "
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
-                          >
-                            /call
-                          </a>
-                          {" <contract address>"} - record a call
-                        </li>
-                      </a>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
-                      >
-                        <li className=" block w-full cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
-                          <a
-                            className="text-pink-400  "
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
-                          >
-                            /checkcalls
-                          </a>
-                          {" <@username> "} - return a list of current active
-                          calls
-                        </li>
-                      </a>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
-                      >
-                        <li className=" block w-full cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700 focus:bg-pink-300 focus:text-neutral-500 focus:ring-0">
-                          <a
-                            className="text-pink-400  "
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
-                          >
-                            /stats
-                          </a>
-                          {" <@username> "} - checks ranking and stats calls
-                        </li>
-                      </a>
+                      <div className="ml-1">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
+                        >
+                          <li className="block w-fit cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700">
+                            <a
+                              className="text-pink-400 font-semibold "
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
+                            >
+                              /call
+                              <span className="font-mono font-normal">
+                                {"  <contract address> "}
+                              </span>
+                            </a>
+                            - record a call
+                          </li>
+                        </a>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
+                        >
+                          <li className=" block w-fit cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700">
+                            <a
+                              className="text-pink-400  font-semibold"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
+                            >
+                              /checkcalls
+                              <span className="font-mono font-normal">
+                                {" <@username> "}
+                              </span>
+                            </a>
+                            - list current active calls
+                          </li>
+                        </a>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
+                        >
+                          <li className=" block w-fit cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700">
+                            <a
+                              className="text-pink-400 font-semibold "
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
+                            >
+                              /stats
+                              <span className="font-mono font-normal">
+                                {" <@username> "}{" "}
+                              </span>{" "}
+                            </a>
+                            - check ranking & stats
+                          </li>
+                        </a>
+                      </div>
                     </ol>
                   </p>
                 </div>

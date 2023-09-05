@@ -55,7 +55,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none"
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   for="flexCheckCheckedDisabled"
                 >
                   Stealth Launch ABC Token
@@ -71,7 +71,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none"
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   for="flexCheckCheckedDisabled"
                 >
                   Release AlphaBot Base Utility
@@ -87,7 +87,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Add AlphaBot to Groups and Spread Adoption
@@ -102,7 +102,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Run Global Tournaments and Competitions
@@ -139,7 +139,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none"
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   for="flexCheckCheckedDisabled"
                 >
                   Leaderboards and Rankings
@@ -155,7 +155,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none"
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   for="flexCheckCheckedDisabled"
                 >
                   Release AlphaBot Base Utility
@@ -171,7 +171,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none"
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   for="flexCheckCheckedDisabled"
                 >
                   ABC Trending
@@ -187,7 +187,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none"
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   for="flexCheckCheckedDisabled"
                 >
                   Integrate With Discord
@@ -203,7 +203,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none"
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   for="flexCheckCheckedDisabled"
                 >
                   Free Caller Subscriptions for Holders
@@ -219,7 +219,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Paid Caller Subscriptions
@@ -234,7 +234,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Group Specific Commands
@@ -249,7 +249,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Meme/Utility Calls
@@ -264,7 +264,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Anti-Calls
@@ -279,7 +279,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Integrated Competition Bot
@@ -294,7 +294,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Custom Security Filtered Call
@@ -331,7 +331,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none"
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   for="flexCheckCheckedDisabled"
                 >
                   Rebranding
@@ -347,7 +347,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none"
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   for="flexCheckCheckedDisabled"
                 >
                   New Website
@@ -363,7 +363,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Portal for Claiming Subscription Revenue
@@ -378,7 +378,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   RevShare
@@ -393,7 +393,7 @@ export default function Roadmap() {
                   disabled
                 />
                 <label
-                  class="inline-block pl-[0.15rem] opacity-70 hover:pointer-events-none "
+                  class="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
                   for="flexCheckDisabled"
                 >
                   Dashboard

@@ -23,7 +23,7 @@ const Pricing = () => (
             <u class="text-white dark:text-primary-400 text-6xl">Alpha Hub</u>
           </h2>
 
-          <p class="font-spacegrotesk mt-6 text-xl leading-7 lg:text-left  text-white mb-12  dark:text-neutral-300">
+          <p class="font-spacegrotesk mt-6 text-xl leading-7 lg:text-left  text-white mb-12  ">
             ABC is committed to maximizing token holder value through the
             creation of premium, holder-exclusive features and access to our
             comprehensive revenue sharing model.
@@ -53,7 +53,7 @@ const Pricing = () => (
                       Gold Tier
                     </Typography>
                   </div>
-                  <Typography className="relative" color="blue-gray ">
+                  <Typography className="relative" color=" ">
                     <div className="flex items-center relative">
                       <ul className="list-disc list-inside ml-2 gap-x-2 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg text-[#0a0a0a]">
                         <li className="blur">2 eerF relalC snoiSbcstup *</li>
@@ -196,7 +196,7 @@ const Pricing = () => (
                       Diamond Tier
                     </Typography>
                   </div>
-                  <Typography color="blue-gray">
+                  <Typography color="">
                     <ul className="list-disc list-inside ml-2  gap-x-2  mt-6leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                       <li>Calls From Top Callers Forwarded</li>
                       <li>Unlimited Free Caller Subscriptions</li>

@@ -27,7 +27,7 @@ export default function Roadmap() {
         </p>
       </div>
       <div className="flex flex-col sm:flex-row justify-center gap-6  mx-auto">
-        <Card className="mt-6 w-auto xs:w-96 h-min  mx-auto sm:mx-0">
+        <Card className="mt-6 w-auto xs:w-[400px] w- h-min  mx-auto sm:mx-0">
           <CardBody>
             <RocketLaunchIcon
               className="mb-4 h-12 w-12 text-gray-900"
@@ -111,7 +111,7 @@ export default function Roadmap() {
             </div>
           </CardBody>
         </Card>
-        <Card className="mt-6 xs:w-96 h-min mx-auto sm:mx-0">
+        <Card className="mt-6 xs:w-[400px] h-min mx-auto sm:mx-0">
           <CardBody>
             <ForwardIcon
               className="mb-4 h-12 w-12 text-gray-900"
@@ -303,7 +303,7 @@ export default function Roadmap() {
             </div>
           </CardBody>
         </Card>
-        <Card className="mt-6 xs:w-96 h-min  mx-auto sm:mx-0">
+        <Card className="mt-6 xs:w-[400px] h-min  mx-auto sm:mx-0">
           <CardBody>
             <CircleStackIcon
               className="mb-4 h-12 w-12 text-gray-900"

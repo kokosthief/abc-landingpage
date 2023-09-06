@@ -57,7 +57,7 @@ const Hero = () => {
                     class="relative self-center overflow-hidden inline-block px-8 py-4 mr-4 font-extrabold text-xl rounded-full group focus:bg-primary-600 "
                   >
                     <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-                    <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                    <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-3"></span>
                     <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
                       Buy $ABC
                     </span>
@@ -127,23 +127,23 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className={`${styles.flexCenter} grid sm:grid-cols-2 lg:grid-cols-4 m-4 md:px-4 lg:px-10`}
+        className={`${styles.flexCenter} grid sm:grid-cols-2 lg:grid-cols-4 m-4 md:px-4 xl:px-8  `}
       >
         {stats.map((stat) => (
           <div
             key={stat.id}
-            className={`flex-1 flex items-center  md:px-2 lg:px-4 xl:px-5 flex-row my-4 mx-auto transition duration-300 ease-in-out hover:scale-110`}
+            className={` flex flex-row  place-items-center my-4 lg:scale-[86%] xl:scale-[105%]  mx-auto transition duration-300 ease-in-out hover:scale-110 `}
           >
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              <h4 className="font-league font-semibold text-4xl xs:text-5xl ss:text-5xl sm:text-6xl lg:text-7xl leading-[43.16px] text-white">
+              <h4 className="font-league font-semibold text-4xl xs:text-5xl ss:text-5xl sm:text-6xl lg:text-6xl xl:text-7xl leading-[43.16px] text-white">
                 {stat.value}
               </h4>
             </motion.div>
-            <p className="font-league font-bold text-2xl xs:text-3xl ss:text-3xl sm:text-3xl lg:text-4xl leading-[31.58px] text-[#0a0a0a] ml-3 sm:ml-4 md:ml-3">
+            <p className="font-league font-bold text-2xl xs:text-3xl ss:text-3xl sm:text-3xl lg:text-3xl xl:text-4xl leading-[31.58px] text-[#0a0a0a] ml-3 sm:ml-4 md:ml-3">
               {stat.title}
             </p>
           </div>

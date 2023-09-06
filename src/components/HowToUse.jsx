@@ -11,10 +11,15 @@ import {
 
 const HowToUse = () => {
   const [openPopover, setOpenPopover] = React.useState(false);
+  const [openPopover2, setOpenPopover2] = React.useState(false);
 
   const triggers = {
     onMouseEnter: () => setOpenPopover(true),
     onMouseLeave: () => setOpenPopover(false),
+  };
+  const triggers2 = {
+    onMouseEnter: () => setOpenPopover2(true),
+    onMouseLeave: () => setOpenPopover2(false),
   };
 
   useEffect(() => {
@@ -142,7 +147,7 @@ const HowToUse = () => {
                           </PopoverHandler>
                           <PopoverContent
                             {...triggers}
-                            className="z-50 max-w-[26rem]"
+                            className="z-50 max-w-[20rem] rounded-3xl border-pink-400 border-4 "
                           >
                             <div className="mb-2 flex items-center gap-3">
                               <Typography
@@ -152,13 +157,8 @@ const HowToUse = () => {
                                 color="blue-gray"
                                 className=" transition-colorsfont-spacegrotesk font-bold text-sm sm:text-md  text-[#0a0a0a]"
                               >
-                                How to make ABC AlphaBot have full admin rights
-                                in a Telegram group:
+                                How to add to Telegram:
                               </Typography>
-                              <Chip
-                                value="Easy as ABC"
-                                className="rounded-full py-1 px-2 font-medium capitalize tracking-wide"
-                              />
                             </div>
                             <Typography
                               variant="small"
@@ -170,16 +170,45 @@ const HowToUse = () => {
                                 <li>Tap on the group name</li>
                                 <li>Select "Administrators"</li>
                                 <li>Tap on "Add Administrator"</li>
-                                <li>Search for and select AlphaBot</li>
-                                <li>Assign full admin privileges"</li>
+                                <li>Search for and select @AlphaBot</li>
                               </ul>
                             </Typography>
                           </PopoverContent>
                         </Popover>
                         or{" "}
-                        <span className="text-pink-400  font-semibold cursor-help">
-                          Discord (roles)
-                        </span>
+                        <Popover open={openPopover2} handler={setOpenPopover2}>
+                          <PopoverHandler {...triggers2}>
+                            <span className="text-pink-400  font-semibold cursor-help">
+                              Discord (roles)
+                            </span>
+                          </PopoverHandler>
+                          <PopoverContent
+                            {...triggers2}
+                            className="z-50 max-w-[20rem] rounded-3xl border-pink-400 border-4 "
+                          >
+                            <div className="mb-2 flex items-center gap-3">
+                              <Typography
+                                as="a"
+                                href="#"
+                                variant="h6"
+                                color="blue-gray"
+                                className=" transition-colorsfont-spacegrotesk font-bold text-sm sm:text-md  text-[#0a0a0a]"
+                              >
+                                How to add to Discord:
+                              </Typography>
+                            </div>
+                            <Typography
+                              variant="small"
+                              color="gray"
+                              className="font-normal"
+                            >
+                              <ul className="list-disc list-inside ml-2  gap-x-2   leading-7  font-spacegrotesk font-normal text-sm sm:text-md  text-[#0a0a0a]">
+                                <li>Add AlphaBot to your server</li>
+                                <li>Accept priveledges when prompted</li>
+                              </ul>
+                            </Typography>
+                          </PopoverContent>
+                        </Popover>
                       </li>
 
                       <li class="block w-full cursor-default px-4 pt-5 my-1  font-semibold focus:outline-none focus:ring-0">

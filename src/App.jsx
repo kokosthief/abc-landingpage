@@ -18,9 +18,11 @@ const App = () => (
     <Hero3 />
     <CTA />
     <Tiers />
-    <HowToUse />
-    <Roadmap />
-    <Tokenomics />
+    <div className="bg-hero1-gradient">
+      <HowToUse />
+      <Roadmap />
+      <Tokenomics />
+    </div>
 
     <div className="bg-[#0a0a0a]  ">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>

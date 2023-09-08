@@ -12,7 +12,7 @@ export default function CTA() {
           className="relative overflow-hidden bg-cover bg-no-repeat bg-[50%] h-screen"
           style={backgroundImageStyle}
         >
-          <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed">
+          <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden">
             <div class="flex h-full items-center justify-center">
               <div class="px-6 text-center text-white md:px-12">
                 <h2 class="font-arcade text-3xl font-semibold text-white mb-8  leading-tight tracking-tight">

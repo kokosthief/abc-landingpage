@@ -31,7 +31,7 @@ const HowToUse = () => {
   }, []);
 
   return (
-    <section id="howtouse" className="h-max bg-hero2-gradient">
+    <section id="howtouse" className="h-max ">
       <div className="pt-10 pb-20 sm:pt-56 sm:pb-36 mx-auto px-5 ">
         <section className=" bg-white   rounded-3xl  md:max-w-[1300px] mx-auto">
           <div className="px-6 py-2 sm:py-12 text-left md:px-12">
@@ -155,7 +155,7 @@ const HowToUse = () => {
                                 href="#"
                                 variant="h6"
                                 color="blue-gray"
-                                className=" transition-colorsfont-spacegrotesk font-bold text-sm sm:text-md  text-[#0a0a0a]"
+                                className=" transition-colorsfont-spacegrotesk font-bold text-sm sm:text-md  text-[#0a0a0a] outline-none"
                               >
                                 How to add to Telegram:
                               </Typography>
@@ -192,7 +192,7 @@ const HowToUse = () => {
                                 href="#"
                                 variant="h6"
                                 color="blue-gray"
-                                className=" transition-colorsfont-spacegrotesk font-bold text-sm sm:text-md  text-[#0a0a0a]"
+                                className=" transition-colorsfont-spacegrotesk font-bold text-sm sm:text-md  text-[#0a0a0a] outline-none"
                               >
                                 How to add to Discord:
                               </Typography>
@@ -232,7 +232,7 @@ const HowToUse = () => {
                                 {"  <contract address> "}
                               </span>
                             </a>
-                            - record a call
+                            - Make a call
                           </li>
                         </a>
                         <a
@@ -252,7 +252,7 @@ const HowToUse = () => {
                                 {" <@username> "}
                               </span>
                             </a>
-                            - list current active calls
+                            - List current active calls
                           </li>
                         </a>
                         <a
@@ -272,7 +272,7 @@ const HowToUse = () => {
                                 {" <@username> "}{" "}
                               </span>{" "}
                             </a>
-                            - check ranking & stats
+                            - Check ranking & stats
                           </li>
                         </a>
                       </div>

@@ -17,10 +17,11 @@ const Pricing = () => (
   <section class="bg-hero2-gradient">
     <div class="container mx-auto md:px-6 pt-14">
       <div class="flex flex-wrap items-center">
-        <div class="mb-6 w-full shrink-0 grow-0 basis-auto px-3 lg:w-4/12 text-center ">
+        <div class="mb-6 w-full  x-3 lg:w-4/12 text-center  ">
           <h2 className="font-league font-bold pt-16 text-5xl    lg:text-left  xs:text-5xl text-white tracking-normal   ">
-            Holder Benefits: <br />
-            <u class="text-white dark:text-primary-400 text-6xl">Alpha Hub</u>
+            <u class="text-white dark:text-primary-400 text-6xl">
+              Holder Benefits
+            </u>
           </h2>
 
           <p class="font-spacegrotesk mt-6 text-xl leading-7 lg:text-left  text-white mb-12  ">

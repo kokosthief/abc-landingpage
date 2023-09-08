@@ -10,9 +10,9 @@ const Hero2 = () => {
 
   return (
     <section id="hero2" className="  h-screen    " style={sectionStyle}>
-      <div className="flex flex-col mx-auto overflow-clip xl:max-w-screen-xl justify-around sm:justify-center sm:gap-8 h-full px-5 sm:px-20 md:px-28 lg:px-40">
+      <div className="flex flex-col mx-auto overflow-clip xl:max-w-screen-xl py-20 justify-between sm:justify-between sm:gap-8 sm:pb-44 h-full px-5 sm:px-20 md:px-28 lg:px-40">
         <div className=" ">
-          <h1 className="font-league font-bold text-center md:text-left text-4xl xs:text-5xl ss:text-6xl sm:text-6xl md:text-7xl lg:text--8xl xl:text-9xl text-white tracking-normal   ">
+          <h1 className="  font-league font-bold text-center md:text-left text-4xl xs:text-5xl ss:text-6xl sm:text-6xl md:text-7xl lg:text--8xl xl:text-9xl text-white tracking-normal   ">
             Creating <br />
             <span className="text-[#0a0a0a]">an Ecosystem </span>
             <br />

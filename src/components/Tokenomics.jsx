@@ -8,10 +8,10 @@ const bullishPoints = [
 ];
 
 const Tokenomics = () => (
-  <section class="bg-hero-gradient">
-    <div class="container flex flex-wrap py-20  sm:py-40 mx-auto px-5">
-      <div class=" border-4 border-white px-6 shadow-2xl py-5 rounded-3xl sm:w-1/2 sm:pr-12 sm:py-8 mb-10 sm:mb-0 pb-10  ">
-        <h3 className=" font-league text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#ff75ef] mb-12 md:text-6xl xl:text-7xl">
+  <section class=" h-fit py-20">
+    <div class="container flex flex-wrap  sm:py-40 mx-auto px-5  gap-20 sm:gap-0">
+      <div class=" border-4 border-white px-6 shadow-2xl rounded-3xl sm:w-1/2 sm:pr-12 py-5  ">
+        <h3 className=" font-league text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#0a0a0a]  mb-12 md:text-6xl xl:text-7xl">
           Tokenomics
         </h3>
         <ul
@@ -62,7 +62,7 @@ const Tokenomics = () => (
             class="relative self-center overflow-hidden inline-block px-8 py-4 mr-4 font-extrabold text-xl rounded-full group focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] shadow-lg"
           >
             <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-[white] opacity-[3%]"></span>
-            <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-[#ff75ef] opacity-100 group-hover:-translate-x-3"></span>
+            <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-3"></span>
             <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
               Buy $ABC
             </span>
@@ -71,19 +71,19 @@ const Tokenomics = () => (
         </div>
       </div>
       <div class="flex flex-col text-center sm:text-right grow justify-between gap-4">
-        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-gradient-to-r from-[#E900CE] to-pink-600 bg-clip-text font-extrabold uppercase  text-transparent ">
+        <h3 className="font-league text-9xl tracking-widest -mr-4 text-[#0a0a0a] font-extrabold uppercase   ">
           1M
         </h3>
         <h4 className="font-league flex-none text-3xl -mt-7 mb-3 font-semibold leading-6 text-white">
           Total Supply
         </h4>
-        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-[linear-gradient(to_bottom,_#FF7892,_#FF8661)] mt-1  bg-clip-text font-extrabold uppercase  text-transparent ">
+        <h3 className="font-league text-9xl tracking-widest -mr-4 text-[#0a0a0a]  mt-1   font-extrabold uppercase   ">
           .5%
         </h3>
         <h4 className="font-league flex-none text-3xl -mt-7 mb-3 font-semibold leading-6 text-white">
           Supply Burned
         </h4>{" "}
-        <h3 className="font-league text-9xl tracking-widest -mr-4 bg-[#FFB762] bg-clip-text font-extrabold uppercase  text-transparent ">
+        <h3 className="font-league text-9xl tracking-widest -mr-4 text-[#0a0a0a]   font-extrabold uppercase   ">
           4%
         </h3>
         <h4 className="font-league flex-none text-3xl -mt-7 mb-3 font-semibold leading-6 text-white">

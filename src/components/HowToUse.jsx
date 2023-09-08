@@ -46,9 +46,9 @@ const HowToUse = () => {
                     </span>
                   </h1>
 
-                  <p className="font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
+                  <p className="font-spacegrotesk leading-7 font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                     <ol className="list-inside list-decimal ">
-                      <li class="block w-full cursor-default px-4 my-1 pb-2 font-semibold focus:outline-none focus:ring-0">
+                      <li class="block w-full cursor-default px-4 my-1 pb-2 focus:outline-none focus:ring-0 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                         1. Install AlphaBot in Telegram or Discord
                       </li>
 
@@ -136,7 +136,7 @@ const HowToUse = () => {
                               className="w-[25px] h-auto inline-block mr-1"
                             /> */}
                       </div>
-                      <li class="block w-full cursor-default px-4 pt-5 my-1  font-semibold focus:outline-none focus:ring-0">
+                      <li class="block w-full cursor-default px-4 pt-5 my-1 focus:outline-none focus:ring-0 ">
                         2. Ensure AlphaBot is assigned the proper permissions in{" "}
                         <br />{" "}
                         <Popover open={openPopover} handler={setOpenPopover}>
@@ -211,7 +211,7 @@ const HowToUse = () => {
                         </Popover>
                       </li>
 
-                      <li class="block w-full cursor-default px-4 pt-5 my-1  font-semibold focus:outline-none focus:ring-0">
+                      <li class="block w-full px-4 pt-5 my-1">
                         3. Perform basic functions: <br />
                       </li>
                       <div className="ml-1">

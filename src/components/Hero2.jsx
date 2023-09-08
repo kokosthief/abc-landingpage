@@ -24,13 +24,16 @@ const Hero2 = () => {
           </h1>
         </div>
         <div className="  md:place-self-end">
-          <p className="my-4 bg-white rounded-3xl px-5 py-5 mx-auto md:mx-0 font-spacegrotesk font-bold text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl max-w-md">
-            ABC tracks data and the performance of callers across all socials.
+          <p className="my-4 bg-white rounded-3xl px-5 py-5 mx-auto md:mx-0 font-spacegrotesk font-normal text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl max-w-md">
+            ABC tracks the{" "}
+            <span className="font-bold">performance of callers </span> across
+            all socials.
             <br></br>
           </p>
-          <p className="bg-white rounded-3xl px-5 py-5 mx-auto md:mx-0 font-spacegrotesk font-bold text-[#0a0a0a] text-center md:text-left text-1xl sm:text-1xl max-w-md">
-            Whether you're a seasoned gem-finder or just starting, ABC empowers
-            you to build a following and earn rewards for successful calls.
+          <p className="bg-white rounded-3xl px-5 py-5 mx-auto md:mx-0 font-spacegrotesk font-normal text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl max-w-md">
+            Whether you're a seasoned gem-finder or just starting, AlphaBot
+            empowers you to <span className="font-bold">earn rewards </span> for
+            successful calls and build a following.
           </p>
         </div>
       </div>

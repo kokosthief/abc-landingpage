@@ -27,13 +27,13 @@ const Hero3 = () => {
             className="w-[70px] md:w-[100px] mx-auto flex "
           />
           <div className=" bg-white rounded-3xl px-5 py-5 mx-auto ">
-            <p className="font-spacegrotesk font-bold text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl md:text-2xl xl:text-3xl max-w-md">
+            <p className="font-spacegrotesk font-normal text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl md:text-2xl xl:text-3xl max-w-md">
               AlphaBot is a{" "}
               <span className="font-bold">fun, free and useful </span>utility
               that tracks calls and brings transparency and competition to the
               space.
             </p>
-            <p className="mt-3 font-spacegrotesk font-bold text-[#0a0a0a] text-center md:text-left text-1xl sm:text-1xl max-w-md">
+            <p className="mt-3 font-spacegrotesk font-normal text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl max-w-md">
               Anyone can use the bot to track their own calls,{" "}
               <span className="font-bold">receive a score and ranking, </span>{" "}
               and try to make it on the ABC Leaderboards.

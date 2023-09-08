@@ -124,7 +124,7 @@ const Hero = () => {
             <img
               src={abcbricklogo}
               alt="CredibleCallers"
-              className="w-[100px]  ss:w-[150px] sm:w-[300px] md:w-[400px]"
+              className="w-[150px] sm:w-[300px] lg:w-[400px] "
             />
           </div>
         </div>

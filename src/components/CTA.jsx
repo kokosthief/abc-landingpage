@@ -32,7 +32,7 @@ export default function CTA() {
                   </span>
                   <span class="absolute inset-0 border-2 hover:border-white  rounded-full"></span>
                 </a>
-                <p className="font-spacegrotesk mt-6 text-sm leading-5 text-white">
+                <p className="font-spacegrotesk mt-6 leading-7 font-normal text-sm sm:text-lg  text-white">
                   Buy / Sell Taxes : 4%
                 </p>
               </div>

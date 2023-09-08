@@ -191,7 +191,7 @@ const Pricing = () => (
                   </Typography>
                 </div>
                 <Typography color="">
-                  <ul className="list-disc list-inside ml-2  gap-x-2  mt-6leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
+                  <ul className="list-disc list-inside ml-2 gap-x-2 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                     <li>Calls From Top Callers Forwarded</li>
                     <li>Unlimited Free Caller Subscriptions</li>
                     <li>Diamond Alpha Chat Access</li>

@@ -25,9 +25,12 @@ const Hero = () => {
       <div class="container mx-auto lg:px-20 -mt-7 sm:mt-0 sm:py-10 md:py-16 lg:py-20 xl:py-24  xl:max-w-screen-xl ">
         <div class="flex flex-col-reverse	 sm:flex-row items-center justify-around sm:justify-between ">
           <div class="mt-6 lg:mt-0 text-center sm:text-left ">
-            <h1 class="whitespace-nowrap overflow-hidden font-league font-bold text-4xl  sm:text-5xl  md:text-7xl lg:text-7xl text-white tracking-normal mb-12">
-              Gamifying Calls. <br />
-              <span class="text-[#0a0a0a] ">Finding Alpha.</span>
+            <h1 class="whitespace-nowrap overflow-hidden font-league font-bold text-6xl  sm:text-5xl  md:text-7xl lg:text-8xl text-white tracking-normal mb-12">
+              Gamifying <br className="sm:hidden" /> Calls. <br />
+              <span class="text-[#0a0a0a] ">
+                Finding <br className="sm:hidden" />
+                Alpha.
+              </span>
             </h1>
             <div className="flex flex-row gap-2 justify-center sm:justify-start ">
               <div className="flex">
@@ -121,7 +124,7 @@ const Hero = () => {
             <img
               src={abcbricklogo}
               alt="CredibleCallers"
-              className="w-[200px] sm:w-[300px] md:w-[400px]"
+              className="w-[100px]  ss:w-[150px] sm:w-[300px] md:w-[400px]"
             />
           </div>
         </div>

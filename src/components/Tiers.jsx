@@ -8,76 +8,69 @@ import {
   CardBody,
   CardFooter,
   Typography,
-  Button,
-  Tooltip,
-  IconButton,
 } from "@material-tailwind/react";
 
 const Pricing = () => (
-  <section class="bg-hero2-gradient">
-    <div class="container mx-auto md:px-6 pt-14">
-      <div class="flex flex-wrap items-center">
-        <div class="mb-6 w-full  x-3 lg:w-4/12 text-center  ">
-          <h2 className="font-league font-bold pt-16 text-5xl    lg:text-left  xs:text-5xl text-white tracking-normal   ">
-            <u class="text-white dark:text-primary-400 text-6xl">
-              Holder Benefits
-            </u>
-          </h2>
+  <section class="px-5 sm:px-20 py-20 md:pt-20   ">
+    <div className="flex flex-wrap h-fit lg:h-screen content-center">
+      <div class="w-full text-center sm:text-left lg:w-4/12 pb-20 sm:pt-3">
+        <h1 className=" font-league font-bold text-white text-6xl  sm:text-8xl  md:text-8xl xl:text-8xl ">
+          <span className="text-[white] ">Holder Benefits</span>
+        </h1>
+        <p class="font-spacegrotesk  text-xl leading-7 lg:text-left  text-white  ">
+          ABC is committed to maximizing token holder value through the creation
+          of premium, holder-exclusive features and access to our comprehensive
+          revenue sharing model.
+        </p>
+      </div>
 
-          <p class="font-spacegrotesk mt-6 text-xl leading-7 lg:text-left  text-white mb-12  ">
-            ABC is committed to maximizing token holder value through the
-            creation of premium, holder-exclusive features and access to our
-            comprehensive revenue sharing model.
-          </p>
-        </div>
+      <div class="mb-md-0 mb-6 w-full lg:w-8/12 content-center">
+        <div class="mx-auto max-w-5xl  sm:px-6  lg:px-8 ">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
+            <Card className="w-full max-w-[26rem] h-full justify-center shadow-lg mx-auto">
+              <CardHeader
+                className="w-9/12 mx-auto shadow-none"
+                floated={false}
+                // color="blue-gray"
+              >
+                <img src={tiergold} alt="ui/ux review check" />
+                {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
+              </CardHeader>
 
-        <div class="mb-md-0 mb-6 w-full shrink-0 grow-0 basis-auto px-3 lg:w-8/12">
-          <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
-              <Card className="w-full max-w-[26rem] h-full justify-center shadow-lg mx-auto">
-                <CardHeader
-                  className="w-9/12 mx-auto shadow-none"
-                  floated={false}
-                  // color="blue-gray"
-                >
-                  <img src={tiergold} alt="ui/ux review check" />
-                  {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
-                </CardHeader>
-
-                <CardBody>
-                  <div className="mb-3 flex  justify-between ">
-                    <Typography
-                      variant="h5"
-                      color="blue-gray"
-                      className="font-league text-4xl font-semibold text-center mx-auto"
-                    >
-                      Gold Tier
-                    </Typography>
-                  </div>
-                  <Typography className="relative" color=" ">
-                    <div className="flex items-center relative">
-                      <ul className="list-disc list-inside ml-2 gap-x-2 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg text-[#0a0a0a]">
-                        <li className="blur">2 eerF relalC snoiSbcstup *</li>
-                        <li className="blur">
-                          nraE HTE nehw gnnaiG diaP serrsubipS *
-                        </li>
-                        <li className="blur">dloG ahplA tahC ssseccA *</li>
-                        <li className="blur">
-                          ahplA sgnilaS morF ruo esabataD *
-                        </li>
-                      </ul>
-                      <QuestionMarkCircleIcon className="  flex z-4 opacity-30 text-[#e6b284] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-40 w-40" />
-                    </div>
-                  </Typography>
+              <CardBody>
+                <div className="mb-3 flex  justify-between ">
                   <Typography
+                    variant="h5"
                     color="blue-gray"
-                    className="flex font-arcade pt-6 gap-1.5 text-2xl font-bold mx-auto "
+                    className="font-league text-4xl font-semibold text-center mx-auto"
                   >
-                    <p className="mx-auto">
-                      <span className=" text-pink-400">400</span> $ABC
-                    </p>
+                    Gold Tier
                   </Typography>
-                  {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                </div>
+                <Typography className="relative" color=" ">
+                  <div className="flex items-center relative">
+                    <ul className="list-disc list-inside ml-2 gap-x-2 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg text-[#0a0a0a]">
+                      <li className="blur">2 eerF relalC snoiSbcstup *</li>
+                      <li className="blur">
+                        nraE HTE nehw gnnaiG diaP serrsubipS *
+                      </li>
+                      <li className="blur">dloG ahplA tahC ssseccA *</li>
+                      <li className="blur">
+                        ahplA sgnilaS morF ruo esabataD *
+                      </li>
+                    </ul>
+                    <QuestionMarkCircleIcon className="  flex z-4 opacity-30 text-[#e6b284] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-40 w-40" />
+                  </div>
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="flex font-arcade pt-6 gap-1.5 text-2xl font-bold mx-auto "
+                >
+                  <p className="mx-auto">
+                    <span className=" text-pink-400">400</span> $ABC
+                  </p>
+                </Typography>
+                {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
               <Tooltip content="Free wifi">
                 <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                   <svg
@@ -146,28 +139,28 @@ const Pricing = () => (
                 </span>
               </Tooltip>
             </div> */}
-                </CardBody>
-                <CardFooter className="-mt-6">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href=""
-                    class=" w-full box-border relative z-30 my-3 inline-flex items-center justify-center px-6  overflow-hidden font-bold text-white transition-all duration-300 bg-[#EC407A] rounded-md cursor-wait group ring-offset-2 ring-1 ring-[#e65787] ring-offset-[#ffa8c5] hover:ring-offset-[#ba3e68] ease focus:outline-none"
-                  >
-                    <span class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
-                    <span class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
-                    <span class="relative z-20 flex items-center text-sm -my-[5px]">
-                      <KeyIcon
-                        className="mb-4 mt-4 h-6 w-auto text-white "
-                        fill="white"
-                      />
-                      <span class=" font-spacegrotesk px-6 font-extrabold text-lg  ">
-                        COMING SOON
-                      </span>
+              </CardBody>
+              <CardFooter className="-mt-6">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href=""
+                  class=" w-full box-border relative z-30 my-3 inline-flex items-center justify-center px-6  overflow-hidden font-bold text-white transition-all duration-300 bg-[#EC407A] rounded-md cursor-wait group ring-offset-2 ring-1 ring-[#e65787] ring-offset-[#ffa8c5] hover:ring-offset-[#ba3e68] ease focus:outline-none"
+                >
+                  <span class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                  <span class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                  <span class="relative z-20 flex items-center text-sm -my-[5px]">
+                    <KeyIcon
+                      className="mb-4 mt-4 h-6 w-auto text-white "
+                      fill="white"
+                    />
+                    <span class=" font-spacegrotesk px-6 font-extrabold text-lg  ">
+                      COMING SOON
                     </span>
-                  </a>
+                  </span>
+                </a>
 
-                  {/* <a
+                {/* <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://t.me/AlphaBotCalls"
@@ -176,46 +169,46 @@ const Pricing = () => (
                 Get Access
               </Button>
             </a> */}
-                </CardFooter>
-              </Card>
-              <Card className="w-full max-w-[26rem] shadow-lg  mx-auto">
-                <CardHeader
-                  className="w-9/12 mx-auto shadow-none"
-                  floated={false}
-                  // color="blue-gray"
-                >
-                  <img src={tierdiamond} alt="ui/ux review check" />
-                  {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-3 flex items-center justify-between">
-                    <Typography
-                      variant="h5"
-                      color="blue-gray"
-                      className="font-league text-4xl font-semibold mx-auto"
-                    >
-                      Diamond Tier
-                    </Typography>
-                  </div>
-                  <Typography color="">
-                    <ul className="list-disc list-inside ml-2  gap-x-2  mt-6leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
-                      <li>Calls From Top Callers Forwarded</li>
-                      <li>Unlimited Free Caller Subscriptions</li>
-                      <li>Diamond Alpha Chat Access</li>
-                      <li>Custom Filtered Call Forwarding*</li>
-                      <li>Security Filtered Calls*</li>
-                      <li>RevShare*</li>
-                    </ul>
-                  </Typography>
+              </CardFooter>
+            </Card>
+            <Card className="w-full max-w-[26rem] shadow-lg  mx-auto">
+              <CardHeader
+                className="w-9/12 mx-auto shadow-none"
+                floated={false}
+                // color="blue-gray"
+              >
+                <img src={tierdiamond} alt="ui/ux review check" />
+                {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " /> */}
+              </CardHeader>
+              <CardBody>
+                <div className="mb-3 flex items-center justify-between">
                   <Typography
+                    variant="h5"
                     color="blue-gray"
-                    className="flex font-arcade pt-6  gap-1.5 text-2xl font-bold mx-auto "
+                    className="font-league text-4xl font-semibold mx-auto"
                   >
-                    <p className="mx-auto">
-                      <span className=" text-pink-400">2000</span> $ABC
-                    </p>{" "}
+                    Diamond Tier
                   </Typography>
-                  {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                </div>
+                <Typography color="">
+                  <ul className="list-disc list-inside ml-2  gap-x-2  mt-6leading-7  font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
+                    <li>Calls From Top Callers Forwarded</li>
+                    <li>Unlimited Free Caller Subscriptions</li>
+                    <li>Diamond Alpha Chat Access</li>
+                    <li>Custom Filtered Call Forwarding*</li>
+                    <li>Security Filtered Calls*</li>
+                    <li>RevShare*</li>
+                  </ul>
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="flex font-arcade pt-6  gap-1.5 text-2xl font-bold mx-auto "
+                >
+                  <p className="mx-auto">
+                    <span className=" text-pink-400">2000</span> $ABC
+                  </p>{" "}
+                </Typography>
+                {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
               <Tooltip content="Revenue Share">
                 <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                   <svg
@@ -302,28 +295,28 @@ const Pricing = () => (
                 </span>
               </Tooltip>
             </div> */}
-                </CardBody>
-                <CardFooter className="-mt-6">
-                  <a
-                    href="https://telegram.me/collablandbot?start=VFBDI1RFTCNDT01NIy0xMDAxNzMzNTg0NTg0"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class=" w-full box-border relative z-30 my-3 inline-flex items-center justify-center px-6  overflow-hidden font-bold text-white transition-all duration-300 bg-[#EC407A] rounded-md cursor-pointer group ring-offset-2 ring-1 ring-[#e65787] ring-offset-[#ffa8c5] hover:ring-offset-[#ba3e68] ease focus:outline-none"
-                  >
-                    <span class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
-                    <span class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
-                    <span class="relative z-20 flex items-center text-sm -my-[5px]">
-                      <KeyIcon
-                        className="mb-4 mt-4 h-6 w-auto text-white "
-                        fill="white"
-                      />
-                      <span class=" font-spacegrotesk px-6  font-extrabold text-lg  ">
-                        GET ACCESS
-                      </span>
+              </CardBody>
+              <CardFooter className="-mt-6">
+                <a
+                  href="https://telegram.me/collablandbot?start=VFBDI1RFTCNDT01NIy0xMDAxNzMzNTg0NTg0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class=" w-full box-border relative z-30 my-3 inline-flex items-center justify-center px-6  overflow-hidden font-bold text-white transition-all duration-300 bg-[#EC407A] rounded-md cursor-pointer group ring-offset-2 ring-1 ring-[#e65787] ring-offset-[#ffa8c5] hover:ring-offset-[#ba3e68] ease focus:outline-none"
+                >
+                  <span class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                  <span class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                  <span class="relative z-20 flex items-center text-sm -my-[5px]">
+                    <KeyIcon
+                      className="mb-4 mt-4 h-6 w-auto text-white "
+                      fill="white"
+                    />
+                    <span class=" font-spacegrotesk px-6  font-extrabold text-lg  ">
+                      GET ACCESS
                     </span>
-                  </a>
+                  </span>
+                </a>
 
-                  {/* <a
+                {/* <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://t.me/AlphaBotCalls"
@@ -332,9 +325,8 @@ const Pricing = () => (
                 Get Access
               </Button>
             </a> */}
-                </CardFooter>
-              </Card>
-            </div>
+              </CardFooter>
+            </Card>
           </div>
         </div>
       </div>

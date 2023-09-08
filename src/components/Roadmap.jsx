@@ -18,7 +18,7 @@ export default function Roadmap() {
   return (
     <div className="h-auto mx-auto -mt-20 pb-32  px-5">
       <div className="mx-auto max-w-2xl text-center">
-        <h1 className=" font-league font-bold text-white pt-16 text-6xl xs:mt-16 sm:text-8xl  md:text-8xl xl:text-9xl  ">
+        <h1 className=" font-league font-bold text-white pt-16 text-6xl xs:mt-16 sm:text-8xl  md:text-8xl xl:text-8xl  ">
           <span className="text-[white] ">Roadmap</span>
         </h1>
 

@@ -36,9 +36,9 @@ const HowToUse = () => {
         <section className=" bg-white   rounded-3xl  md:max-w-[1300px] mx-auto">
           <div className="px-6 py-2 sm:py-12 text-left md:px-12">
             <div className="container mx-auto">
-              <div className="grid items-center gap-12 lg:grid-cols-2 ">
-                <div className="mt-6 lg:mt-0 ">
-                  <h1 className="font-league text-center  lg:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#0a0a0a] mb-4 md:text-5xl ">
+              <div className="grid items-center gap-12  sm:gap-0 lg:grid-cols-2 ">
+                <div className="mt-6 lg:mt-0  ">
+                  <h1 className="font-league text-center px-4 lg:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#0a0a0a] mb-4 md:text-5xl ">
                     How to Use AlphaBot
                     <br />
                     <span className=" text-pink-400 md:text-6xl">

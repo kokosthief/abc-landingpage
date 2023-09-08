@@ -17,8 +17,8 @@ const App = () => (
     <Hero2 />
     <Hero3 />
     <CTA />
-    <Tiers />
     <div className="bg-hero1-gradient">
+      <Tiers />
       <HowToUse />
       <Roadmap />
       <Tokenomics />

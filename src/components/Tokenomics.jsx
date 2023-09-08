@@ -9,11 +9,11 @@ const bullishPoints = [
 
 const Tokenomics = () => (
   <section class=" h-fit py-20">
-    <div class="container flex flex-wrap  sm:py-40 mx-auto px-5  gap-20 sm:gap-0">
-      <div class=" border-4 border-white px-6 shadow-2xl rounded-3xl sm:w-1/2 sm:pr-12 py-5  ">
-        <h3 className=" font-league text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#0a0a0a]  mb-12 md:text-6xl xl:text-7xl">
-          Tokenomics
-        </h3>
+    <div class="container flex flex-wrap  sm:py-40 mx-auto px-5  gap-20 sm:gap-0 md:px-20">
+      <div class=" border-4 border-white px-6 shadow-2xl rounded-3xl sm:w-7/12 md:w-1/2 sm:pr-12 py-5  ">
+        <h1 className=" font-league text-center md:text-left font-bold text-white text-6xl sm:text-7xl  md:text-8xl xl:text-8xl ">
+          <span className="text-[white] ">Tokenomics</span>
+        </h1>
         <ul
           role="list"
           className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6  sm:gap-6"
@@ -37,7 +37,7 @@ const Tokenomics = () => (
           burned.
         </p>
         <div
-          className="md:hidden flex-shrink-0 pt-6            "
+          className="md:hidden pt-6"
           data-te-animation-init
           data-te-animation-start="onLoad"
           data-te-animation-reset="true"
@@ -47,7 +47,7 @@ const Tokenomics = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
-            class="relative self-center bg-white inline-block  px-8 py-4 mr-4 font-extrabold text-xl rounded-full"
+            class="relative self-center bg-white inline-block  px-8 py-4 font-extrabold text-xl rounded-full"
           >
             <span class="relative w-full text-center text-[#0a0a0a] ">
               Buy $ABC

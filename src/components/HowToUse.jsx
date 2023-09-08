@@ -48,27 +48,27 @@ const HowToUse = () => {
 
                   <p className="font-spacegrotesk leading-7 font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                     <ol className="list-inside list-decimal ">
-                      <li class="block w-full cursor-default px-4 my-1 pb-2 focus:outline-none focus:ring-0 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
+                      <li className="block w-full cursor-default px-4 my-1 pb-2 focus:outline-none focus:ring-0 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                         1. Install AlphaBot in Telegram or Discord
                       </li>
 
                       <div className="flex flex-col xs:flex-row gap-2 sm:gap-4 sm:pl-5 ">
                         <div className="flex mx-auto sm:mx-0">
                           <a
-                            class="group relative "
+                            className="group relative "
                             href="https://discord.com/api/oauth2/authorize?client_id=1141380686188662884&permissions=534723951680&scope=bot"
                           >
-                            <div class="flex absolute -left-3 items-center h-full">
-                              <div class="h-5 scale-0 opacity-0 group-hover:opacity-100 group-hover:scale-100 w-1 transition-all duration-200 origin-left bg-white rounded-r"></div>
+                            <div className="flex absolute -left-3 items-center h-full">
+                              <div className="h-5 scale-0 opacity-0 group-hover:opacity-100 group-hover:scale-100 w-1 transition-all duration-200 origin-left bg-white rounded-r"></div>
                             </div>
 
-                            <div class="group-active:translate-y-px">
-                              <div class="text-gray-100 group-hover:rounded-2xl group-hover:bg-[#5D65F3] group-hover:text-white bg-gray-700 rounded-3xl flex items-center justify-center w-36 h-12 transition-all duration-200 overflow-hidden shadow-lg">
+                            <div className="group-active:translate-y-px">
+                              <div className="text-gray-100 group-hover:rounded-2xl group-hover:bg-[#5D65F3] group-hover:text-white bg-gray-700 rounded-3xl flex items-center justify-center w-36 h-12 transition-all duration-200 overflow-hidden shadow-lg">
                                 <svg
                                   aria-hidden="false"
                                   aria-label="Discord"
                                   viewBox="0 0 28 20"
-                                  class="w-7 h-5 mr-1"
+                                  className="w-7 h-5 mr-1"
                                 >
                                   <path
                                     fill="currentColor"
@@ -136,7 +136,7 @@ const HowToUse = () => {
                               className="w-[25px] h-auto inline-block mr-1"
                             /> */}
                       </div>
-                      <li class="block w-full cursor-default px-4 pt-5 my-1 focus:outline-none focus:ring-0 ">
+                      <li className="block w-full cursor-default px-4 pt-5 my-1 focus:outline-none focus:ring-0 ">
                         2. Ensure AlphaBot is assigned the proper permissions in{" "}
                         <br />{" "}
                         <Popover open={openPopover} handler={setOpenPopover}>
@@ -211,7 +211,7 @@ const HowToUse = () => {
                         </Popover>
                       </li>
 
-                      <li class="block w-full px-4 pt-5 my-1">
+                      <li className="block w-full px-4 pt-5 my-1">
                         3. Perform basic functions: <br />
                       </li>
                       <div className="ml-1">

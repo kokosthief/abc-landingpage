@@ -28,15 +28,14 @@ const Hero3 = () => {
           />
           <div className=" bg-white rounded-3xl px-5 py-5 mx-auto ">
             <p className="font-spacegrotesk font-normal text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl md:text-2xl xl:text-3xl max-w-md">
-              AlphaBot is a{" "}
-              <span className="font-bold">fun, free and useful </span>utility
-              that tracks calls and brings transparency and competition to the
-              space.
+              A competitive <span className="font-bold">fun and free</span>{" "}
+              crypto calling bot that brings transparency and accountability to
+              the space.
             </p>
             <p className="mt-3 font-spacegrotesk font-normal text-[#0a0a0a] text-center md:text-left text-1xl sm:text-2xl max-w-md">
-              Anyone can use the bot to track their own calls,{" "}
+              Anyone can use the bot to track calls,{" "}
               <span className="font-bold">receive a score and ranking, </span>{" "}
-              and try to make it on the ABC Leaderboards.
+              and make their way up the ABC leaderboards.
             </p>
           </div>
         </div>

@@ -22,12 +22,12 @@ const Hero = () => {
       className={`flex flex-col pb-10 sm:px-20  h-fit sm:h-fit md:h-screen lg:h-screen xl:h-screen  justify-between bg-[linear-gradient(to_bottom,_#FD7553,_#D84261)] mx-auto `}
     >
       <Navbar />
-      <div class="container mx-auto lg:px-20 -mt-7 sm:mt-0 sm:py-10 md:py-16 lg:py-20 xl:py-24  xl:max-w-screen-xl ">
-        <div class="flex flex-col-reverse	 sm:flex-row items-center justify-around sm:justify-between ">
-          <div class="mt-6 lg:mt-0 text-center sm:text-left ">
-            <h1 class="whitespace-nowrap overflow-hidden font-league font-bold text-6xl  sm:text-5xl  md:text-7xl lg:text-8xl text-white tracking-normal mb-12">
+      <div className="container mx-auto lg:px-20 -mt-7 sm:mt-0 sm:py-10 md:py-16 lg:py-20 xl:py-24  xl:max-w-screen-xl ">
+        <div className="flex flex-col-reverse	 sm:flex-row items-center justify-around sm:justify-between ">
+          <div className="mt-6 lg:mt-0 text-center sm:text-left ">
+            <h1 className="whitespace-nowrap overflow-hidden font-league font-bold text-6xl  sm:text-5xl  md:text-7xl lg:text-8xl text-white tracking-normal mb-12">
               Gamifying <br className="sm:hidden" /> Calls. <br />
-              <span class="text-[#0a0a0a] ">
+              <span className="text-[#0a0a0a] ">
                 Finding <br className="sm:hidden" />
                 Alpha.
               </span>
@@ -45,9 +45,9 @@ const Hero = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
-                    class="relative self-center bg-white inline-block  px-8 py-4 mr-4 font-extrabold text-xl rounded-full"
+                    className="relative self-center bg-white inline-block  px-8 py-4 mr-4 font-extrabold text-xl rounded-full"
                   >
-                    <span class="relative w-full text-center text-[#0a0a0a] ">
+                    <span className="relative w-full text-center text-[#0a0a0a] ">
                       Buy $ABC
                     </span>
                   </a>
@@ -57,14 +57,14 @@ const Hero = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
-                    class="relative self-center overflow-hidden inline-block px-8 py-4 mr-4 font-extrabold text-xl rounded-full group focus:bg-primary-600 "
+                    className="relative self-center overflow-hidden inline-block px-8 py-4 mr-4 font-extrabold text-xl rounded-full group focus:bg-primary-600 "
                   >
-                    <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-                    <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-3"></span>
-                    <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
+                    <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                    <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-3"></span>
+                    <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
                       Buy $ABC
                     </span>
-                    <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                    <span className="absolute inset-0 border-2 border-white rounded-full"></span>
                   </a>
                 </div>
               </div>

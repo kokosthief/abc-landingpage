@@ -52,7 +52,7 @@ const HowToUse = () => {
                         1. Install AlphaBot in Telegram or Discord
                       </li>
 
-                      <div className="flex flex-col xs:flex-row gap-2 sm:gap-4 sm:pl-5 ">
+                      <div className="flex flex-wrap gap-2 sm:gap-4 sm:pl-5 ">
                         <div className="flex mx-auto sm:mx-0">
                           <a
                             className="group relative "

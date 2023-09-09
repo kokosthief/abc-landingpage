@@ -7,7 +7,6 @@ import {
   mediumcircle,
 } from "../assets";
 import Navbar from "./Navbar";
-import Stats from "./Stats";
 
 import React from "react";
 
@@ -25,17 +24,14 @@ const Hero = () => {
       <div className="container mx-auto lg:px-20 -mt-7 sm:mt-0 sm:py-10 md:py-16 lg:py-20 xl:py-24  xl:max-w-screen-xl ">
         <div className="flex flex-col-reverse	 sm:flex-row items-center justify-around sm:justify-between ">
           <div className="mt-6 lg:mt-0 text-center sm:text-left ">
-            <h1 className="whitespace-nowrap overflow-hidden font-league font-bold text-6xl  sm:text-5xl  md:text-7xl lg:text-8xl text-white tracking-normal mb-12">
-              Gamifying <br className="sm:hidden" /> Calls. <br />
-              <span className="text-[#0a0a0a] ">
-                Finding <br className="sm:hidden" />
-                Alpha.
-              </span>
+            <h1 className="whitespace-nowrap overflow-hidden font-league font-bold text-5xl  sm:text-5xl  md:text-7xl lg:text-8xl text-white tracking-normal mb-3 sm:mb-12 leading-[60px]">
+              Gamifying Calls. <br />
+              <span className="text-[#0a0a0a]">Finding Alpha.</span>
             </h1>
             <div className="flex flex-row gap-2 justify-center sm:justify-start ">
-              <div className="flex">
+              <div className="flex ">
                 <div
-                  className="md:hidden flex-shrink-0            "
+                  className="sm:hidden flex-shrink-0 scale-[85%]"
                   data-te-animation-init
                   data-te-animation-start="onLoad"
                   data-te-animation-reset="true"
@@ -52,7 +48,7 @@ const Hero = () => {
                     </span>
                   </a>
                 </div>
-                <div className="hidden md:flex mx-auto text-center w-max align-middle">
+                <div className="sm:scale-100 hidden sm:flex mx-auto text-center w-max align-middle">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -68,23 +64,24 @@ const Hero = () => {
                   </a>
                 </div>
               </div>
-              <div className="hidden xs:flex flex-row flex-wrap xs:gap-3   ">
+              <div className="-ml-8 sm:ml-0 scale-[85%] sm:scale-100 flex flex-row gap-2 xs:gap-3   ">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://telegram.me/AlphaBotCalls"
+                  className="flex"
                 >
                   <img
                     src={telegramcircle}
                     alt="CredibleCallers"
-                    className="w-[60px] h-auto rounded-full hidden xs:flex "
+                    className="w-[60px] h-auto rounded-full "
                   />
                 </a>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://twitter.com/alphabotcalls"
-                  className="hidden ss:flex "
+                  className="flex "
                 >
                   <img
                     src={twittercircle}
@@ -96,7 +93,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://discord.gg/CQ6txJa8RA"
-                  className="hidden md:flex "
+                  className="flex "
                 >
                   <img
                     src={discordcircle}
@@ -108,12 +105,12 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://medium.com/@alphabotcalls"
-                  className="hidden md:flex "
+                  className=" hidden md:flex  "
                 >
                   <img
                     src={mediumcircle}
                     alt="CredibleCallers"
-                    className="w-[60px] h-auto rounded-full"
+                    className="w-[60px] h-[60px] rounded-full"
                   />
                 </a>
               </div>
@@ -124,18 +121,18 @@ const Hero = () => {
             <img
               src={abcbricklogo}
               alt="CredibleCallers"
-              className="w-[150px] sm:w-[300px] lg:w-[400px] "
+              className="w-[200px] sm:w-[300px] lg:w-[400px] "
             />
           </div>
         </div>
       </div>
       <div
-        className={`${styles.flexCenter} grid sm:grid-cols-2 lg:grid-cols-4 m-4 md:px-4 xl:px-8  `}
+        className={`${styles.flexCenter} px-4 grid grid-cols-2 lg:grid-cols-4 m-0 sm:m-4 md:px-4 xl:px-8  `}
       >
         {stats.map((stat) => (
           <div
             key={stat.id}
-            className={` flex flex-row  place-items-center my-4 lg:scale-[86%] xl:scale-[105%]  mx-auto transition duration-300 ease-in-out hover:scale-110 `}
+            className={` flex flex-row  place-items-center my-2 scale-[83%]   sm:my-4 lg:scale-[86%] xl:scale-[105%]  mx-auto transition duration-300 ease-in-out hover:scale-110 `}
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -146,7 +143,7 @@ const Hero = () => {
                 {stat.value}
               </h4>
             </motion.div>
-            <p className="font-league font-bold text-2xl xs:text-3xl ss:text-3xl sm:text-3xl lg:text-3xl xl:text-4xl leading-[31.58px] text-[#0a0a0a] ml-3 sm:ml-4 md:ml-3">
+            <p className="font-league font-bold text-2xl xs:text-3xl ss:text-3xl sm:text-3xl lg:text-3xl xl:text-4xl leading-[24.58px] text-[#0a0a0a] ml-3 sm:ml-4 md:ml-3 ">
               {stat.title}
             </p>
           </div>

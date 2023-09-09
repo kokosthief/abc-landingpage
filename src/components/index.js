@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
 import Integrations from "./Integrations";
-import Stats from "./Stats";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Hero2 from "./Hero2";
@@ -18,7 +17,6 @@ export {
   HowToUse,
   Team,
   Integrations,
-  Stats,
   Footer,
   Tiers,
   Tokenomics,

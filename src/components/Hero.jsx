@@ -132,7 +132,7 @@ const Hero = () => {
         {stats.map((stat) => (
           <div
             key={stat.id}
-            className={` flex flex-row  place-items-center my-2 scale-[83%]   sm:my-4 lg:scale-[86%] xl:scale-[105%]  mx-auto transition duration-300 ease-in-out hover:scale-110 `}
+            className={` flex flex-row  place-items-center my-2 scale-[83%]   sm:my-4 lg:scale-[83%] xl:scale-[105%]  mx-auto transition duration-300 ease-in-out hover:scale-110 `}
           >
             <motion.div
               initial={{ opacity: 0 }}

@@ -3,22 +3,22 @@ import { dexscreener, dextools, maestro, uniswap } from "../assets";
 export const stats = [
   {
     id: "stats-1",
-    title: "unique callers",
+    title: "Unique Callers",
     value: "3000+",
   },
   {
     id: "stats-2",
-    title: "communities",
+    title: "Groups",
     value: "50+",
   },
   {
     id: "stats-3",
-    title: "total calls",
+    title: "Total Calls",
     value: "4000+",
   },
   {
     id: "stats-4",
-    title: "100x calls",
+    title: "100x Calls",
     value: "10",
   },
 ];

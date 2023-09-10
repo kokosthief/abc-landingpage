@@ -58,7 +58,7 @@ export default function Navbar() {
           className="relative w-[100px] h-[auto] p-2"
         />
       </a>
-      <h1 className="  xs:inline-flex text-sm xs:text-md sm:text-lg md:text-xl  font-arcade text-white">
+      <h1 className="  xs:inline-flex text-sm xs:text-md sm:text-lg md:text-xl  font-arcade text-white mr-4">
         ALPHA BOT CALLS
       </h1>
 

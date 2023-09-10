@@ -1,7 +1,8 @@
-import dexscreener from "./dexscreener.png";
-import dextools from "./dextools.png";
-import maestro from "./maestro.png";
-import uniswap from "./uniswap.png";
+import partnerdextools from "./dextools.png";
+import partneruniswap from "./uniswap.png";
+import partnertwitter from "./twitter.png";
+import partnertelegram from "./telegram.png";
+
 import logo from "./logo.png";
 import abccolorlogo from "./abclogo.png";
 import abcbricklogo from "./abclogo-brick.png";
@@ -24,6 +25,10 @@ import tiergold from "./tier-gold.png";
 import herobg from "./hero-bg.jpeg";
 
 export {
+  partnertwitter,
+  partnerdextools,
+  partneruniswap,
+  partnertelegram,
   herobg,
   tierdiamond,
   tiergold,
@@ -34,10 +39,6 @@ export {
   zhaabbah,
   zen,
   kokos,
-  dexscreener,
-  dextools,
-  maestro,
-  uniswap,
   logo,
   abccolorlogo,
   abcbricklogo,

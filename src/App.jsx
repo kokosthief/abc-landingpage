@@ -8,7 +8,8 @@ import {
   CTA,
   HowToUse,
   Roadmap,
-  Tiers,
+  HolderBenefits,
+  Integrations,
 } from "./components";
 
 const App = () => (
@@ -18,7 +19,8 @@ const App = () => (
     <Hero3 />
     <CTA />
     <div className="bg-hero1-gradient">
-      <Tiers />
+      <HolderBenefits />
+      <Integrations />
       <HowToUse />
       <Roadmap />
       <Tokenomics />

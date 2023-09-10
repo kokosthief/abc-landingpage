@@ -1,4 +1,9 @@
-import { dexscreener, dextools, maestro, uniswap } from "../assets";
+import {
+  partnertelegram,
+  partnerdextools,
+  partnertwitter,
+  partneruniswap,
+} from "../assets";
 
 export const stats = [
   {
@@ -80,18 +85,18 @@ export const footerLinks = [
 export const integrations = [
   {
     id: "client-1",
-    logo: dexscreener,
+    logo: partnertelegram,
   },
   {
     id: "client-2",
-    logo: dextools,
+    logo: partnerdextools,
   },
   {
     id: "client-3",
-    logo: maestro,
+    logo: partnertwitter,
   },
   {
     id: "client-4",
-    logo: uniswap,
+    logo: partneruniswap,
   },
 ];

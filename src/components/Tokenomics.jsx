@@ -9,8 +9,8 @@ const bullishPoints = [
 
 const Tokenomics = () => (
   <section className=" h-fit py-20">
-    <div className="container flex flex-wrap  sm:py-40 mx-auto px-5  gap-20 sm:gap-0 md:px-20">
-      <div className=" border-4 border-white px-6 shadow-2xl rounded-3xl sm:w-7/12 md:w-1/2 sm:pr-12 py-5  ">
+    <div className="container flex flex-wrap sm:py-40 mx-auto px-5  gap-20 sm:gap-0 md:px-20">
+      <div className=" border-4 border-white pl-5 pr-2 shadow-2xl rounded-3xl sm:w-7/12 md:w-1/2 sm:pr-12 py-5  ">
         <h1 className=" font-league text-center md:text-left font-bold text-white text-6xl sm:text-7xl  md:text-8xl xl:text-8xl ">
           <span className="text-[white] ">Tokenomics</span>
         </h1>

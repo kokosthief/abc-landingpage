@@ -52,8 +52,8 @@ const HowToUse = () => {
                         1. Install AlphaBot in Telegram or Discord
                       </li>
 
-                      <div className="flex flex-wrap gap-2 sm:gap-4 sm:pl-5 ">
-                        <div className="flex mx-auto sm:mx-0">
+                      <div className="flex flex-row gap-2 sm:gap-4 sm:pl-5  scale-90 sm:scale-100   ">
+                        <div className="flex ">
                           <a
                             className="group relative "
                             href="https://discord.com/api/oauth2/authorize?client_id=1141380686188662884&permissions=534723951680&scope=bot"
@@ -83,7 +83,7 @@ const HowToUse = () => {
                           </a>
                         </div>
 
-                        <div className="mx-auto sm:mx-0 ">
+                        <div className="">
                           <a
                             href="https://t.me/ABCAlphaBot?startgroup=true"
                             target="_blank"
@@ -211,10 +211,10 @@ const HowToUse = () => {
                         </Popover>
                       </li>
 
-                      <li className="block w-full px-4 pt-5 my-1">
+                      <li className="block w-full px-4 pt-5 ">
                         3. Perform basic functions: <br />
                       </li>
-                      <div className="ml-1">
+                      <div className="">
                         <a
                           target="_blank"
                           rel="noopener noreferrer"

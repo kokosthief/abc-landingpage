@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import Hero2 from "./Hero2";
 import Hero3 from "./Hero3";
 import Team from "./Team";
-import Tiers from "./Tiers";
+import HolderBenefits from "./HolderBenefits";
 import Tokenomics from "./Tokenomics";
 import CTA from "./CTA";
 import HowToUse from "./HowToUse";
@@ -18,7 +18,7 @@ export {
   Team,
   Integrations,
   Footer,
-  Tiers,
+  HolderBenefits,
   Tokenomics,
   Hero,
   Hero2,

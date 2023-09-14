@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
-import { Checkbox } from "flowbite-react";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 import {
   CircleStackIcon,
   ForwardIcon,

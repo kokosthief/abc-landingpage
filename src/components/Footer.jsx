@@ -94,7 +94,7 @@ const Footer = () => (
             <svg
               className="w-8 h-8 fill-current"
               fill="#000000"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               viewBox="-105 -105 450 500"
               xmlns="http://www.w3.org/2000/svg"
             >

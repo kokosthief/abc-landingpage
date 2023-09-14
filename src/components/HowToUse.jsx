@@ -46,7 +46,7 @@ const HowToUse = () => {
                     </span>
                   </h1>
 
-                  <p className="font-spacegrotesk leading-7 font-normal text-sm sm:text-lg  text-[#0a0a0a]">
+                  <div className="font-spacegrotesk leading-7 font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                     <ol className="list-inside list-decimal ">
                       <li className="block w-full cursor-default px-4 my-1 pb-2 focus:outline-none focus:ring-0 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                         1. Install AlphaBot in Telegram or Discord
@@ -277,7 +277,7 @@ const HowToUse = () => {
                         </a>
                       </div>
                     </ol>
-                  </p>
+                  </div>
                 </div>
 
                 <div className="mb-12 lg:mb-0">

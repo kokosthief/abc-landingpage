@@ -9,11 +9,13 @@ const Integrations = () => (
           key={integration.id}
           className={`flex-1 ${styles.flexCenter} sm:min-w-[192px] min-w-[120px] m-20`}
         >
-          <img
-            src={integration.logo}
-            alt="integration_logo"
-            className="sm:w-[192px] w-[100px] object-contain"
-          />
+          <a target="_blank" rel="noopener noreferrer" href={integration.href}>
+            <img
+              src={integration.logo}
+              alt="integration_logo"
+              className="sm:w-[192px] w-[100px] object-contain"
+            />
+          </a>
         </div>
       ))}
     </div>

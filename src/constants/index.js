@@ -86,17 +86,21 @@ export const integrations = [
   {
     id: "client-1",
     logo: partnertelegram,
+    href: "https://t.me/AlphaBotCalls",
   },
   {
     id: "client-2",
     logo: partnerdextools,
+    href: "https://www.dextools.io/app/en/ether/pair-explorer/0xc290f0db1db21eede38792ee7fcdabfff3ad2960",
   },
   {
     id: "client-3",
     logo: partnertwitter,
+    href: "https://twitter.com/alphabotcalls",
   },
   {
     id: "client-4",
     logo: partneruniswap,
+    href: "https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30",
   },
 ];

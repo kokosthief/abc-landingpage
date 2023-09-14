@@ -63,7 +63,7 @@ const HowToUse = () => {
                             </div>
 
                             <div className="group-active:translate-y-px">
-                              <div className="text-gray-100 group-hover:rounded-2xl group-hover:bg-[#5D65F3] group-hover:text-white bg-gray-700 rounded-3xl flex items-center justify-center w-36 h-12 transition-all duration-200 overflow-hidden shadow-lg">
+                              <div className="text-gray-100 group-hover:rounded-2xl group-hover:bg-[#5D65F3] group-hover:text-white bg-[#5D65F3] rounded-3xl flex items-center justify-center w-36 h-12 transition-all duration-200 overflow-hidden shadow-lg">
                                 <svg
                                   aria-hidden="false"
                                   aria-label="Discord"
@@ -96,6 +96,7 @@ const HowToUse = () => {
                               color: "#FFFFFF",
                               borderRadius: "46px",
                               padding: "10px", // Add padding for spacing
+                              boxShadow: "none",
                             }}
                             title="Telegram Button"
                           >
@@ -130,11 +131,6 @@ const HowToUse = () => {
                             <span className="font-sans text-md ">Telegram</span>
                           </a>
                         </div>
-                        {/* <img
-                              src={telegramcircle}
-                              alt="CredibleCallers"
-                              className="w-[25px] h-auto inline-block mr-1"
-                            /> */}
                       </div>
                       <li className="block w-full cursor-default px-4 pt-5 my-1 focus:outline-none focus:ring-0 ">
                         2. Ensure AlphaBot is assigned the proper permissions in{" "}

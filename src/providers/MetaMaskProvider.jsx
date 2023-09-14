@@ -6,6 +6,7 @@ import {
   useState,
 } from "react";
 import { MetaMaskErrorTitlesMap } from "../constants/errors";
+import { formatBalance } from "../helpers/formatBalance";
 
 import { getParsedParams } from "../helpers/getParsedParams";
 
@@ -13,7 +14,7 @@ const disconnectedState = { accounts: [], balance: "", chainId: "" };
 
 const MetaMaskContext = createContext({});
 
-export const MetaMaskContextProvider = ({ children }) => {
+export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
   const [wallet, setWallet] = useState(disconnectedState);
   const [isValidPage, setIsValidPage] = useState(true);
 
@@ -24,7 +25,9 @@ export const MetaMaskContextProvider = ({ children }) => {
 
   const clearError = () => setErrorMessage("");
 
-  const accountValidation = useCallback((accounts, user) => {
+  const accountValidation = useCallback((accounts) => {
+    const { user } = getParsedParams(location.search);
+
     if (!accounts.includes(user.toLowerCase())) {
       setErrorMessage(MetaMaskErrorTitlesMap.wrongWalletConnected);
       setIsWrongConnect(true);
@@ -72,17 +75,20 @@ export const MetaMaskContextProvider = ({ children }) => {
         return;
       }
 
-      const { user } = getParsedParams(location.search);
       setIsConnected(true);
-      const isValid = accountValidation(accounts, user);
+      const isValid = checkIsNeeded && accountValidation(accounts);
 
-      if (!isValid) return;
+      if (!isValid && checkIsNeeded) return;
 
       setIsWrongConnect(false);
-      const balance = await window.ethereum.request({
-        method: "eth_getBalance",
-        params: [accounts[0], "latest"],
-      });
+
+      const balance = formatBalance(
+        await window.ethereum.request({
+          method: "eth_getBalance",
+          params: [accounts[0], "latest"],
+        })
+      );
+
       const chainId = await window.ethereum.request({
         method: "eth_chainId",
       });
@@ -132,12 +138,14 @@ export const MetaMaskContextProvider = ({ children }) => {
   }, [updateWallet]);
 
   useEffect(() => {
-    const { price, user, trader } = getParsedParams(location.search);
+    if (checkIsNeeded) {
+      const { price, user, trader } = getParsedParams(location.search);
 
-    if (!price || !user || !trader) {
-      setIsValidPage(false);
-      setErrorMessage(MetaMaskErrorTitlesMap.params);
-      return;
+      if (!price || !user || !trader) {
+        setIsValidPage(false);
+        setErrorMessage(MetaMaskErrorTitlesMap.params);
+        return;
+      }
     }
 
     const getProvider = async () => {

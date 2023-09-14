@@ -1,8 +1,8 @@
 import subscribeBG from "../../assets/subscribe-bg.jpg";
-import { SubscribeCard } from "../../components/SubscribeCard/SubscribeCard";
+import { ConnectWalletCard } from "../../components/ConnectWalletCard";
 import { Logo } from "../../components/ui/Logo";
 
-export const SubscriptionPage = () => {
+export const ConnectWalletPage = () => {
   return (
     <div
       className="w-full overflow-hidden bg-cover bg-no-repeat min-h-screen py-4 ss:py-6"
@@ -13,7 +13,7 @@ export const SubscriptionPage = () => {
           <Logo />
         </header>
         <main>
-          <SubscribeCard />
+          <ConnectWalletCard />
         </main>
       </div>
     </div>

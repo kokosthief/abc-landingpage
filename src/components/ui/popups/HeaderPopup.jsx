@@ -8,7 +8,7 @@ const notificationTypeMap = {
     color: "text-error",
   },
   loading: {
-    Icon: <LoadingIcon />,
+    Icon: <LoadingIcon className="animate-spin" />,
     color: "text-pink-dark",
   },
   success: {

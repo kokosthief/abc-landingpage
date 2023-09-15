@@ -7,6 +7,7 @@ export const MainPopup = ({
   children,
   className,
   header,
+  isClosing = true,
   isOpened,
   onClose,
 }) => {
@@ -21,10 +22,12 @@ export const MainPopup = ({
         }
       )}
     >
-      <CloseIcon
-        onClick={onClose}
-        className="absolute right-0 ss:right-[-24px] top-[-24px] cursor-pointer"
-      />
+      {isClosing && (
+        <CloseIcon
+          onClick={onClose}
+          className="absolute right-0 ss:right-[-24px] top-[-24px] cursor-pointer"
+        />
+      )}
       {header && <HeaderPopup {...header} />}
       {children}
     </Dialog>

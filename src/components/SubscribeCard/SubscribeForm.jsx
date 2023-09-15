@@ -104,6 +104,7 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
 
     const notificationPropsMap = {
       error: {
+        isClosing: true,
         isOpened: !!errorMessage,
         message: GetSubscriptionErrorMessageMap[errorMessage],
         onClose: clearError,
@@ -111,6 +112,7 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
         title: errorMessage,
       },
       loading: {
+        isClosing: false,
         isOpened: isLoading,
         message: "Hold on, sometimes it takes a while.",
         onClose: () => 1,
@@ -118,6 +120,7 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
         title: "The transaction is processing",
       },
       success: {
+        isClosing: false,
         isOpened: isTransactionBeingMade,
         message:
           "Your payment is completed! Your subscription will be activated in 5 minutes.",
@@ -130,9 +133,10 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
     return notificationPropsMap[status];
   };
 
-  const { isOpened, message, onClose, status, title } = useMemo(() => {
-    return getNotificationProps();
-  }, [errorMessage, isLoading, isTransactionBeingMade]);
+  const { isClosing, isOpened, message, onClose, status, title } =
+    useMemo(() => {
+      return getNotificationProps();
+    }, [errorMessage, isLoading, isTransactionBeingMade]);
 
   return (
     <>
@@ -163,6 +167,7 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
         </Button>
       </form>
       <Notification
+        isClosing={isClosing}
         isOpened={isOpened}
         onClose={onClose}
         message={message}

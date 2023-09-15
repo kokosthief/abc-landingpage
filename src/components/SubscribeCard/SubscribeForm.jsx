@@ -58,9 +58,13 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
         signer
       );
 
-      const priceNew = parseEther(price.toString());
+      const currentPrice = (price * subscription.value).toFixed(
+        price.length - 2
+      );
 
-      if (priceNew > balance) {
+      const parsedPrice = parseEther(currentPrice.toString());
+
+      if (parsedPrice > balance) {
         setErrorMessage(GetSubscriptionErrorTitleMap.balance);
         return;
       }
@@ -73,7 +77,7 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
       }
 
       let overrides = {
-        value: priceNew.toString(),
+        value: parsedPrice.toString(),
         gasLimit: 300_000,
       };
 

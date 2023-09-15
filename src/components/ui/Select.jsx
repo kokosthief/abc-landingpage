@@ -13,7 +13,7 @@ const customStyles = {
   valueContainer: () => "p-3.5 m-0 text-neutral-black body",
   input: () => " p-0 m-0",
   menu: () =>
-    "py-1 px-0 shadow-[2px_2px_12px_0px_rgba(10,10,10,0.16)] rounded-[1rem] bg-white",
+    "py-1 px-0 shadow-[2px_2px_12px_0px_rgba(10,10,10,0.16)] rounded-[1rem] bg-white mt-1",
   menuList: () =>
     "overflow-auto !max-h-[206px] ::-webkit-scrollbar:w-[16px] scroll",
   option: () =>

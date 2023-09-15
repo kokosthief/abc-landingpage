@@ -22,7 +22,7 @@ export const SubscribeCard = () => {
 
   const { width } = useWindowSize();
 
-  const { price, trader, user } = useMemo(() => {
+  const { from, price, to } = useMemo(() => {
     return getParsedParams(location.search);
   }, [location.search]);
 
@@ -53,16 +53,16 @@ export const SubscribeCard = () => {
           <SubscribeForm
             disabled={isWrongConnect}
             price={price}
-            user={user}
-            trader={trader}
+            user={from}
+            trader={to}
           />
         ) : (
           <Button onClick={connectMetaMask}>Connect a Wallet</Button>
         )}
         <div className="border-2 border-neutral-gray rounded-2xl p-3.5 mt-4 ss:mt-6">
-          <WalletAddress address={user} title="Subscriber’s Wallet" />
+          <WalletAddress address={from} title="Subscriber’s Wallet" />
           <hr className="my-2 ss:my-4" />
-          <WalletAddress address={trader} title="Trader’s Wallet" />
+          <WalletAddress address={to} title="Trader’s Wallet" />
         </div>
       </div>
       <Notification
@@ -72,8 +72,8 @@ export const SubscribeCard = () => {
           typeof MetaMaskErrorMessagesMap[errorMessage] === "function"
             ? MetaMaskErrorMessagesMap[errorMessage](
                 width > breakpoints.ss
-                  ? user
-                  : `${user?.slice(0, 17)}...${user?.slice(-10)}`
+                  ? from
+                  : `${from?.slice(0, 17)}...${from?.slice(-10)}`
               )
             : MetaMaskErrorMessagesMap[errorMessage]
         }

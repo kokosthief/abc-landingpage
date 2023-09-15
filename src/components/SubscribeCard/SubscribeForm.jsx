@@ -121,7 +121,7 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
         isOpened: isTransactionBeingMade,
         message:
           "Your payment is completed! Your subscription will be activated in 5 minutes.",
-        onClose: closeTransaction,
+        onClose: () => 1,
         status: "success",
         title: "The payment is successful!",
       },
@@ -158,7 +158,9 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
           title="Total:"
           className="mb-2 ss:mb-4"
         />
-        <Button disabled={disabled || isLoading}>Pay Now</Button>
+        <Button disabled={disabled || isLoading || isTransactionBeingMade}>
+          Pay Now
+        </Button>
       </form>
       <Notification
         isOpened={isOpened}

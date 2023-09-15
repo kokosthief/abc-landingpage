@@ -26,7 +26,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
   const clearError = () => setErrorMessage("");
 
   const accountValidation = useCallback((accounts) => {
-    const { user } = getParsedParams(location.search);
+    const { from: user } = getParsedParams(location.search);
 
     if (!accounts.includes(user.toLowerCase())) {
       setErrorMessage(MetaMaskErrorTitlesMap.wrongWalletConnected);
@@ -71,6 +71,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
         (await window.ethereum.request({ method: "eth_accounts" }));
 
       if (!accounts.length) {
+        setIsConnected(false);
         setWallet(disconnectedState);
         return;
       }
@@ -139,9 +140,9 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
 
   useEffect(() => {
     if (checkIsNeeded) {
-      const { price, user, trader } = getParsedParams(location.search);
+      const { from, price, to } = getParsedParams(location.search);
 
-      if (!price || !user || !trader) {
+      if (!price || !from || !to) {
         setIsValidPage(false);
         setErrorMessage(MetaMaskErrorTitlesMap.params);
         return;

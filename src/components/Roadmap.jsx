@@ -1,18 +1,11 @@
 import React from "react";
 
 import {
-  Card,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
-import { Checkbox } from "flowbite-react";
-import {
   CircleStackIcon,
   ForwardIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/20/solid";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 
 export default function Roadmap() {
   return (
@@ -56,7 +49,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
-                  for="flexCheckCheckedDisabled"
+                  htmlFor="flexCheckCheckedDisabled"
                 >
                   Stealth Launch ABC Token
                 </label>
@@ -72,7 +65,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
-                  for="flexCheckCheckedDisabled"
+                  htmlFor="flexCheckCheckedDisabled"
                 >
                   Release AlphaBot Base Utility
                 </label>
@@ -88,7 +81,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Add AlphaBot to Groups and Spread Adoption
                 </label>
@@ -103,7 +96,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Run Global Tournaments and Competitions
                 </label>
@@ -140,7 +133,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
-                  for="flexCheckCheckedDisabled"
+                  htmlFor="flexCheckCheckedDisabled"
                 >
                   Leaderboards and Rankings
                 </label>
@@ -156,7 +149,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
-                  for="flexCheckCheckedDisabled"
+                  htmlFor="flexCheckCheckedDisabled"
                 >
                   Release AlphaBot Base Utility
                 </label>
@@ -172,7 +165,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
-                  for="flexCheckCheckedDisabled"
+                  htmlFor="flexCheckCheckedDisabled"
                 >
                   ABC Trending
                 </label>
@@ -188,7 +181,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
-                  for="flexCheckCheckedDisabled"
+                  htmlFor="flexCheckCheckedDisabled"
                 >
                   Integrate With Discord
                 </label>
@@ -204,7 +197,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
-                  for="flexCheckCheckedDisabled"
+                  htmlFor="flexCheckCheckedDisabled"
                 >
                   Free Caller Subscriptions for Holders
                 </label>
@@ -220,7 +213,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Paid Caller Subscriptions
                 </label>
@@ -235,7 +228,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Group Specific Commands
                 </label>
@@ -250,7 +243,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Meme/Utility Calls
                 </label>
@@ -265,7 +258,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Anti-Calls
                 </label>
@@ -280,7 +273,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Integrated Competition Bot
                 </label>
@@ -295,7 +288,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Custom Security Filtered Call
                 </label>
@@ -332,7 +325,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
-                  for="flexCheckCheckedDisabled"
+                  htmlFor="flexCheckCheckedDisabled"
                 >
                   Rebranding
                 </label>
@@ -348,7 +341,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
-                  for="flexCheckCheckedDisabled"
+                  htmlFor="flexCheckCheckedDisabled"
                 >
                   New Website
                 </label>
@@ -364,7 +357,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Portal for Claiming Subscription Revenue
                 </label>
@@ -379,7 +372,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   RevShare
                 </label>
@@ -394,7 +387,7 @@ export default function Roadmap() {
                 />
                 <label
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
-                  for="flexCheckDisabled"
+                  htmlFor="flexCheckDisabled"
                 >
                   Dashboard
                 </label>

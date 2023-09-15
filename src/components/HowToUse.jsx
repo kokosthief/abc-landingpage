@@ -2,10 +2,8 @@ import React, { useEffect } from "react";
 
 import {
   Popover,
-  PopoverHandler,
   PopoverContent,
-  Button,
-  Chip,
+  PopoverHandler,
   Typography,
 } from "@material-tailwind/react";
 
@@ -46,7 +44,7 @@ const HowToUse = () => {
                     </span>
                   </h1>
 
-                  <p className="font-spacegrotesk leading-7 font-normal text-sm sm:text-lg  text-[#0a0a0a]">
+                  <div className="font-spacegrotesk leading-7 font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                     <ol className="list-inside list-decimal ">
                       <li className="block w-full cursor-default px-4 my-1 pb-2 focus:outline-none focus:ring-0 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
                         1. Install AlphaBot in Telegram or Discord
@@ -114,8 +112,8 @@ const HowToUse = () => {
                                   y1="0%"
                                   y2="100%"
                                 >
-                                  <stop offset="0%" stop-color="#2AABEE" />
-                                  <stop offset="100%" stop-color="#229ED9" />
+                                  <stop offset="0%" stopColor="#2AABEE" />
+                                  <stop offset="100%" stopColor="#229ED9" />
                                 </linearGradient>
                               </defs>
                               <path
@@ -160,19 +158,14 @@ const HowToUse = () => {
                                 How to add to Telegram:
                               </Typography>
                             </div>
-                            <Typography
-                              variant="small"
-                              color="gray"
-                              className="font-normal"
-                            >
-                              <ul className="list-disc list-inside ml-2  gap-x-2   leading-7  font-spacegrotesk font-normal text-sm sm:text-md  text-[#0a0a0a]">
-                                <li>Open your Telegram group</li>
-                                <li>Tap on the group name</li>
-                                <li>Select "Administrators"</li>
-                                <li>Tap on "Add Administrator"</li>
-                                <li>Search for and select @AlphaBot</li>
-                              </ul>
-                            </Typography>
+
+                            <ul className="list-disc list-inside ml-2  gap-x-2   leading-7  font-spacegrotesk font-normal text-sm sm:text-md  text-[#0a0a0a] font-normal">
+                              <li>Open your Telegram group</li>
+                              <li>Tap on the group name</li>
+                              <li>Select "Administrators"</li>
+                              <li>Tap on "Add Administrator"</li>
+                              <li>Search for and select @AlphaBot</li>
+                            </ul>
                           </PopoverContent>
                         </Popover>
                         or{" "}
@@ -197,16 +190,11 @@ const HowToUse = () => {
                                 How to add to Discord:
                               </Typography>
                             </div>
-                            <Typography
-                              variant="small"
-                              color="gray"
-                              className="font-normal"
-                            >
-                              <ul className="list-disc list-inside ml-2  gap-x-2   leading-7  font-spacegrotesk font-normal text-sm sm:text-md  text-[#0a0a0a]">
-                                <li>Add AlphaBot to your server</li>
-                                <li>Accept priveledges when prompted</li>
-                              </ul>
-                            </Typography>
+
+                            <ul className="list-disc list-inside ml-2  gap-x-2   leading-7  font-spacegrotesk font-normal text-sm sm:text-md  text-[#0a0a0a]">
+                              <li>Add AlphaBot to your server</li>
+                              <li>Accept priveledges when prompted</li>
+                            </ul>
                           </PopoverContent>
                         </Popover>
                       </li>
@@ -214,24 +202,19 @@ const HowToUse = () => {
                       <li className="block w-full px-4 pt-5 ">
                         3. Perform basic functions: <br />
                       </li>
-                      <div className="">
+                      <div>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
                           href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
                         >
                           <li className="block w-fit cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700">
-                            <a
-                              className="text-pink-400 font-semibold "
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
-                            >
+                            <span className="text-pink-400 font-semibold ">
                               /call
                               <span className="font-mono font-normal">
                                 {"  <contract address> "}
                               </span>
-                            </a>
+                            </span>
                             - Make a call
                           </li>
                         </a>
@@ -241,17 +224,12 @@ const HowToUse = () => {
                           href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
                         >
                           <li className=" block w-fit cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700">
-                            <a
-                              className="text-pink-400  font-semibold"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
-                            >
+                            <span className="text-pink-400  font-semibold">
                               /checkcalls
                               <span className="font-mono font-normal">
                                 {" <@username> "}
                               </span>
-                            </a>
+                            </span>
                             - List current active calls
                           </li>
                         </a>
@@ -261,23 +239,18 @@ const HowToUse = () => {
                           href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
                         >
                           <li className=" block w-fit cursor-pointer  rounded-2xl px-4 py-2 my-1 transition duration-500 hover:bg-pink-100 hover:text-neutral-700">
-                            <a
-                              className="text-pink-400 font-semibold "
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href="https://t.me/ABCAlphaBot?start=0xasdhajsdhjasdasd"
-                            >
+                            <span className="text-pink-400 font-semibold ">
                               /stats
                               <span className="font-mono font-normal">
                                 {" <@username> "}{" "}
                               </span>{" "}
-                            </a>
+                            </span>
                             - Check ranking & stats
                           </li>
                         </a>
                       </div>
                     </ol>
-                  </p>
+                  </div>
                 </div>
 
                 <div className="mb-12 lg:mb-0">

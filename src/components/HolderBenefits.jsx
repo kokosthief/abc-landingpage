@@ -4,9 +4,9 @@ import { tierdiamond, tiergold } from "../assets";
 
 import {
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
+  CardHeader,
   Typography,
 } from "@material-tailwind/react";
 
@@ -47,28 +47,24 @@ const Pricing = () => (
                     Gold Tier
                   </Typography>
                 </div>
-                <Typography className="relative" color=" ">
-                  <div className="flex items-center relative">
-                    <ul className="list-disc list-inside ml-2 gap-x-2 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg text-[#0a0a0a]">
-                      <li className="blur">2 eerF relalC snoiSbcstup *</li>
-                      <li className="blur">
-                        nraE HTE nehw gnnaiG diaP serrsubipS *
-                      </li>
-                      <li className="blur">dloG ahplA tahC ssseccA *</li>
-                      <li className="blur">
-                        ahplA sgnilaS morF ruo esabataD *
-                      </li>
-                    </ul>
-                    <QuestionMarkCircleIcon className="  flex z-4 opacity-30 text-[#e6b284] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-40 w-40" />
-                  </div>
-                </Typography>
+
+                <div className="flex items-center relative">
+                  <ul className="list-disc list-inside ml-2 gap-x-2 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg text-[#0a0a0a]">
+                    <li className="blur">2 eerF relalC snoiSbcstup *</li>
+                    <li className="blur">
+                      nraE HTE nehw gnnaiG diaP serrsubipS *
+                    </li>
+                    <li className="blur">dloG ahplA tahC ssseccA *</li>
+                    <li className="blur">ahplA sgnilaS morF ruo esabataD *</li>
+                  </ul>
+                  <QuestionMarkCircleIcon className="  flex z-4 opacity-30 text-[#e6b284] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-40 w-40" />
+                </div>
+
                 <Typography
                   color="blue-gray"
-                  className="flex font-arcade pt-6 gap-1.5 text-2xl font-bold mx-auto "
+                  className="flex font-arcade pt-6 gap-1.5 text-2xl font-bold mx-auto justify-center gap-x-6"
                 >
-                  <p className="mx-auto">
-                    <span className=" text-pink-400">400</span> $ABC
-                  </p>
+                  <span className=" text-pink-400">400</span>$ABC
                 </Typography>
                 {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
               <Tooltip content="Free wifi">
@@ -190,23 +186,21 @@ const Pricing = () => (
                     Diamond Tier
                   </Typography>
                 </div>
-                <Typography color="">
-                  <ul className="list-disc list-inside ml-2 gap-x-2 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
-                    <li>Calls From Top Callers Forwarded</li>
-                    <li>Unlimited Free Caller Subscriptions</li>
-                    <li>Diamond Alpha Chat Access</li>
-                    <li>Custom Filtered Call Forwarding*</li>
-                    <li>Security Filtered Calls*</li>
-                    <li>RevShare*</li>
-                  </ul>
-                </Typography>
+
+                <ul className="list-disc list-inside ml-2 gap-x-2 leading-7 font-spacegrotesk font-normal text-sm sm:text-lg  text-[#0a0a0a]">
+                  <li>Calls From Top Callers Forwarded</li>
+                  <li>Unlimited Free Caller Subscriptions</li>
+                  <li>Diamond Alpha Chat Access</li>
+                  <li>Custom Filtered Call Forwarding*</li>
+                  <li>Security Filtered Calls*</li>
+                  <li>RevShare*</li>
+                </ul>
+
                 <Typography
                   color="blue-gray"
-                  className="flex font-arcade pt-6  gap-1.5 text-2xl font-bold mx-auto "
+                  className="flex font-arcade pt-6  gap-1.5 text-2xl font-bold mx-auto justify-center gap-x-6"
                 >
-                  <p className="mx-auto">
-                    <span className=" text-pink-400">2000</span> $ABC
-                  </p>{" "}
+                  <span className=" text-pink-400">2000</span>$ABC
                 </Typography>
                 {/* <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
               <Tooltip content="Revenue Share">

@@ -67,8 +67,8 @@ export const footerLinks = [
     title: "AlphaBotCalls",
     links: [
       {
-        name: "Support",
-        link: "https://telegram.me/MisterS3R",
+        name: "Docs",
+        link: "https://docs.alpha-bot-calls.com/",
       },
       {
         name: "Etherscan",

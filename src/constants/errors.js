@@ -20,6 +20,11 @@ export const MetaMaskErrorMessagesMap = {
     `Please connect the wallet:\n${wallet}`,
 };
 
+export const VerificationErrorTitleMap = {
+  tokenExist: "IP address already exists",
+  tokenNotFound: "Token not found",
+};
+
 export const GetSubscriptionErrorTitleMap = {
   balance: "Not enough money",
   expectation: "Expectation",

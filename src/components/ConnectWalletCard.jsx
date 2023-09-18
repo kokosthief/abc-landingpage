@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   GetSubscriptionErrorMessageMap,
+  GetSubscriptionErrorTitleMap,
   MetaMaskErrorMessagesMap,
   MetaMaskErrorTitlesMap,
+  VerificationErrorTitleMap,
 } from "../constants/errors";
 import { getParsedParams } from "../helpers/getParsedParams";
 import { useMetaMask } from "../providers/MetaMaskProvider";
@@ -13,6 +15,7 @@ import { Notification } from "./ui/popups/Notification";
 export const ConnectWalletCard = () => {
   const { clearError, errorMessage, isConnected, connectMetaMask, wallet } =
     useMetaMask();
+  const [verificationError, setVerificationError] = useState("");
 
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -23,22 +26,31 @@ export const ConnectWalletCard = () => {
   const getNotificationProps = () => {
     let status = "success";
 
-    if (errorMessage) {
+    if (
+      (errorMessage || verificationError) &&
+      verificationError !== VerificationErrorTitleMap.tokenExist
+    ) {
       status = "error";
     }
 
     const notificationPropsMap = {
       error: {
-        isOpened: !!errorMessage,
-        message: GetSubscriptionErrorMessageMap[errorMessage],
-        onClose: clearError,
+        isOpened: !!errorMessage || !!verificationError,
+        message:
+          GetSubscriptionErrorMessageMap[errorMessage || verificationError],
+        onClose: () => {
+          clearError();
+          setVerificationError("");
+        },
         status: "error",
-        title: errorMessage,
+        title: errorMessage || verificationError,
       },
       success: {
         isOpened: isSuccess,
         message: "The wallet was connected to your telegram account.",
-        onClose: () => 1,
+        onClose: () => {
+          setIsSuccess(false);
+        },
         status: "success",
         title: "The connect is successful!",
       },
@@ -49,15 +61,23 @@ export const ConnectWalletCard = () => {
 
   const { isOpened, message, onClose, status, title } = useMemo(() => {
     return getNotificationProps();
-  }, [errorMessage, isSuccess]);
+  }, [errorMessage, isSuccess, verificationError]);
 
   useEffect(() => {
     if (isConnected && wallet.accounts.length) {
-      WalletService.verification({ address: wallet.accounts[0], token }).then(
-        () => {
+      WalletService.verification({ address: wallet.accounts[0], token })
+        .then(() => {
           setIsSuccess(true);
-        }
-      );
+        })
+        .catch((err) => {
+          if (err.message === VerificationErrorTitleMap.tokenExist) {
+            setVerificationError(err.message);
+            setIsSuccess(true);
+            return;
+          }
+
+          setVerificationError(GetSubscriptionErrorTitleMap.unknown);
+        });
     }
   }, [isConnected, wallet.accounts]);
 

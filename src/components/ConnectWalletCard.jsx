@@ -18,6 +18,7 @@ export const ConnectWalletCard = () => {
   const [verificationError, setVerificationError] = useState("");
 
   const [isSuccess, setIsSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const { token } = useMemo(() => {
     return getParsedParams(location.search);
@@ -31,6 +32,8 @@ export const ConnectWalletCard = () => {
       verificationError !== VerificationErrorTitleMap.tokenExist
     ) {
       status = "error";
+    } else if (loading) {
+      status = "loading";
     }
 
     const notificationPropsMap = {
@@ -42,29 +45,41 @@ export const ConnectWalletCard = () => {
           clearError();
           setVerificationError("");
         },
-        status: "error",
-        title: errorMessage || verificationError,
+        header: {
+          status: "error",
+          title: errorMessage || verificationError,
+        },
+      },
+      loading: {
+        isClosing: false,
+        isOpened: loading,
+        message: "Hold on, sometimes it takes a while.",
+        header: {
+          status: "loading",
+          title: "The verification is processing",
+        },
       },
       success: {
+        isClosing: false,
         isOpened: isSuccess,
         message: "The wallet was connected to your telegram account.",
-        onClose: () => {
-          setIsSuccess(false);
+        header: {
+          status: "success",
+          title: "The connect is successful!",
         },
-        status: "success",
-        title: "The connect is successful!",
       },
     };
 
     return notificationPropsMap[status];
   };
 
-  const { isOpened, message, onClose, status, title } = useMemo(() => {
+  const notificationProps = useMemo(() => {
     return getNotificationProps();
-  }, [errorMessage, isSuccess, verificationError]);
+  }, [errorMessage, isSuccess, loading, verificationError]);
 
   useEffect(() => {
     if (isConnected && wallet.accounts.length) {
+      setLoading(true);
       WalletService.verification({ address: wallet.accounts[0], token })
         .then(() => {
           setIsSuccess(true);
@@ -77,6 +92,9 @@ export const ConnectWalletCard = () => {
           }
 
           setVerificationError(GetSubscriptionErrorTitleMap.unknown);
+        })
+        .finally(() => {
+          setLoading(false);
         });
     }
   }, [isConnected, wallet.accounts]);
@@ -84,6 +102,7 @@ export const ConnectWalletCard = () => {
   if (!token) {
     return (
       <Notification
+        isClosing={false}
         isOpened={true}
         message={MetaMaskErrorMessagesMap[MetaMaskErrorTitlesMap.params]}
         header={{
@@ -102,15 +121,7 @@ export const ConnectWalletCard = () => {
           Connect a Wallet
         </Button>
       </div>
-      <Notification
-        isOpened={isOpened}
-        onClose={onClose}
-        message={message}
-        header={{
-          status: status,
-          title: title,
-        }}
-      />
+      <Notification {...notificationProps} />
     </>
   );
 };

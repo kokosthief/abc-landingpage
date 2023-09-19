@@ -29,11 +29,9 @@ const options = [
 export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
   const [subscription, setSubscription] = useState(options[0]);
   const [errorMessage, setErrorMessage] = useState("");
-  const {
-    open: isTransactionBeingMade,
-    onClose: closeTransaction,
-    onOpen: openTransaction,
-  } = useOpen(false);
+  const { open: isTransactionBeingMade, onOpen: openTransaction } =
+    useOpen(false);
+
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubscriptionChange = (selectedOption) => {
@@ -112,35 +110,38 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
         isOpened: !!errorMessage,
         message: GetSubscriptionErrorMessageMap[errorMessage],
         onClose: clearError,
-        status: "error",
-        title: errorMessage,
+        header: {
+          status: "error",
+          title: errorMessage,
+        },
       },
       loading: {
         isClosing: false,
         isOpened: isLoading,
         message: "Hold on, sometimes it takes a while.",
-        onClose: () => 1,
-        status: "loading",
-        title: "The transaction is processing",
+        header: {
+          status: "loading",
+          title: "The transaction is processing",
+        },
       },
       success: {
         isClosing: false,
         isOpened: isTransactionBeingMade,
         message:
           "Your payment is completed! Your subscription will be activated in 5 minutes.",
-        onClose: () => 1,
-        status: "success",
-        title: "The payment is successful!",
+        header: {
+          status: "success",
+          title: "The payment is successful!",
+        },
       },
     };
 
     return notificationPropsMap[status];
   };
 
-  const { isClosing, isOpened, message, onClose, status, title } =
-    useMemo(() => {
-      return getNotificationProps();
-    }, [errorMessage, isLoading, isTransactionBeingMade]);
+  const notificationProps = useMemo(() => {
+    return getNotificationProps();
+  }, [errorMessage, isLoading, isTransactionBeingMade]);
 
   return (
     <>
@@ -170,16 +171,7 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
           Pay Now
         </Button>
       </form>
-      <Notification
-        isClosing={isClosing}
-        isOpened={isOpened}
-        onClose={onClose}
-        message={message}
-        header={{
-          status: status,
-          title: title,
-        }}
-      />
+      <Notification {...notificationProps} />
     </>
   );
 };

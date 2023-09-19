@@ -1,7 +1,5 @@
-import { useMemo } from "react";
 import { breakpoints } from "../../constants/breakpoints";
 import { MetaMaskErrorMessagesMap } from "../../constants/errors";
-import { getParsedParams } from "../../helpers/getParsedParams";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { useMetaMask } from "../../providers/MetaMaskProvider";
 import { Button } from "../ui/Button";
@@ -18,17 +16,17 @@ export const SubscribeCard = () => {
     isValidPage,
     isWrongConnect,
     connectMetaMask,
+    subscribeInfo: { from, price, time, to },
   } = useMetaMask();
 
-  const { width } = useWindowSize();
+  const isValidTime = new Date(time).getTime() > new Date().getTime();
 
-  const { from, price, to } = useMemo(() => {
-    return getParsedParams(location.search);
-  }, [location.search]);
+  const { width } = useWindowSize();
 
   if (!isValidPage) {
     return (
       <Notification
+        isClosing={false}
         isOpened={!!errorMessage}
         message={MetaMaskErrorMessagesMap[errorMessage]}
         header={{
@@ -38,6 +36,8 @@ export const SubscribeCard = () => {
       />
     );
   }
+
+  if (!to || !price || !from) return;
 
   return (
     <>
@@ -51,13 +51,15 @@ export const SubscribeCard = () => {
         />
         {isConnected ? (
           <SubscribeForm
-            disabled={isWrongConnect}
+            disabled={isWrongConnect || !isValidTime}
             price={price}
             user={from}
             trader={to}
           />
         ) : (
-          <Button onClick={connectMetaMask}>Connect a Wallet</Button>
+          <Button onClick={connectMetaMask} disabled={!isValidTime}>
+            Connect a Wallet
+          </Button>
         )}
         <div className="border-2 border-neutral-gray rounded-2xl p-3.5 mt-4 ss:mt-6">
           <WalletAddress address={from} title="Subscriber’s Wallet" />

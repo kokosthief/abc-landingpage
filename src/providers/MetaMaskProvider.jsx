@@ -9,6 +9,7 @@ import { MetaMaskErrorTitlesMap } from "../constants/errors";
 import { formatBalance } from "../helpers/formatBalance";
 
 import { getParsedParams } from "../helpers/getParsedParams";
+import { WalletService } from "../services/wallet.service";
 
 const disconnectedState = { accounts: [], balance: "", chainId: "" };
 
@@ -16,7 +17,8 @@ const MetaMaskContext = createContext({});
 
 export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
   const [wallet, setWallet] = useState(disconnectedState);
-  const [isValidPage, setIsValidPage] = useState(true);
+  const [subscribeInfo, setSubscribeInfo] = useState({});
+  const [isValidPage, setIsValidPage] = useState(false);
 
   const [isWrongConnect, setIsWrongConnect] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
@@ -25,23 +27,24 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
 
   const clearError = () => setErrorMessage("");
 
-  const accountValidation = useCallback((accounts) => {
-    const { from: user } = getParsedParams(location.search);
+  const accountValidation = useCallback(
+    (accounts, user = subscribeInfo.from) => {
+      if (!accounts.includes(user.toLowerCase())) {
+        setErrorMessage(MetaMaskErrorTitlesMap.wrongWalletConnected);
+        setIsWrongConnect(true);
+        return false;
+      }
 
-    if (!accounts.includes(user.toLowerCase())) {
-      setErrorMessage(MetaMaskErrorTitlesMap.wrongWalletConnected);
-      setIsWrongConnect(true);
-      return false;
-    }
+      if (accounts[0] !== user.toLowerCase()) {
+        setErrorMessage(MetaMaskErrorTitlesMap.wrongWalletSelected);
+        setIsWrongConnect(true);
+        return false;
+      }
 
-    if (accounts[0] !== user.toLowerCase()) {
-      setErrorMessage(MetaMaskErrorTitlesMap.wrongWalletSelected);
-      setIsWrongConnect(true);
-      return false;
-    }
-
-    return true;
-  }, []);
+      return true;
+    },
+    []
+  );
 
   const switchChainId = useCallback(async (chainId) => {
     try {
@@ -62,7 +65,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
   }, []);
 
   const updateWallet = useCallback(
-    async (providedAccounts) => {
+    async (providedAccounts, user) => {
       if (!window.ethereum) return;
       clearError();
 
@@ -77,7 +80,8 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
       }
 
       setIsConnected(true);
-      const isValid = checkIsNeeded && accountValidation(accounts);
+
+      let isValid = checkIsNeeded && accountValidation(accounts, user);
 
       if (!isValid && checkIsNeeded) return;
 
@@ -106,9 +110,12 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
     [accountValidation, switchChainId]
   );
 
-  const updateWalletOnly = useCallback(() => updateWallet(), [updateWallet]);
+  const updateWalletOnly = useCallback(
+    (user) => () => updateWallet(null, user),
+    [updateWallet]
+  );
   const updateWalletAndAccounts = useCallback(
-    (accounts) => updateWallet(accounts),
+    (user) => (accounts) => updateWallet(accounts, user),
     [updateWallet]
   );
 
@@ -121,7 +128,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
           method: "eth_requestAccounts",
         });
 
-        updateWallet(accounts);
+        updateWallet(accounts, subscribeInfo.from);
       } catch (err) {
         if (err?.code === 4001) {
           setErrorMessage(MetaMaskErrorTitlesMap[4001]);
@@ -139,23 +146,42 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
   }, [updateWallet]);
 
   useEffect(() => {
-    if (checkIsNeeded) {
-      const { from, price, to } = getParsedParams(location.search);
-
-      if (!price || !from || !to) {
-        setIsValidPage(false);
-        setErrorMessage(MetaMaskErrorTitlesMap.params);
-        return;
-      }
-    }
+    let user;
 
     const getProvider = async () => {
+      if (checkIsNeeded) {
+        const { token } = getParsedParams(location.search);
+
+        if (!token) {
+          setIsValidPage(false);
+          setErrorMessage(MetaMaskErrorTitlesMap.params);
+          return;
+        }
+
+        try {
+          const { user_address, time, trade_amount, trade_address } =
+            await WalletService.tokenVerification({ token });
+          user = user_address;
+          setSubscribeInfo({
+            from: user_address,
+            price: trade_amount,
+            time,
+            to: trade_address,
+          });
+        } catch (err) {
+          setIsValidPage(false);
+          setErrorMessage(err.message);
+          return;
+        }
+      }
+
       const provider = window.ethereum;
       setIsValidPage(true);
-      updateWalletOnly();
+      updateWallet(null, user);
+
       if (provider) {
-        window.ethereum.on("accountsChanged", updateWalletAndAccounts);
-        window.ethereum.on("chainChanged", updateWalletOnly);
+        window.ethereum.on("accountsChanged", updateWalletAndAccounts(user));
+        window.ethereum.on("chainChanged", updateWalletOnly(user));
       }
     };
 
@@ -164,11 +190,11 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
     return () => {
       window.ethereum?.removeListener(
         "accountsChanged",
-        updateWalletAndAccounts
+        updateWalletAndAccounts(user)
       );
-      window.ethereum?.removeListener("chainChanged", updateWalletOnly);
+      window.ethereum?.removeListener("chainChanged", updateWalletOnly(user));
     };
-  }, [connectMetaMask, updateWalletOnly, updateWalletAndAccounts]);
+  }, []);
 
   return (
     <MetaMaskContext.Provider
@@ -180,6 +206,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
         isWrongConnect,
         connectMetaMask,
         clearError,
+        subscribeInfo,
       }}
     >
       {children}

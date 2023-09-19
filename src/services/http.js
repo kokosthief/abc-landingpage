@@ -7,7 +7,7 @@ export class HttpClient {
   }
 
   async get(url, options) {
-    return (await this.instance.get) < R > (url, options);
+    return await this.instance.get(url, options);
   }
 
   async post(url, body, options) {

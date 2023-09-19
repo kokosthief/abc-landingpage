@@ -25,6 +25,11 @@ export const VerificationErrorTitleMap = {
   tokenNotFound: "Token not found",
 };
 
+export const VerificationErrorMessageMap = {
+  [VerificationErrorTitleMap.tokenExist]:
+    "The wallet was connected to your telegram account.",
+};
+
 export const GetSubscriptionErrorTitleMap = {
   balance: "Not enough money",
   expectation: "Expectation",

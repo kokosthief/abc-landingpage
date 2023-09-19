@@ -4,6 +4,7 @@ import {
   GetSubscriptionErrorTitleMap,
   MetaMaskErrorMessagesMap,
   MetaMaskErrorTitlesMap,
+  VerificationErrorMessageMap,
   VerificationErrorTitleMap,
 } from "../constants/errors";
 import { getParsedParams } from "../helpers/getParsedParams";
@@ -25,22 +26,26 @@ export const ConnectWalletCard = () => {
   }, [location.search]);
 
   const getNotificationProps = () => {
-    let status = "success";
+    let status;
 
-    if (
-      (errorMessage || verificationError) &&
-      verificationError !== VerificationErrorTitleMap.tokenExist
-    ) {
+    if (errorMessage || verificationError) {
       status = "error";
-    } else if (loading) {
+    }
+
+    if (loading) {
       status = "loading";
+    }
+
+    if (isSuccess) {
+      status = "success";
     }
 
     const notificationPropsMap = {
       error: {
         isOpened: !!errorMessage || !!verificationError,
         message:
-          GetSubscriptionErrorMessageMap[errorMessage || verificationError],
+          GetSubscriptionErrorMessageMap[errorMessage] ||
+          VerificationErrorMessageMap[verificationError],
         onClose: () => {
           clearError();
           setVerificationError("");
@@ -87,7 +92,6 @@ export const ConnectWalletCard = () => {
         .catch((err) => {
           if (err.message === VerificationErrorTitleMap.tokenExist) {
             setVerificationError(err.message);
-            setIsSuccess(true);
             return;
           }
 

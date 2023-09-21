@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import { ConnectWalletPage } from "../pages/ConnectWalletPage/ConnectWalletPage";
 import { HomePage } from "../pages/HomePage/HomePage";
 import { SubscriptionPage } from "../pages/SubscriptionPage/SubscriptionPage";
 import { MetaMaskContextProvider } from "../providers/MetaMaskProvider";
-import { ConnectWalletPage } from "../pages/ConnectWalletPage/ConnectWalletPage";
 
 export const router = createBrowserRouter([
   {

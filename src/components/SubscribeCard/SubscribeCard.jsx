@@ -6,7 +6,6 @@ import { Button } from "../ui/Button";
 import { Notification } from "../ui/popups/Notification";
 import { PriceInformation } from "./PriceInformation";
 import { SubscribeForm } from "./SubscribeForm";
-import { WalletAddress } from "./WalletAddress";
 
 export const SubscribeCard = () => {
   const {
@@ -61,11 +60,6 @@ export const SubscribeCard = () => {
             Connect a Wallet
           </Button>
         )}
-        <div className="border-2 border-neutral-gray rounded-2xl p-3.5 mt-4 ss:mt-6">
-          <WalletAddress address={from} title="Subscriber’s Wallet" />
-          <hr className="my-2 ss:my-4" />
-          <WalletAddress address={to} title="Trader’s Wallet" />
-        </div>
       </div>
       <Notification
         isOpened={!!errorMessage}

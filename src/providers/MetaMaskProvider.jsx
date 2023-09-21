@@ -27,25 +27,6 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
 
   const clearError = () => setErrorMessage("");
 
-  const accountValidation = useCallback(
-    (accounts, user = subscribeInfo.from) => {
-      if (!accounts.includes(user.toLowerCase())) {
-        setErrorMessage(MetaMaskErrorTitlesMap.wrongWalletConnected);
-        setIsWrongConnect(true);
-        return false;
-      }
-
-      if (accounts[0] !== user.toLowerCase()) {
-        setErrorMessage(MetaMaskErrorTitlesMap.wrongWalletSelected);
-        setIsWrongConnect(true);
-        return false;
-      }
-
-      return true;
-    },
-    []
-  );
-
   const switchChainId = useCallback(async (chainId) => {
     try {
       const provider = window.ethereum;
@@ -58,6 +39,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
           },
         ],
       });
+      setIsWrongConnect(false);
       clearError();
     } catch (err) {
       setErrorMessage(MetaMaskErrorTitlesMap.network);
@@ -65,7 +47,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
   }, []);
 
   const updateWallet = useCallback(
-    async (providedAccounts, user) => {
+    async (providedAccounts) => {
       if (!window.ethereum) return;
       clearError();
 
@@ -80,12 +62,6 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
       }
 
       setIsConnected(true);
-
-      let isValid = checkIsNeeded && accountValidation(accounts, user);
-
-      if (!isValid && checkIsNeeded) return;
-
-      setIsWrongConnect(false);
 
       const balance = formatBalance(
         await window.ethereum.request({
@@ -107,15 +83,12 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
 
       setWallet({ accounts, balance, chainId });
     },
-    [accountValidation, switchChainId]
+    [switchChainId]
   );
 
-  const updateWalletOnly = useCallback(
-    (user) => () => updateWallet(null, user),
-    [updateWallet]
-  );
+  const updateWalletOnly = useCallback(() => updateWallet(), [updateWallet]);
   const updateWalletAndAccounts = useCallback(
-    (user) => (accounts) => updateWallet(accounts, user),
+    (accounts) => updateWallet(accounts),
     [updateWallet]
   );
 
@@ -128,13 +101,8 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
           method: "eth_requestAccounts",
         });
 
-        updateWallet(accounts, subscribeInfo.from);
+        updateWallet(accounts);
       } catch (err) {
-        if (err?.code === 4001) {
-          setErrorMessage(MetaMaskErrorTitlesMap[4001]);
-          return;
-        }
-
         if (!err.message.includes(`type 'wallet_requestPermissions' `)) {
           setErrorMessage(err.message);
         }
@@ -146,8 +114,6 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
   }, [updateWallet]);
 
   useEffect(() => {
-    let user;
-
     const getProvider = async () => {
       if (checkIsNeeded) {
         const { token } = getParsedParams(location.search);
@@ -161,7 +127,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
         try {
           const { user_address, time, trade_amount, trade_address } =
             await WalletService.tokenVerification({ token });
-          user = user_address;
+
           setSubscribeInfo({
             from: user_address,
             price: trade_amount,
@@ -177,11 +143,11 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
 
       const provider = window.ethereum;
       setIsValidPage(true);
-      updateWallet(null, user);
+      updateWallet();
 
       if (provider) {
-        window.ethereum.on("accountsChanged", updateWalletAndAccounts(user));
-        window.ethereum.on("chainChanged", updateWalletOnly(user));
+        window.ethereum.on("accountsChanged", updateWalletAndAccounts);
+        window.ethereum.on("chainChanged", updateWalletOnly);
       }
     };
 
@@ -190,9 +156,9 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
     return () => {
       window.ethereum?.removeListener(
         "accountsChanged",
-        updateWalletAndAccounts(user)
+        updateWalletAndAccounts
       );
-      window.ethereum?.removeListener("chainChanged", updateWalletOnly(user));
+      window.ethereum?.removeListener("chainChanged", updateWalletOnly);
     };
   }, []);
 

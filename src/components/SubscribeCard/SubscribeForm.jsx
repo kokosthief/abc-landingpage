@@ -45,6 +45,7 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
   const onSubscribe = async (event) => {
     try {
       event.preventDefault();
+      if (disabled) return;
       clearError();
       const provider = new ethers.BrowserProvider(window.ethereum);
       const balance = await provider.getBalance(user);

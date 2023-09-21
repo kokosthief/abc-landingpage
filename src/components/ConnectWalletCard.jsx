@@ -26,7 +26,7 @@ export const ConnectWalletCard = () => {
   }, [location.search]);
 
   const getNotificationProps = () => {
-    let status;
+    let status = "success";
 
     if (errorMessage || verificationError) {
       status = "error";

@@ -30,6 +30,7 @@ export const WalletService = {
     try {
       return await http.post("/v2/token-verification", body);
     } catch ({ message, status }) {
+      console.log("error");
       if (status === 403) {
         throw new Error("Connection refused");
       }

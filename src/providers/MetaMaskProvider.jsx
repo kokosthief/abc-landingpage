@@ -1,4 +1,3 @@
-import { formatEther } from "ethers";
 import {
   createContext,
   useCallback,
@@ -134,7 +133,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
           setSubscribeInfo({
             caller,
             from,
-            price: formatEther(price),
+            price: price / 1000000000000000000,
             to,
             until,
           });

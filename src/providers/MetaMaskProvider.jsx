@@ -1,3 +1,4 @@
+import { formatEther } from "ethers";
 import {
   createContext,
   useCallback,
@@ -125,14 +126,17 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
         }
 
         try {
-          const { user_address, time, trade_amount, trade_address } =
-            await WalletService.tokenVerification({ token });
+          const { caller, from, price, to, until } =
+            await WalletService.tokenVerification({
+              token,
+            });
 
           setSubscribeInfo({
-            from: user_address,
-            price: trade_amount,
-            time,
-            to: trade_address,
+            caller,
+            from,
+            price: formatEther(price),
+            to,
+            until,
           });
         } catch (err) {
           setIsValidPage(false);

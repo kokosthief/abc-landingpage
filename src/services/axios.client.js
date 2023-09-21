@@ -16,7 +16,6 @@ export class AxiosClient {
         url,
         ...options,
       });
-
       return data;
     } catch (err) {
       throw {

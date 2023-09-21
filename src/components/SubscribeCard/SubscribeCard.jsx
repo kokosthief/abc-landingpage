@@ -15,10 +15,10 @@ export const SubscribeCard = () => {
     isValidPage,
     isWrongConnect,
     connectMetaMask,
-    subscribeInfo: { from, price, time, to },
+    subscribeInfo: { caller, from, price, to, until },
   } = useMetaMask();
 
-  const isValidTime = new Date(time).getTime() > new Date().getTime();
+  const isValidTime = new Date(until).getTime() > new Date().getTime();
 
   const { width } = useWindowSize();
 
@@ -40,8 +40,8 @@ export const SubscribeCard = () => {
 
   return (
     <>
-      <div className="rounded-2xl bg-white max-w-[580px] p-4 ss:p-10">
-        <h1 className="h1 text-neutral-black mb-2">Subscribe to User</h1>
+      <div className="rounded-2xl bg-white max-w-[600px] p-4 ss:p-10">
+        <h1 className="h1 text-neutral-black mb-2">Subscribe to @{caller}</h1>
         <PriceInformation
           price={`${price} ETH`}
           title="Price:"

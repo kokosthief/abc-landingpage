@@ -5,7 +5,7 @@ export const SuccessTitleMap = {
 
 export const SuccessMessageMap = {
   [SuccessTitleMap.connectWallet]:
-    "The wallet was connected to your telegram account.",
+    "The wallet was connected to your ABC account. You may now close the tab.",
   [SuccessTitleMap.subscribe]:
     "Your payment is completed! Your subscription will be activated in 5 minutes.",
 };

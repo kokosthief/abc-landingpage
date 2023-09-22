@@ -11,7 +11,7 @@ export const Notification = ({
     <MainPopup
       header={header}
       isClosing={isClosing}
-      isOpened={isOpened}
+      isOpened={!!isOpened}
       onClose={onClose}
       className="ss:!max-w-[500px] ss:!min-w-[auto] !min-w-[90%] !max-w-[90%]"
     >

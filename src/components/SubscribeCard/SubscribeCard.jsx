@@ -1,6 +1,4 @@
-import { breakpoints } from "../../constants/breakpoints";
 import { MetaMaskErrorMessagesMap } from "../../constants/errors";
-import { useWindowSize } from "../../hooks/useWindowSize";
 import { useMetaMask } from "../../providers/MetaMaskProvider";
 import { Button } from "../ui/Button";
 import { Notification } from "../ui/popups/Notification";
@@ -15,12 +13,12 @@ export const SubscribeCard = () => {
     isValidPage,
     isWrongConnect,
     connectMetaMask,
-    subscribeInfo: { caller, from, price, to, until },
+    subscribeInfo: { caller, groupOwnerWallet, followerId, price, to, until },
+    wallet,
   } = useMetaMask();
 
-  const isValidTime = new Date(until).getTime() > new Date().getTime();
-
-  const { width } = useWindowSize();
+  const isValidTime =
+    new Date(until).getTime() > new Date(new Date().toUTCString()).getTime();
 
   if (!isValidPage) {
     return (
@@ -36,7 +34,7 @@ export const SubscribeCard = () => {
     );
   }
 
-  if (!to || !price || !from) return;
+  if (!to || !price) return;
 
   return (
     <>
@@ -51,8 +49,10 @@ export const SubscribeCard = () => {
         {isConnected ? (
           <SubscribeForm
             disabled={isWrongConnect || !isValidTime}
+            groupOwnerWallet={groupOwnerWallet}
+            followerId={followerId}
             price={price}
-            user={from}
+            user={wallet.accounts[0]}
             trader={to}
           />
         ) : (
@@ -64,15 +64,7 @@ export const SubscribeCard = () => {
       <Notification
         isOpened={!!errorMessage}
         onClose={clearError}
-        message={
-          typeof MetaMaskErrorMessagesMap[errorMessage] === "function"
-            ? MetaMaskErrorMessagesMap[errorMessage](
-                width > breakpoints.ss
-                  ? from
-                  : `${from?.slice(0, 17)}...${from?.slice(-10)}`
-              )
-            : MetaMaskErrorMessagesMap[errorMessage]
-        }
+        message={MetaMaskErrorMessagesMap[errorMessage]}
         header={{
           status: "error",
           title: errorMessage,

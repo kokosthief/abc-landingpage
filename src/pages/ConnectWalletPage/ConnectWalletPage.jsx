@@ -1,4 +1,4 @@
-import subscribeBG from "../../assets/subscribe-bg.jpg";
+import subscribeBG from "../../assets/subscribe-bg.webp";
 import { ConnectWalletCard } from "../../components/ConnectWalletCard";
 import { Logo } from "../../components/ui/Logo";
 

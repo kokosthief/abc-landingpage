@@ -2,11 +2,18 @@ import classNames from "classnames";
 import { ethers, parseEther } from "ethers";
 import { useMemo, useState } from "react";
 import contractABI from "../../abi/contract.json";
+import { CONTRACT_ADDRESS } from "../../config/env";
 import {
   GetSubscriptionErrorMessageMap,
   GetSubscriptionErrorTitleMap,
 } from "../../constants/errors";
-import { useOpen } from "../../hooks/useOpen";
+import {
+  LoadingMessageMap,
+  LoadingTitleMap,
+  SuccessMessageMap,
+  SuccessTitleMap,
+} from "../../constants/statusMessages";
+import { getParsedParams } from "../../helpers/getParsedParams";
 import { Button } from "../ui/Button";
 import { Notification } from "../ui/popups/Notification";
 import { Select } from "../ui/Select";
@@ -26,11 +33,18 @@ const options = [
   { value: 11, label: "11 month" },
 ];
 
-export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
+export const SubscribeForm = ({
+  className,
+  disabled,
+  groupOwnerWallet,
+  followerId,
+  price,
+  user,
+  trader,
+}) => {
   const [subscription, setSubscription] = useState(options[0]);
   const [errorMessage, setErrorMessage] = useState("");
-  const { open: isTransactionBeingMade, onOpen: openTransaction } =
-    useOpen(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -50,15 +64,15 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
       const provider = new ethers.BrowserProvider(window.ethereum);
       const balance = await provider.getBalance(user);
       const signer = await provider.getSigner();
-      const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
+
       const contract = new ethers.Contract(
-        contractAddress,
+        CONTRACT_ADDRESS,
         contractABI,
         signer
       );
 
       const currentPrice = (price * subscription.value).toFixed(
-        price.length - 2
+        price.toString().length - 2
       );
 
       const parsedPrice = parseEther(currentPrice.toString());
@@ -79,17 +93,21 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
         value: parsedPrice.toString(),
         gasLimit: 300_000,
       };
-
-      const trx = await contract.getSubscription(trader, overrides);
+      const { token } = getParsedParams(location.search);
+      const trx = await contract.getSubscription(
+        trader,
+        groupOwnerWallet,
+        followerId,
+        overrides
+      );
       setIsLoading(true);
       await trx.wait();
-      openTransaction();
+      setIsSuccess(true);
     } catch (err) {
       if (err?.code === "ACTION_REJECTED") {
         console.log(err);
         return;
       }
-
       setErrorMessage(GetSubscriptionErrorTitleMap.unknown);
     } finally {
       setIsLoading(false);
@@ -119,20 +137,19 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
       loading: {
         isClosing: false,
         isOpened: isLoading,
-        message: "Hold on, sometimes it takes a while.",
+        message: LoadingMessageMap[LoadingTitleMap.subscribe],
         header: {
           status: "loading",
-          title: "The transaction is processing",
+          title: LoadingTitleMap.subscribe,
         },
       },
       success: {
         isClosing: false,
-        isOpened: isTransactionBeingMade,
-        message:
-          "Your payment is completed! Your subscription will be activated in 5 minutes.",
+        isOpened: isSuccess,
+        message: SuccessMessageMap[SuccessTitleMap.subscribe],
         header: {
           status: "success",
-          title: "The payment is successful!",
+          title: SuccessTitleMap.subscribe,
         },
       },
     };
@@ -142,7 +159,7 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
 
   const notificationProps = useMemo(() => {
     return getNotificationProps();
-  }, [errorMessage, isLoading, isTransactionBeingMade]);
+  }, [errorMessage, isLoading, isSuccess]);
 
   return (
     <>
@@ -162,15 +179,15 @@ export const SubscribeForm = ({ className, disabled, price, user, trader }) => {
         <PriceInformation
           price={`${
             Number.isInteger(+price)
-              ? price
-              : (price * subscription.value).toFixed(price.length - 2)
+              ? price * subscription.value
+              : (price * subscription.value).toFixed(
+                  price.toString().length - 2
+                )
           } ETH`}
           title="Total:"
           className="mb-2 ss:mb-4"
         />
-        <Button disabled={disabled || isLoading || isTransactionBeingMade}>
-          Pay Now
-        </Button>
+        <Button disabled={disabled || isLoading || isSuccess}>Pay Now</Button>
       </form>
       <Notification {...notificationProps} />
     </>

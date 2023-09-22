@@ -4,9 +4,13 @@ import {
   GetSubscriptionErrorTitleMap,
   MetaMaskErrorMessagesMap,
   MetaMaskErrorTitlesMap,
-  VerificationErrorMessageMap,
-  VerificationErrorTitleMap,
 } from "../constants/errors";
+import {
+  LoadingMessageMap,
+  LoadingTitleMap,
+  SuccessMessageMap,
+  SuccessTitleMap,
+} from "../constants/statusMessages";
 import { getParsedParams } from "../helpers/getParsedParams";
 import { useMetaMask } from "../providers/MetaMaskProvider";
 import { WalletService } from "../services/wallet.service";
@@ -44,8 +48,7 @@ export const ConnectWalletCard = () => {
       error: {
         isOpened: !!errorMessage || !!verificationError,
         message:
-          GetSubscriptionErrorMessageMap[errorMessage] ||
-          VerificationErrorMessageMap[verificationError],
+          GetSubscriptionErrorMessageMap[errorMessage || verificationError],
         onClose: () => {
           clearError();
           setVerificationError("");
@@ -58,19 +61,19 @@ export const ConnectWalletCard = () => {
       loading: {
         isClosing: false,
         isOpened: loading,
-        message: "Hold on, sometimes it takes a while.",
+        message: LoadingMessageMap[LoadingTitleMap.connectWallet],
         header: {
           status: "loading",
-          title: "The verification is processing",
+          title: LoadingTitleMap.connectWallet,
         },
       },
       success: {
         isClosing: false,
         isOpened: isSuccess,
-        message: "The wallet was connected to your telegram account.",
+        message: SuccessMessageMap[SuccessTitleMap.connectWallet],
         header: {
           status: "success",
-          title: "The connect is successful!",
+          title: SuccessTitleMap.connectWallet,
         },
       },
     };
@@ -89,12 +92,7 @@ export const ConnectWalletCard = () => {
         .then(() => {
           setIsSuccess(true);
         })
-        .catch((err) => {
-          if (err.message === VerificationErrorTitleMap.tokenExist) {
-            setVerificationError(err.message);
-            return;
-          }
-
+        .catch(() => {
           setVerificationError(GetSubscriptionErrorTitleMap.unknown);
         })
         .finally(() => {

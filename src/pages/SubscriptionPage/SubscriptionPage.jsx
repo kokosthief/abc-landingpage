@@ -1,4 +1,4 @@
-import subscribeBG from "../../assets/subscribe-bg.jpg";
+import subscribeBG from "../../assets/subscribe-bg.webp";
 import { SubscribeCard } from "../../components/SubscribeCard/SubscribeCard";
 import { Logo } from "../../components/ui/Logo";
 

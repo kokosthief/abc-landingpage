@@ -5,18 +5,20 @@ import {
   useEffect,
   useState,
 } from "react";
+import { CHAIN_ID } from "../config/env";
 import { MetaMaskErrorTitlesMap } from "../constants/errors";
 import { formatBalance } from "../helpers/formatBalance";
+import { formatEther } from "../helpers/formatEther";
 
 import { getParsedParams } from "../helpers/getParsedParams";
 import { WalletService } from "../services/wallet.service";
 
-const disconnectedState = { accounts: [], balance: "", chainId: "" };
+const initialState = { accounts: [], balance: "", chainId: "" };
 
 const MetaMaskContext = createContext({});
 
-export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
-  const [wallet, setWallet] = useState(disconnectedState);
+export const MetaMaskProvider = ({ checkIsNeeded = true, children }) => {
+  const [wallet, setWallet] = useState(initialState);
   const [subscribeInfo, setSubscribeInfo] = useState({});
   const [isValidPage, setIsValidPage] = useState(false);
 
@@ -57,7 +59,7 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
 
       if (!accounts.length) {
         setIsConnected(false);
-        setWallet(disconnectedState);
+        setWallet(initialState);
         return;
       }
 
@@ -74,10 +76,8 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
         method: "eth_chainId",
       });
 
-      const chainIdGoerliETH = import.meta.env.VITE_CHAIN_ID;
-
-      if (chainId !== chainIdGoerliETH) {
-        await switchChainId(chainIdGoerliETH);
+      if (chainId !== CHAIN_ID) {
+        await switchChainId(CHAIN_ID);
         return;
       }
 
@@ -125,17 +125,16 @@ export const MetaMaskContextProvider = ({ checkIsNeeded = true, children }) => {
         }
 
         try {
-          const { caller, from, price, to, until } =
+          const { group_owner_wallet, follower_id, price, ...props } =
             await WalletService.tokenVerification({
               token,
             });
 
           setSubscribeInfo({
-            caller,
-            from,
-            price: price / 1000000000000000000,
-            to,
-            until,
+            groupOwnerWallet: group_owner_wallet,
+            followerId: follower_id,
+            price: formatEther(price),
+            ...props,
           });
         } catch (err) {
           setIsValidPage(false);

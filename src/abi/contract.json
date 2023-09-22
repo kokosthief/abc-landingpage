@@ -78,22 +78,22 @@
   },
   {
     "inputs": [],
-    "name": "developersRewardWithAbc",
-    "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "developersRewardWithoutAbc",
-    "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "developersWallet",
     "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDevelopersRewardWithAbc",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDevelopersRewardWithoutAbc",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
@@ -112,19 +112,43 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "getRewardsForTopTraders",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
-      { "internalType": "address", "name": "_traderAddress", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_traderAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_groupOwnersAddress",
+        "type": "address"
+      },
+      { "internalType": "uint256", "name": "_trnId", "type": "uint256" }
     ],
     "name": "getSubscription",
     "outputs": [],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "groupOwnerRewardWithAbc",
+    "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "groupOwnerRewardWithoutAbc",
+    "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "minTraderTokenAmount",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -157,6 +181,32 @@
   },
   {
     "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_newCommunityReward",
+        "type": "uint8"
+      }
+    ],
+    "name": "setCommunityRewardWithAbc",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_newCommunityReward",
+        "type": "uint8"
+      }
+    ],
+    "name": "setCommunityRewardWithoutAbc",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
       { "internalType": "address", "name": "_newWallet", "type": "address" }
     ],
     "name": "setCommunityWallet",
@@ -175,24 +225,9 @@
   },
   {
     "inputs": [
-      { "internalType": "uint8", "name": "_newRewardTrade", "type": "uint8" },
-      {
-        "internalType": "uint8",
-        "name": "_newRewardCommunity",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint8",
-        "name": "_newRewardDeveloper",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint8",
-        "name": "_newRewardTopTrader",
-        "type": "uint8"
-      }
+      { "internalType": "uint256", "name": "_newAmount", "type": "uint256" }
     ],
-    "name": "setRewardsWithAbc",
+    "name": "setMinTraderTokenCount",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -201,30 +236,33 @@
     "inputs": [
       {
         "internalType": "uint8",
-        "name": "_newRewardCommunity",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint8",
-        "name": "_newRawardDeveloper",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint8",
-        "name": "_newRewardTopTrader",
+        "name": "_newTopGroupOwnerReward",
         "type": "uint8"
       }
     ],
-    "name": "setRewardsWithoutAbc",
+    "name": "setTopGroupOwnerRewardWithAbc",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_newCount", "type": "uint256" }
+      {
+        "internalType": "uint8",
+        "name": "_newTopGroupOwnerReward",
+        "type": "uint8"
+      }
     ],
-    "name": "setTraderTokenCount",
+    "name": "setTopGroupOwnerRewardWithoutAbc",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint8", "name": "_newTraderReward", "type": "uint8" }
+    ],
+    "name": "setTraderRewardWithAbc",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -244,29 +282,8 @@
   },
   {
     "inputs": [],
-    "name": "topTraderRewardWithAbc",
-    "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "topTraderRewardWithoutAbc",
-    "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "traderRewardWithAbc",
     "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "traderTokenCount",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
@@ -288,7 +305,7 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_ammount", "type": "uint256" }
+      { "internalType": "uint256", "name": "_amount", "type": "uint256" }
     ],
     "name": "withDrawCommunity",
     "outputs": [],
@@ -297,23 +314,9 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_ammount", "type": "uint256" }
+      { "internalType": "uint256", "name": "_amount", "type": "uint256" }
     ],
     "name": "withDrawDevelopers",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      { "internalType": "uint256", "name": "_ammount", "type": "uint256" },
-      {
-        "internalType": "address",
-        "name": "_topTraderWallet",
-        "type": "address"
-      }
-    ],
-    "name": "withDrawTopTraders",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

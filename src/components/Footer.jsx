@@ -1,6 +1,6 @@
-import styles from "../style";
 import { logo } from "../assets";
 import { footerLinks } from "../constants";
+import styles from "../pages/HomePage/HomePage.style";
 
 const Footer = () => (
   <section

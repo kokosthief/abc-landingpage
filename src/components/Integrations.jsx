@@ -1,5 +1,5 @@
 import { integrations } from "../constants";
-import styles from "../style";
+import styles from "../pages/HomePage/HomePage.style";
 
 const Integrations = () => (
   <section className={`${styles.flexCenter} my-4 `}>
@@ -9,13 +9,11 @@ const Integrations = () => (
           key={integration.id}
           className={`flex-1 ${styles.flexCenter} sm:min-w-[192px] min-w-[120px] m-20`}
         >
-          <a target="_blank" rel="noopener noreferrer" href={integration.href}>
-            <img
-              src={integration.logo}
-              alt="integration_logo"
-              className="sm:w-[192px] w-[100px] object-contain"
-            />
-          </a>
+          <img
+            src={integration.logo}
+            alt="integration_logo"
+            className="sm:w-[192px] w-[100px] object-contain"
+          />
         </div>
       ))}
     </div>

@@ -1,11 +1,11 @@
-import styles from "../style";
 import {
   abcbricklogo,
-  twittercircle,
-  telegramcircle,
   discordcircle,
   mediumcircle,
+  telegramcircle,
+  twittercircle,
 } from "../assets";
+import styles from "../pages/HomePage/HomePage.style";
 import Navbar from "./Navbar";
 
 import React from "react";

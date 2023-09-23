@@ -4,8 +4,6 @@ import {
   Popover,
   PopoverHandler,
   PopoverContent,
-  Button,
-  Chip,
   Typography,
 } from "@material-tailwind/react";
 
@@ -92,7 +90,6 @@ const HowToUse = () => {
                               fontSize: "16px",
                               width: "146px",
                               background: "#27A5E7",
-                              boxShadow: "1px 1px 3px #27A5E7",
                               color: "#FFFFFF",
                               borderRadius: "46px",
                               padding: "10px", // Add padding for spacing

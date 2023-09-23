@@ -2,7 +2,11 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 /** @type {import('tailwindcss').Config} */
 
 module.exports = withMT({
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx,js,cjs,mjs,ts}",
+  ],
   mode: "jit",
   theme: {
     safelist: [
@@ -12,12 +16,19 @@ module.exports = withMT({
     ],
     extend: {
       colors: {
+        error: "#F26255",
         primary: "#232323",
         secondary: "#31AAB7",
+        "neutral-black": "#0A0A0A",
+        "neutral-gray": "#E7E7E7",
         orange: "#FA9E66",
+        "pink-dark": "#EC407A",
+        "pink-dark-hover": "#CC2960",
+        "pink-light": "#FFE5EF",
         purple: "#63224D",
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
+        success: "#24B296",
       },
       fontFamily: {
         arcade: ["Arcade", "sans-serif"],

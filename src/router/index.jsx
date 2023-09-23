@@ -6,7 +6,7 @@ import { MetaMaskProvider } from "../providers/MetaMaskProvider";
 
 export const router = createBrowserRouter([
   {
-    path: "/h",
+    path: "/",
     element: <HomePage />,
   },
   {

@@ -23,3 +23,4 @@ export const GetSubscriptionErrorMessageMap = {
   [GetSubscriptionErrorTitleMap.expectation]: "Try again later",
   [GetSubscriptionErrorTitleMap.unknown]: "Please use the /addwallet command again",
 };
+

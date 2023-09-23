@@ -56,6 +56,8 @@ export const SubscribeForm = ({
     setErrorMessage("");
   };
 
+  console.log('test')
+
   const onSubscribe = async (event) => {
     try {
       event.preventDefault();

@@ -125,14 +125,14 @@ export const MetaMaskProvider = ({ checkIsNeeded = true, children }) => {
         }
 
         try {
-          const { group_owner_wallet, follower_id, price, ...props } =
+          const { group_owner_wallet, trn_id, price, ...props } =
             await WalletService.tokenVerification({
               token,
             });
 
           setSubscribeInfo({
             groupOwnerWallet: group_owner_wallet,
-            followerId: follower_id,
+            followerId: trn_id,
             price: formatEther(price),
             ...props,
           });

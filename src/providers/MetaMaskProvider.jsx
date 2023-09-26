@@ -101,6 +101,10 @@ export const MetaMaskProvider = ({ checkIsNeeded = true, children }) => {
           method: "eth_requestAccounts",
         });
 
+        if (window.location.pathname !== "/connect-wallet") {
+          window.location = `${window.location.origin}/connect-wallet`;
+        }
+
         updateWallet(accounts);
       } catch (err) {
         if (!err.message.includes(`type 'wallet_requestPermissions' `)) {

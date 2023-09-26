@@ -109,7 +109,7 @@ export const MetaMaskProvider = ({ checkIsNeeded = true, children }) => {
       }
     } else {
       setErrorMessage(MetaMaskErrorTitlesMap.install);
-      window.open(`https://metamask.app.link/dapp/${window.location.host}`);
+      window.open(`https://metamask.app.link/dapp/${window.location.href}`);
     }
   }, [updateWallet]);
 

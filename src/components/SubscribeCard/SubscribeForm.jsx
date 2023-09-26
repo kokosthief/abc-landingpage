@@ -13,7 +13,6 @@ import {
   SuccessMessageMap,
   SuccessTitleMap,
 } from "../../constants/statusMessages";
-import { getParsedParams } from "../../helpers/getParsedParams";
 import { Button } from "../ui/Button";
 import { Notification } from "../ui/popups/Notification";
 import { Select } from "../ui/Select";
@@ -93,7 +92,7 @@ export const SubscribeForm = ({
         value: parsedPrice.toString(),
         gasLimit: 300_000,
       };
-      const { token } = getParsedParams(location.search);
+
       const trx = await contract.getSubscription(
         trader,
         groupOwnerWallet,

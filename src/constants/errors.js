@@ -21,5 +21,6 @@ export const GetSubscriptionErrorMessageMap = {
   [GetSubscriptionErrorTitleMap.balance]:
     "Refill your account before continuing",
   [GetSubscriptionErrorTitleMap.expectation]: "Try again later",
-  [GetSubscriptionErrorTitleMap.unknown]: "Try again",
+  [GetSubscriptionErrorTitleMap.unknown]: "Please use the /addwallet command again",
 };
+

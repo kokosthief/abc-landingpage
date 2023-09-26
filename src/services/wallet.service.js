@@ -7,7 +7,7 @@ export const WalletService = {
 
   async tokenVerification(body) {
     try {
-      return await http.post("/v2/token-verification", body);
+      return await http.post("/token-verification", body);
     } catch ({ message, status }) {
       if (status === 403) {
         throw new Error("Connection refused");

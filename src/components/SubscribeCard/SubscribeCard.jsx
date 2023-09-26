@@ -16,9 +16,9 @@ export const SubscribeCard = () => {
     subscribeInfo: { caller, groupOwnerWallet, followerId, price, to, until },
     wallet,
   } = useMetaMask();
-
   const isValidTime =
-    new Date(until).getTime() > new Date(new Date().toUTCString()).getTime();
+    new Date(until).getTime() >
+    new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000;
 
   if (!isValidPage) {
     return (

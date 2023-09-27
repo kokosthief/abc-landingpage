@@ -90,7 +90,7 @@ export const SubscribeForm = ({
 
       let overrides = {
         value: parsedPrice.toString(),
-        gasLimit: 300_000,
+        gasLimit: 150_000,
       };
 
       const trx = await contract.getSubscription(

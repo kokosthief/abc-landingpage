@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   GetSubscriptionErrorMessageMap,
-  GetSubscriptionErrorTitleMap,
   MetaMaskErrorMessagesMap,
   MetaMaskErrorTitlesMap,
 } from "../constants/errors";
@@ -92,8 +91,8 @@ export const ConnectWalletCard = () => {
         .then(() => {
           setIsSuccess(true);
         })
-        .catch(() => {
-          setVerificationError(GetSubscriptionErrorTitleMap.unknown);
+        .catch((err) => {
+          setVerificationError(err.message);
         })
         .finally(() => {
           setLoading(false);

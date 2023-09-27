@@ -94,12 +94,18 @@ export const MetaMaskProvider = ({ checkIsNeeded = true, children }) => {
 
   const connectMetaMask = useCallback(async () => {
     const { ethereum } = window;
+    const currentLink = window.location.href;
+    const currentPath = window.location.pathname;
 
     if (ethereum) {
       try {
         const accounts = await ethereum.request({
           method: "eth_requestAccounts",
         });
+
+        if (window.location.pathname !== currentPath) {
+          window.location = currentLink;
+        }
 
         updateWallet(accounts);
       } catch (err) {
@@ -109,7 +115,7 @@ export const MetaMaskProvider = ({ checkIsNeeded = true, children }) => {
       }
     } else {
       setErrorMessage(MetaMaskErrorTitlesMap.install);
-      window.open(`https://metamask.app.link/dapp/${window.location.href}`);
+      window.open(`https://metamask.app.link/dapp/${currentLink}`);
     }
   }, [updateWallet]);
 

@@ -11,9 +11,14 @@ export const MetaMaskErrorMessagesMap = {
     "Please make sure you have followed the correct link",
 };
 
+export const ConnectWalletErrorTitleMap = {
+  verification: "Please, use the /addwallet command again",
+};
+
 export const GetSubscriptionErrorTitleMap = {
   balance: "Not enough money",
   expectation: "Expectation",
+  tokenVerification: "Please, use the /subscribe command again",
   unknown: "Something went wrong",
 };
 
@@ -21,6 +26,5 @@ export const GetSubscriptionErrorMessageMap = {
   [GetSubscriptionErrorTitleMap.balance]:
     "Refill your account before continuing",
   [GetSubscriptionErrorTitleMap.expectation]: "Try again later",
-  [GetSubscriptionErrorTitleMap.unknown]: "Please use the /addwallet command again",
+  [GetSubscriptionErrorTitleMap.unknown]: "Try again",
 };
-

@@ -57,14 +57,7 @@
   },
   {
     "inputs": [],
-    "name": "communityRewardWithAbc",
-    "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "communityRewardWithoutAbc",
+    "name": "communityReward",
     "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
     "stateMutability": "view",
     "type": "function"
@@ -80,20 +73,6 @@
     "inputs": [],
     "name": "developersWallet",
     "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getDevelopersRewardWithAbc",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getDevelopersRewardWithoutAbc",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
@@ -123,7 +102,7 @@
         "name": "_groupOwnersAddress",
         "type": "address"
       },
-      { "internalType": "uint256", "name": "_trnId", "type": "uint256" }
+      { "internalType": "uint40", "name": "_trnId", "type": "uint40" }
     ],
     "name": "getSubscription",
     "outputs": [],
@@ -132,14 +111,7 @@
   },
   {
     "inputs": [],
-    "name": "groupOwnerRewardWithAbc",
-    "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "groupOwnerRewardWithoutAbc",
+    "name": "groupOwnerReward",
     "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
     "stateMutability": "view",
     "type": "function"
@@ -187,20 +159,7 @@
         "type": "uint8"
       }
     ],
-    "name": "setCommunityRewardWithAbc",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint8",
-        "name": "_newCommunityReward",
-        "type": "uint8"
-      }
-    ],
-    "name": "setCommunityRewardWithoutAbc",
+    "name": "setCommunityReward",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -240,20 +199,7 @@
         "type": "uint8"
       }
     ],
-    "name": "setTopGroupOwnerRewardWithAbc",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint8",
-        "name": "_newTopGroupOwnerReward",
-        "type": "uint8"
-      }
-    ],
-    "name": "setTopGroupOwnerRewardWithoutAbc",
+    "name": "setTopGroupOwnerReward",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -262,7 +208,7 @@
     "inputs": [
       { "internalType": "uint8", "name": "_newTraderReward", "type": "uint8" }
     ],
-    "name": "setTraderRewardWithAbc",
+    "name": "setTraderReward",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -282,7 +228,7 @@
   },
   {
     "inputs": [],
-    "name": "traderRewardWithAbc",
+    "name": "traderReward",
     "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
     "stateMutability": "view",
     "type": "function"
@@ -307,7 +253,7 @@
     "inputs": [
       { "internalType": "uint256", "name": "_amount", "type": "uint256" }
     ],
-    "name": "withDrawCommunity",
+    "name": "withdrawCommunity",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -316,7 +262,7 @@
     "inputs": [
       { "internalType": "uint256", "name": "_amount", "type": "uint256" }
     ],
-    "name": "withDrawDevelopers",
+    "name": "withdrawDevelopers",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

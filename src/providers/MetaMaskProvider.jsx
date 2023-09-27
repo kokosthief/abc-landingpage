@@ -94,6 +94,8 @@ export const MetaMaskProvider = ({ checkIsNeeded = true, children }) => {
 
   const connectMetaMask = useCallback(async () => {
     const { ethereum } = window;
+    const currentLink = window.location.href;
+    const currentPath = window.location.pathname;
 
     if (ethereum) {
       try {
@@ -101,8 +103,8 @@ export const MetaMaskProvider = ({ checkIsNeeded = true, children }) => {
           method: "eth_requestAccounts",
         });
 
-        if (window.location.pathname !== "/connect-wallet") {
-          window.location = `${window.location.origin}/connect-wallet`;
+        if (window.location.pathname !== currentPath) {
+          window.location = currentLink;
         }
 
         updateWallet(accounts);
@@ -113,7 +115,7 @@ export const MetaMaskProvider = ({ checkIsNeeded = true, children }) => {
       }
     } else {
       setErrorMessage(MetaMaskErrorTitlesMap.install);
-      window.open(`https://metamask.app.link/dapp/${window.location.href}`);
+      window.open(`https://metamask.app.link/dapp/${currentLink}`);
     }
   }, [updateWallet]);
 

@@ -10,6 +10,7 @@ import Tokenomics from "./Tokenomics";
 import CTA from "./CTA";
 import HowToUse from "./HowToUse";
 import Roadmap from "./Roadmap";
+import OTSea from "./OTSea";
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   Hero2,
   Hero3,
   CTA,
+  OTSea,
 };

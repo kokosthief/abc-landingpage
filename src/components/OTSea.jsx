@@ -1,12 +1,3 @@
-import { CheckCircleIcon } from "@heroicons/react/20/solid";
-
-const bullishPoints = [
-  "Total token supply: 1,000,000",
-  "100% of supply added",
-  "No team tokens",
-  "Max wallet: 2%",
-];
-
 const OTSea = () => (
   <section className="h-fit py-20 sm:py-0">
     <div className="h-auto mx-auto -mt-20 pb-32 ">

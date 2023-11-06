@@ -14,33 +14,33 @@ const Hero = () => {
   const [calls, setCalls] = useState(null);
   const [users, setUsers] = useState(null);
 
-  useEffect(() => {
-    // Fetch the amount of calls
-    fetch("http://65.109.234.106:8000/calls")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.text(); // Parse the response as plain text
-      })
-      .then((data) => setCalls(data))
-      .catch((error) => {
-        console.error("Error fetching calls:", error);
-      });
+  // useEffect(() => {
+  //   // Fetch the amount of calls
+  //   fetch("http://65.109.234.106:8000/calls")
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       return response.text(); // Parse the response as plain text
+  //     })
+  //     .then((data) => setCalls(data))
+  //     .catch((error) => {
+  //       console.error("Error fetching calls:", error);
+  //     });
 
-    // Fetch the amount of users
-    fetch("http://65.109.234.106:8000/users")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.text(); // Parse the response as plain text
-      })
-      .then((data) => setUsers(data))
-      .catch((error) => {
-        console.error("Error fetching users:", error);
-      });
-  }, []);
+  //   // Fetch the amount of users
+  //   fetch("http://65.109.234.106:8000/users")
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       return response.text(); // Parse the response as plain text
+  //     })
+  //     .then((data) => setUsers(data))
+  //     .catch((error) => {
+  //       console.error("Error fetching users:", error);
+  //     });
+  // }, []);
 
   return (
     <section
@@ -160,7 +160,8 @@ const Hero = () => {
           className={` flex flex-row  place-items-center my-2 scale-[83%]   sm:my-4 lg:scale-[83%] xl:scale-[105%]  mx-auto transition duration-300 ease-in-out hover:scale-110 `}
         >
           <h4 className="font-league font-semibold text-4xl xs:text-5xl ss:text-5xl sm:text-6xl lg:text-6xl xl:text-7xl leading-[43.16px] text-white">
-            {calls !== null ? calls : "Loading..."}
+            {/* {calls !== null ? calls : "Loading..."} */}
+            7635
           </h4>
           <p className="font-league font-bold text-2xl xs:text-3xl ss:text-3xl sm:text-3xl lg:text-3xl xl:text-4xl leading-[24.58px] text-[#0a0a0a] ml-3 sm:ml-4 md:ml-3 ">
             Total Calls
@@ -180,7 +181,8 @@ const Hero = () => {
           className={` flex flex-row  place-items-center my-2 scale-[83%]   sm:my-4 lg:scale-[83%] xl:scale-[105%]  mx-auto transition duration-300 ease-in-out hover:scale-110 `}
         >
           <h4 className="font-league font-semibold text-4xl xs:text-5xl ss:text-5xl sm:text-6xl lg:text-6xl xl:text-7xl leading-[43.16px] text-white">
-            {users !== null ? users : "Loading..."}
+            {/* {users !== null ? users : "Loading..."} */}
+            26765
           </h4>
           <p className="font-league font-bold text-2xl xs:text-3xl ss:text-3xl sm:text-3xl lg:text-3xl xl:text-4xl leading-[24.58px] text-[#0a0a0a] ml-3 sm:ml-4 md:ml-3">
             Unique Callers

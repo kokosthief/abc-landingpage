@@ -10,7 +10,7 @@ const OTSea = () => (
           Over the counter deals buying and selling $ABC.
         </p>
       </div>
-      <div className="flex flex-col sm:flex-row justify-center gap-6 pt-10 mx-auto">
+      <div className="flex flex-row justify-center gap-6 pt-10 mx-auto ">
         <iframe
           style={{ borderRadius: 24 }}
           width={400}

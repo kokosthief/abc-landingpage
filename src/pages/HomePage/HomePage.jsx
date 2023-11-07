@@ -9,6 +9,7 @@ import {
   Integrations,
   Roadmap,
   Tokenomics,
+  OTSea,
 } from "../../components";
 import styles from "./HomePage.style";
 
@@ -25,6 +26,7 @@ export const HomePage = () => {
         <HowToUse />
         <Roadmap />
         <Tokenomics />
+        <OTSea />
       </div>
 
       <div className="bg-[#0a0a0a]  ">

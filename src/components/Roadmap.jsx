@@ -167,7 +167,7 @@ export default function Roadmap() {
                   className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   htmlFor="flexCheckCheckedDisabled"
                 >
-                  ABC Trending
+                  ABC Leaderboards
                 </label>
               </div>
               <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">

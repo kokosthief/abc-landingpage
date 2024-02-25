@@ -16,7 +16,7 @@ const OTSea = () => (
           width={400}
           height={540}
           allow="ethereum"
-          src="https://otsea.xyz/mini-market?tokenAddress=0xD4d4B7b55B30fB096C30ad202e746d010B47dc30"
+          src="https://otsea.xyz/mini-market?tokenAddress=0x52B552c4a698c9B1De4c7fe0Dd4462AF141F7C3e"
         />
       </div>
     </div>

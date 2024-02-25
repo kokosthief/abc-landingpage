@@ -77,7 +77,7 @@ const Hero = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
+                    href="https://app.uniswap.org/#/swap?outputCurrency=0x52B552c4a698c9B1De4c7fe0Dd4462AF141F7C3e&chain=ethereum"
                     className="relative self-center bg-white inline-block  px-8 py-4 mr-4 font-extrabold text-xl rounded-full"
                   >
                     <span className="relative w-full text-center text-[#0a0a0a] ">
@@ -89,7 +89,7 @@ const Hero = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://app.uniswap.org/#/swap?outputCurrency=0xd4d4b7b55b30fb096c30ad202e746d010b47dc30&chain=ethereum"
+                    href="https://app.uniswap.org/#/swap?outputCurrency=0x52B552c4a698c9B1De4c7fe0Dd4462AF141F7C3e&chain=ethereum"
                     className="relative self-center overflow-hidden inline-block px-8 py-4 mr-4 font-extrabold text-xl rounded-full group focus:bg-primary-600 "
                   >
                     <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>

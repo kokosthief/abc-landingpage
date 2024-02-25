@@ -12,9 +12,9 @@ import {
 
 const solutions = [
   {
-    name: "ABC Trending",
+    name: "ABC Leaderboards",
     description: "List of top tokens called in the last 24 hours.",
-    href: "https://telegram.me/ABCTrending",
+    href: "https://telegram.me/ABCLeaderboards",
     icon: ChartBarSquareIcon,
   },
   {

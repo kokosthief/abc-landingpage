@@ -87,7 +87,7 @@ const Footer = () => (
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://dexscreener.com/ethereum/0xD4d4B7b55B30fB096C30ad202e746d010B47dc30"
+            href="https://dexscreener.com/ethereum/0x52B552c4a698c9B1De4c7fe0Dd4462AF141F7C3e"
             className="flex justify-center items-center bg-white text-[#0a0a0a] rounded-full hover:text-orange shadow transition duration-200 ease-in-out"
             aria-label="DexScreener"
           >

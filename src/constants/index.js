@@ -37,8 +37,8 @@ export const footerLinks = [
         link: "https://telegram.me/ABCAlphaBot",
       },
       {
-        name: "ABC Trending",
-        link: "https://telegram.me/ABCTrending",
+        name: "ABC Leaderboards",
+        link: "https://telegram.me/ABCLeaderboards",
       },
       {
         name: "ABC Subscriptions",
@@ -72,7 +72,7 @@ export const footerLinks = [
       },
       {
         name: "Etherscan",
-        link: "https://etherscan.io/token/0xD4d4B7b55B30fB096C30ad202e746d010B47dc30",
+        link: "https://etherscan.io/token/0x52B552c4a698c9B1De4c7fe0Dd4462AF141F7C3e",
       },
       {
         name: "Become a Partner",

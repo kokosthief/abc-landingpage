@@ -35,6 +35,9 @@ export default function CTA() {
                 <p className="font-spacegrotesk mt-6 leading-7 font-normal text-sm sm:text-lg  text-white">
                   Buy / Sell Taxes : 4%
                 </p>
+                <p className="font-spacegrotesk mt-6 leading-7 font-normal text-sm sm:text-lg  text-white">
+                  CA: 0x52B552c4a698c9B1De4c7fe0Dd4462AF141F7C3e{" "}
+                </p>
               </div>
             </div>
           </div>

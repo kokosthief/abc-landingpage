@@ -2,9 +2,8 @@ import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 const bullishPoints = [
   "Total token supply: 1,000,000",
-  "100% of supply added",
-  "No team tokens",
   "Max wallet: 2%",
+  "Liquidity Locked",
 ];
 
 const Tokenomics = () => (
@@ -32,10 +31,10 @@ const Tokenomics = () => (
             </li>
           ))}
         </ul>
-        <p className="font-spacegrotesk mt-6 text-xl leading-7 text-white">
+        {/* <p className="font-spacegrotesk mt-6 text-xl leading-7 text-white">
           Liquidity is locked for 1 year and tax-added liquidity is periodically
           burned.
-        </p>
+        </p> */}
         <div
           className="md:hidden pt-6"
           data-te-animation-init
@@ -77,12 +76,12 @@ const Tokenomics = () => (
         <h4 className="font-league flex-none text-3xl -mt-7 mb-3 font-semibold leading-6 text-white">
           Total Supply
         </h4>
-        <h3 className="font-league text-9xl tracking-widest -mr-4 text-[#0a0a0a]  mt-1   font-extrabold uppercase   ">
+        {/* <h3 className="font-league text-9xl tracking-widest -mr-4 text-[#0a0a0a]  mt-1   font-extrabold uppercase   ">
           .5%
         </h3>
         <h4 className="font-league flex-none text-3xl -mt-7 mb-3 font-semibold leading-6 text-white">
           Supply Burned
-        </h4>{" "}
+        </h4>{" "} */}
         <h3 className="font-league text-9xl tracking-widest -mr-4 text-[#0a0a0a]   font-extrabold uppercase   ">
           4%
         </h3>

@@ -212,10 +212,11 @@ export default function Roadmap() {
                   type="checkbox"
                   value=""
                   id="flexCheckCheckedDisabled"
+                  checked
                   disabled
                 />
                 <label
-                  className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
+                  className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   htmlFor="flexCheckCheckedDisabled"
                 >
                   Paid Caller Subscriptions
@@ -242,10 +243,11 @@ export default function Roadmap() {
                   type="checkbox"
                   value=""
                   id="flexCheckCheckedDisabled"
+                  checked
                   disabled
                 />
                 <label
-                  className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
+                  className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   htmlFor="flexCheckCheckedDisabled"
                 >
                   Meme/Utility Calls
@@ -272,10 +274,11 @@ export default function Roadmap() {
                   type="checkbox"
                   value=""
                   id="flexCheckCheckedDisabled"
+                  checked
                   disabled
                 />
                 <label
-                  className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none "
+                  className="inline-block pl-[0.15rem] opacity-95 hover:pointer-events-none"
                   htmlFor="flexCheckCheckedDisabled"
                 >
                   Integrated Competition Bot
